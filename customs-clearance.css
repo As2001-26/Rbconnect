@@ -1,0 +1,2019 @@
+/* ==========================================================================
+   RB CONNECT - CUSTOMS CLEARANCE SERVICES (Official Stylesheet)
+   Harmonious Terracotta & Border Navy Palette, Luxury Typography, Micro-interactions
+   ========================================================================== */
+
+:root {
+    --cc-color-terracotta: #c66c24;
+    --cc-color-terracotta-dark: #a8542c;
+    --cc-color-bronze: #b26a38;
+    --cc-color-dark: #0d1b2a;
+    --cc-color-navy: #152538;
+    --cc-color-slate: #1e3a5f;
+    --cc-bg-cream: #f7f3ee;
+    --cc-bg-light: #faf8f5;
+    --cc-border-subtle: #e9e2d8;
+    --cc-border-card: #e2d9cd;
+    --cc-color-text-muted: #64748b;
+    --cc-color-text-body: #4b5563;
+
+    --cc-font-serif: 'Playfair Display', Georgia, serif;
+    --cc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --cc-font-display: 'Montserrat', sans-serif;
+
+    --cc-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --cc-transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Body Override for Customs Clearance Page (Matches Site Theme #f7f3ee) */
+html,
+html:has(.customs-page),
+body.customs-page {
+    background-color: var(--cc-bg-cream);
+    background: var(--cc-bg-cream);
+    color: var(--cc-color-dark);
+    font-family: var(--cc-font-sans);
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   REUSABLE TYPOGRAPHY & BUTTON STYLES
+   ========================================================================== */
+.cc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--cc-font-sans);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cc-color-terracotta);
+    margin-bottom: 12px;
+}
+
+.cc-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background: var(--cc-color-terracotta);
+    opacity: 0.85;
+}
+
+.cc-title-accent {
+    color: var(--cc-color-terracotta);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.cc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cc-color-terracotta);
+    color: #ffffff !important;
+    font-family: var(--cc-font-sans);
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(198, 108, 36, 0.32);
+    transition: all 0.3s var(--cc-transition-smooth);
+    border: none;
+    cursor: pointer;
+}
+
+.cc-btn-primary:hover {
+    background-color: var(--cc-color-terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(168, 84, 44, 0.42);
+    color: #ffffff !important;
+}
+
+.cc-btn-primary i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.cc-btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+.cc-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+    color: var(--cc-color-dark);
+    font-family: var(--cc-font-sans);
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1.5px solid var(--cc-border-card);
+    transition: all 0.3s var(--cc-transition-smooth);
+    cursor: pointer;
+}
+
+.cc-btn-secondary:hover {
+    background-color: #ffffff;
+    border-color: var(--cc-color-terracotta);
+    color: var(--cc-color-terracotta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(198, 108, 36, 0.12);
+}
+
+.cc-btn-secondary i {
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.cc-btn-secondary:hover i {
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   TOP BRANDED EMBLEM HEADLINE (CUSTOMS CLEARANCE)
+   ========================================================================== */
+.cc-brand-emblem-headline {
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 5;
+}
+
+.cc-brand-title {
+    font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(50px, 6.2vw, 80px);
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 1.8vw, 24px);
+    margin: 0 0 14px 0;
+    user-select: none;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.cc-brand-customs {
+    color: #0b2546;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.cc-c-svg-wrap {
+    display: inline-block;
+    width: 1.15em;
+    height: 0.98em;
+    position: relative;
+    margin-right: -0.04em;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.cc-c-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 2px 6px rgba(11, 37, 70, 0.15));
+}
+
+.cc-brand-clearance {
+    color: var(--cc-color-terracotta);
+    letter-spacing: 2px;
+}
+
+/* Speed Box Divider Bar */
+.cc-brand-divider-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.cc-divider-streak {
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.cc-streak-left {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.05) 0%, rgba(198, 108, 36, 0.7) 100%);
+}
+
+.cc-streak-right {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.7) 0%, rgba(198, 108, 36, 0.05) 100%);
+}
+
+.cc-speed-box-wrap {
+    width: 52px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cc-speed-box-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Fast & Compliant Customs Clearance)
+   ========================================================================== */
+.cc-hero-section {
+    position: relative;
+    background-color: var(--cc-bg-cream);
+    background: var(--cc-bg-cream);
+    padding: 24px 0 45px 0;
+    overflow: hidden;
+}
+
+.cc-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(circle at 75% 30%, rgba(198, 108, 36, 0.07) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cc-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.cc-hero-content {
+    max-width: 620px;
+}
+
+.cc-hero-title {
+    font-family: var(--cc-font-serif);
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--cc-color-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+}
+
+.cc-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.68;
+    color: var(--cc-color-text-body);
+    margin-bottom: 30px;
+}
+
+/* 4 Feature Badges Row */
+.cc-hero-badges-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.cc-hero-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.cc-hero-badge-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid var(--cc-border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cc-color-terracotta);
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(13, 27, 42, 0.05);
+    transition: all 0.3s ease;
+}
+
+.cc-hero-badge-item:hover .cc-hero-badge-circle {
+    background: var(--cc-color-terracotta);
+    color: #ffffff;
+    border-color: var(--cc-color-terracotta);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(198, 108, 36, 0.25);
+}
+
+.cc-hero-badge-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cc-color-dark);
+    line-height: 1.25;
+}
+
+.cc-hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RIGHT HERO VISUAL - TRANSPARENT OFFICER STAGE (NO BLACK BOX)
+   ========================================================================== */
+.cc-hero-visual-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+}
+
+.cc-officer-transparent-stage {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 38px;
+    margin-left: 48px;
+}
+
+/* Subtle Warm Ambient Glow Behind Transparent Officer */
+.cc-officer-transparent-stage::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(198, 108, 36, 0.12) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 72%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Realistic Ground Contact Shadow On Floor */
+.cc-hero-ground-shadow {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270px;
+    height: 24px;
+    background: radial-gradient(ellipse at center, rgba(13, 27, 42, 0.28) 0%, rgba(13, 27, 42, 0.08) 52%, transparent 76%);
+    border-radius: 50%;
+    filter: blur(4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   ANIMATED TRANSPARENT BLUE HOLOGRAPHIC HUD BACKDROP (BEHIND WOMAN)
+   ========================================================================== */
+.cc-holo-backdrop-box {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 518px;
+    border-radius: 18px;
+    background: linear-gradient(155deg, rgba(7, 35, 64, 0.42) 0%, rgba(5, 71, 108, 0.26) 45%, rgba(14, 116, 144, 0.38) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(0, 229, 255, 0.55);
+    box-shadow: 0 0 32px rgba(0, 212, 255, 0.25), inset 0 0 24px rgba(0, 212, 255, 0.14);
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    animation: ccHoloBoxGlow 4.5s ease-in-out infinite alternate;
+}
+
+/* Futuristic Cyber Grid Pattern inside Holo Box */
+.cc-holo-backdrop-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity: 0.88;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Sweeping Holographic Laser Scanner Beam */
+.cc-holo-scanline {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.85) 25%, #ffffff 50%, rgba(0, 229, 255, 0.85) 75%, transparent 100%);
+    box-shadow: 0 0 16px #00e5ff, 0 0 28px rgba(0, 229, 255, 0.7);
+    z-index: 4;
+    animation: ccScanSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes ccScanSweep {
+    0% {
+        top: -4px;
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    88% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* Corner Cyber Brackets */
+.cc-holo-corner {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #00e5ff;
+    z-index: 5;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.85));
+}
+
+.cc-corner-tl {
+    top: 8px;
+    left: 8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.cc-corner-tr {
+    top: 8px;
+    right: 8px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.cc-corner-bl {
+    bottom: 8px;
+    left: 8px;
+    border-right: none;
+    border-top: none;
+}
+
+.cc-corner-br {
+    bottom: 8px;
+    right: 8px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Holographic Top Telemetry Header */
+.cc-holo-header {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+.cc-holo-code {
+    font-size: 11px;
+    font-weight: 700;
+    color: #00e5ff;
+    letter-spacing: 0.12em;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+}
+
+.cc-holo-live-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9.5px;
+    font-weight: 800;
+    color: #10b981;
+    letter-spacing: 0.08em;
+}
+
+.cc-holo-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+    animation: ccHoloPulseDot 1.6s infinite ease-in-out;
+}
+
+@keyframes ccHoloPulseDot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+}
+
+/* Center Holographic Badges & Stamp */
+.cc-holo-body-layer {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    z-index: 2;
+}
+
+.cc-holo-approved-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border: 1.5px solid #10b981;
+    border-radius: 6px;
+    background: rgba(16, 185, 129, 0.14);
+    color: #10b981;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(16, 185, 129, 0.15);
+    margin-bottom: 8px;
+    animation: ccApprovedGlow 3s ease-in-out infinite alternate;
+}
+
+.cc-holo-coords {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+    color: rgba(0, 229, 255, 0.7);
+}
+
+/* Bottom Waveform & Telemetry */
+.cc-holo-footer {
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.cc-holo-waveform {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 22px;
+}
+
+.cc-wave-bar {
+    width: 3.5px;
+    background: linear-gradient(180deg, #00e5ff 0%, rgba(0, 229, 255, 0.2) 100%);
+    border-radius: 1px;
+    animation: ccWaveBar 1.8s ease-in-out infinite alternate;
+}
+
+.cc-wave-bar:nth-child(1) { height: 40%; animation-delay: 0.1s; }
+.cc-wave-bar:nth-child(2) { height: 75%; animation-delay: 0.3s; }
+.cc-wave-bar:nth-child(3) { height: 50%; animation-delay: 0.5s; }
+.cc-wave-bar:nth-child(4) { height: 90%; animation-delay: 0.2s; }
+.cc-wave-bar:nth-child(5) { height: 60%; animation-delay: 0.4s; }
+.cc-wave-bar:nth-child(6) { height: 85%; animation-delay: 0.6s; }
+.cc-wave-bar:nth-child(7) { height: 45%; animation-delay: 0.15s; }
+.cc-wave-bar:nth-child(8) { height: 70%; animation-delay: 0.35s; }
+
+@keyframes ccWaveBar {
+    0% {
+        transform: scaleY(0.4);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.cc-holo-meta {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 8.5px;
+    color: rgba(0, 229, 255, 0.75);
+    letter-spacing: 0.1em;
+}
+
+@keyframes ccHoloBoxGlow {
+    0% {
+        border-color: rgba(0, 229, 255, 0.45);
+        box-shadow: 0 0 24px rgba(0, 212, 255, 0.2), inset 0 0 18px rgba(0, 212, 255, 0.1);
+    }
+    100% {
+        border-color: rgba(0, 229, 255, 0.8);
+        box-shadow: 0 0 42px rgba(0, 212, 255, 0.38), inset 0 0 28px rgba(0, 212, 255, 0.2);
+    }
+}
+
+@keyframes ccApprovedGlow {
+    0% {
+        opacity: 0.85;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/* Woman Cutout Wrapper */
+.cc-hero-woman-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Woman Customs Officer Transparent Cutout Image */
+.cc-hero-woman-cutout {
+    max-height: 530px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 14px 26px rgba(13, 27, 42, 0.16));
+    transition: transform 0.6s var(--cc-transition-smooth), filter 0.6s ease;
+    animation: cc-woman-float 5.5s ease-in-out infinite alternate;
+    user-select: none;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-officer-transparent-stage:hover .cc-hero-woman-cutout {
+    transform: scale(1.025) translateY(-4px);
+    filter: drop-shadow(0 20px 34px rgba(13, 27, 42, 0.22));
+}
+
+@keyframes cc-woman-float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Glassmorphic Floating Badges */
+.cc-floating-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 10px 16px;
+    box-shadow: 0 10px 24px rgba(13, 27, 42, 0.14);
+    z-index: 6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cc-floating-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(13, 27, 42, 0.2);
+}
+
+.cc-badge-top-right {
+    top: 38px;
+    right: -92px;
+}
+
+.cc-badge-bottom-left {
+    bottom: 38px;
+    left: -46px;
+}
+
+.cc-badge-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(198, 108, 36, 0.12);
+    color: var(--cc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.cc-badge-status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+    animation: ccPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes ccPulseDot {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+    }
+    50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.15);
+    }
+}
+
+.cc-badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.cc-badge-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--cc-color-dark);
+    line-height: 1.2;
+}
+
+.cc-badge-sub {
+    font-size: 11px;
+    color: var(--cc-color-text-muted);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   2. ABOUT CUSTOMS CLEARANCE SECTION (Speed & Certainty)
+   ========================================================================== */
+.cc-about-section {
+    padding: 45px 0;
+    background-color: var(--cc-bg-cream);
+    background: var(--cc-bg-cream);
+    position: relative;
+}
+
+.cc-about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.cc-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.cc-about-visual {
+    position: relative;
+    margin-top: 32px;
+}
+
+/* ==========================================================================
+   HOLOGRAPHIC HUD ASSEMBLY TO REAL PHOTO CINEMATIC ANIMATION
+   ========================================================================== */
+.cc-about-img-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 42px rgba(13, 27, 42, 0.18), 0 0 35px rgba(0, 212, 255, 0.15);
+    border: 4px solid #ffffff;
+    background: #081626;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+
+/* Layer 1: Real Customs Team Photo (Revealed via Laser Scan Wipe) */
+.cc-about-real-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    overflow: hidden;
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+}
+
+.cc-about-img-card.is-active-scan .cc-about-real-layer {
+    animation: ccLaserScanWipe 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.cc-about-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Layer 2: Transparent Blue Holographic HUD Assembly Layer */
+.cc-about-hud-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(0, 160, 255, 0.16) 0%, rgba(8, 22, 38, 0.95) 75%);
+}
+
+.cc-about-img-card.is-active-scan .cc-about-hud-layer {
+    animation: ccHudLayerLifecycle 5s ease-in-out infinite;
+}
+
+.cc-hud-sheet-container {
+    width: 92%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    margin-top: 38px;
+}
+
+.cc-hud-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.8)) drop-shadow(0 0 35px rgba(0, 229, 255, 0.4));
+}
+
+.cc-about-img-card.is-active-scan .cc-hud-screen-img {
+    animation: ccHudAssemble 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Cyber Digital Grid inside HUD */
+.cc-hud-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Assembling Corner Brackets ("thode thode elements ek jagah aake create kare") */
+.cc-hud-bracket {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 2.5px solid #00e5ff;
+    z-index: 5;
+    filter: drop-shadow(0 0 8px #00e5ff);
+}
+
+.cc-bracket-tl {
+    top: 14px;
+    left: 14px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.cc-about-img-card.is-active-scan .cc-bracket-tl {
+    animation: ccBracketInTL 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-bracket-tr {
+    top: 14px;
+    right: 14px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.cc-about-img-card.is-active-scan .cc-bracket-tr {
+    animation: ccBracketInTR 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-bracket-bl {
+    bottom: 14px;
+    left: 14px;
+    border-right: none;
+    border-top: none;
+}
+
+.cc-about-img-card.is-active-scan .cc-bracket-bl {
+    animation: ccBracketInBL 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-bracket-br {
+    bottom: 14px;
+    right: 14px;
+    border-left: none;
+    border-top: none;
+}
+
+.cc-about-img-card.is-active-scan .cc-bracket-br {
+    animation: ccBracketInBR 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Flying Telemetry Data Chips */
+.cc-hud-fragment {
+    position: absolute;
+    z-index: 4;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.85);
+    background: rgba(8, 26, 46, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    border-radius: 4px;
+    padding: 3px 8px;
+    letter-spacing: 0.08em;
+}
+
+.cc-frag-top-code {
+    top: 14px;
+    left: 175px;
+}
+
+.cc-about-img-card.is-active-scan .cc-frag-top-code {
+    animation: ccFragTopIn 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-frag-vessel {
+    top: 14px;
+    right: 45px;
+}
+
+.cc-about-img-card.is-active-scan .cc-frag-vessel {
+    animation: ccFragVesselIn 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-frag-status {
+    bottom: 22px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #38bdf8;
+}
+
+.cc-about-img-card.is-active-scan .cc-frag-status {
+    animation: ccFragStatusIn 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-frag-coords {
+    bottom: 22px;
+    right: 45px;
+    color: #38bdf8;
+}
+
+.cc-about-img-card.is-active-scan .cc-frag-coords {
+    animation: ccFragCoordsIn 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.cc-hud-blink-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00e5ff;
+    box-shadow: 0 0 8px #00e5ff;
+    animation: ccPulseDot 1.4s infinite;
+}
+
+.cc-frag-approved {
+    top: 58%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    color: #10b981;
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.2);
+    text-shadow: 0 0 12px #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    padding: 5px 12px;
+}
+
+.cc-about-img-card.is-active-scan .cc-frag-approved {
+    animation: ccFragApprovedIn 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Layer 3: Sweeping Cyan Laser Scanning Beam (Morphs HUD into Real Image) */
+.cc-hud-laser-beam {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.95) 15%, #ffffff 50%, rgba(0, 229, 255, 0.95) 85%, transparent 100%);
+    box-shadow: 0 0 15px #00e5ff, 0 0 35px #00e5ff, 0 0 65px rgba(0, 229, 255, 0.9);
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    top: -10px;
+}
+
+.cc-about-img-card.is-active-scan .cc-hud-laser-beam {
+    animation: ccHudLaserSweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Live Interactive Status Tag */
+.cc-hud-status-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 7;
+    background: rgba(8, 22, 38, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    border-radius: 20px;
+    padding: 4px 11px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #00e5ff;
+    letter-spacing: 0.08em;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.cc-about-img-card.is-active-scan .cc-hud-status-badge {
+    animation: ccStatusBadgeBox 5s infinite;
+}
+
+.cc-hud-status-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00e5ff;
+    box-shadow: 0 0 8px #00e5ff;
+    animation: ccPulseDot 1.4s infinite;
+}
+
+.cc-hud-status-text::after {
+    content: "HOLO-EDI SCAN";
+}
+
+.cc-about-img-card.is-active-scan .cc-hud-status-text::after {
+    animation: ccStatusBadgeText 5s infinite;
+}
+
+/* ==========================================================================
+   CINEMATIC KEYFRAMES: ASSEMBLY -> SCAN -> MORPH TO REAL IMAGE
+   ========================================================================== */
+
+/* 1. Real Photo Laser Scan Wipe (Reveals from top to bottom) */
+@keyframes ccLaserScanWipe {
+    0%, 29% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+        transform: scale(1.03);
+    }
+    30% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    43% {
+        clip-path: inset(0 0 0% 0);
+        opacity: 1;
+        transform: scale(1);
+    }
+    88% {
+        clip-path: inset(0 0 0% 0);
+        opacity: 1;
+        transform: scale(1);
+    }
+    92% {
+        clip-path: inset(0 0 0% 0);
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    96%, 100% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+        transform: scale(1.03);
+    }
+}
+
+/* 2. HUD Layer Lifecycle: Active first, dissolves as real photo takes over */
+@keyframes ccHudLayerLifecycle {
+    0% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    43% {
+        opacity: 0.2;
+    }
+    46%, 89% {
+        opacity: 0;
+    }
+    96%, 100% {
+        opacity: 0;
+    }
+}
+
+/* 3. The Blue Holographic Sheet Image Assembly */
+@keyframes ccHudAssemble {
+    0% {
+        transform: scale(0.82) perspective(800px) rotateX(12deg);
+        filter: blur(12px) brightness(2.2) drop-shadow(0 0 35px #00e5ff);
+        opacity: 0;
+    }
+    8% {
+        opacity: 0.8;
+    }
+    16%, 29% {
+        transform: scale(1) perspective(800px) rotateX(0deg);
+        filter: blur(0px) brightness(1) drop-shadow(0 0 20px rgba(0, 229, 255, 0.8)) drop-shadow(0 0 35px rgba(0, 229, 255, 0.4));
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1.02);
+        opacity: 0.3;
+    }
+    45%, 100% {
+        transform: scale(1.04);
+        opacity: 0;
+    }
+}
+
+/* 4. Assembling Brackets converge from 4 corners */
+@keyframes ccBracketInTL {
+    0% { transform: translate(-65px, -65px); opacity: 0; }
+    12%, 32% { transform: translate(0, 0); opacity: 1; }
+    42%, 100% { transform: translate(-30px, -30px); opacity: 0; }
+}
+
+@keyframes ccBracketInTR {
+    0% { transform: translate(65px, -65px); opacity: 0; }
+    12%, 32% { transform: translate(0, 0); opacity: 1; }
+    42%, 100% { transform: translate(30px, -30px); opacity: 0; }
+}
+
+@keyframes ccBracketInBL {
+    0% { transform: translate(-65px, 65px); opacity: 0; }
+    12%, 32% { transform: translate(0, 0); opacity: 1; }
+    42%, 100% { transform: translate(-30px, 30px); opacity: 0; }
+}
+
+@keyframes ccBracketInBR {
+    0% { transform: translate(65px, 65px); opacity: 0; }
+    12%, 32% { transform: translate(0, 0); opacity: 1; }
+    42%, 100% { transform: translate(30px, 30px); opacity: 0; }
+}
+
+/* 5. Flying Data Chips converge into sheet */
+@keyframes ccFragTopIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    14%, 32% { transform: translateY(0); opacity: 1; }
+    40%, 100% { transform: translateY(-30px); opacity: 0; }
+}
+
+@keyframes ccFragVesselIn {
+    0% { transform: translateX(60px); opacity: 0; }
+    15%, 32% { transform: translateX(0); opacity: 1; }
+    40%, 100% { transform: translateX(40px); opacity: 0; }
+}
+
+@keyframes ccFragStatusIn {
+    0% { transform: translateX(-60px); opacity: 0; }
+    14%, 32% { transform: translateX(0); opacity: 1; }
+    40%, 100% { transform: translateX(-40px); opacity: 0; }
+}
+
+@keyframes ccFragCoordsIn {
+    0% { transform: translateY(50px); opacity: 0; }
+    16%, 32% { transform: translateY(0); opacity: 1; }
+    40%, 100% { transform: translateY(30px); opacity: 0; }
+}
+
+@keyframes ccFragApprovedIn {
+    0%, 10% { transform: translate(-50%, -50%) scale(2.6); opacity: 0; }
+    18%, 32% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    38%, 100% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+}
+
+/* 6. Sweeping Laser Beam */
+@keyframes ccHudLaserSweep {
+    0%, 28% {
+        top: -10px;
+        opacity: 0;
+    }
+    29.5% {
+        top: 0%;
+        opacity: 0;
+    }
+    30% {
+        top: 0%;
+        opacity: 1;
+    }
+    43% {
+        top: 100%;
+        opacity: 1;
+    }
+    44% {
+        top: 101%;
+        opacity: 0;
+    }
+    100% {
+        top: 101%;
+        opacity: 0;
+    }
+}
+
+/* 7. Dynamic Status Badge Text & Colors */
+@keyframes ccStatusBadgeText {
+    0%, 29% { content: "HOLO-EDI SCAN"; }
+    30%, 42% { content: "LASER DECODING..."; }
+    43%, 89% { content: "CUSTOMS CLEARED"; }
+    90%, 100% { content: "INITIALIZING..."; }
+}
+
+@keyframes ccStatusBadgeBox {
+    0%, 29% {
+        border-color: rgba(0, 229, 255, 0.5);
+        color: #00e5ff;
+    }
+    30%, 42% {
+        border-color: rgba(0, 229, 255, 0.95);
+        box-shadow: 0 0 16px rgba(0, 229, 255, 0.6);
+        color: #ffffff;
+    }
+    43%, 89% {
+        border-color: rgba(16, 185, 129, 0.7);
+        color: #10b981;
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+    }
+    90%, 100% {
+        border-color: rgba(0, 229, 255, 0.5);
+        color: #00e5ff;
+    }
+}
+
+.cc-about-floating-seal {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: #ffffff;
+    border: 1px solid var(--cc-border-subtle);
+    border-radius: 14px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 14px 34px rgba(13, 27, 42, 0.18);
+    z-index: 10;
+}
+
+.cc-seal-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(198, 108, 36, 0.12);
+    color: var(--cc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.cc-seal-text strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--cc-color-dark);
+    line-height: 1.1;
+}
+
+.cc-seal-text span {
+    font-size: 11.5px;
+    color: var(--cc-color-text-muted);
+    font-weight: 600;
+}
+
+.cc-about-content {
+    max-width: 650px;
+}
+
+.cc-about-title {
+    font-family: var(--cc-font-serif);
+    font-size: clamp(30px, 3.2vw, 44px);
+    font-weight: 800;
+    line-height: 1.16;
+    color: var(--cc-color-dark);
+    margin-bottom: 18px;
+}
+
+.cc-about-desc {
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--cc-color-text-body);
+    margin-bottom: 26px;
+}
+
+.cc-about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.cc-feature-box {
+    background: #ffffff;
+    border: 1px solid var(--cc-border-subtle);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.3s ease;
+}
+
+.cc-feature-box:hover {
+    border-color: var(--cc-color-terracotta);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(198, 108, 36, 0.1);
+}
+
+.cc-feat-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(198, 108, 36, 0.1);
+    color: var(--cc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.cc-feat-details h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cc-color-dark);
+    margin: 0 0 4px 0;
+}
+
+.cc-feat-details p {
+    font-size: 12px;
+    color: var(--cc-color-text-muted);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. PROCESS SECTION OVERRIDE (OUR PROCESS)
+   ========================================================================== */
+body.customs-page .af-process-section {
+    padding: 45px 0 !important;
+}
+
+body.customs-page .af-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.cc-stamp-runner {
+    color: var(--cc-color-terracotta);
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   4. COMPREHENSIVE CUSTOMS SOLUTIONS SECTION
+   ========================================================================== */
+.cc-solutions-section {
+    padding: 45px 0;
+    background-color: var(--cc-bg-cream);
+    position: relative;
+}
+
+.cc-solutions-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.cc-section-header {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.cc-section-title {
+    font-family: var(--cc-font-serif);
+    font-size: clamp(30px, 3.2vw, 42px);
+    font-weight: 800;
+    color: var(--cc-color-dark);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.cc-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cc-solution-card {
+    background: #ffffff;
+    border: 1px solid var(--cc-border-card);
+    border-radius: 16px;
+    padding: 28px 22px;
+    box-shadow: 0 4px 16px rgba(13, 27, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s var(--cc-transition-bounce);
+}
+
+.cc-solution-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cc-color-terracotta);
+    box-shadow: 0 14px 32px rgba(198, 108, 36, 0.16);
+}
+
+.cc-sol-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(198, 108, 36, 0.08);
+    color: var(--cc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+
+.cc-solution-card:hover .cc-sol-icon {
+    background: var(--cc-color-terracotta);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.cc-sol-title {
+    font-family: var(--cc-font-serif);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--cc-color-dark);
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.cc-sol-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--cc-color-text-body);
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.cc-sol-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    border-top: 1px dashed var(--cc-border-subtle);
+    padding-top: 14px;
+}
+
+.cc-sol-list li {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cc-color-dark);
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cc-sol-list li i {
+    color: var(--cc-color-terracotta);
+    font-size: 14px;
+}
+
+/* Customs Counter Stats Box */
+.cc-stats-box {
+    background: #ffffff;
+    border: 1px solid var(--cc-border-subtle);
+    border-radius: 16px;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    box-shadow: 0 6px 20px rgba(13, 27, 42, 0.04);
+}
+
+.cc-stat-box-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cc-stat-box-item:not(:last-child) {
+    border-right: 1px solid rgba(198, 108, 36, 0.18);
+}
+
+.cc-stat-box-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(198, 108, 36, 0.08);
+    color: var(--cc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.cc-stat-box-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cc-stat-box-num {
+    font-family: var(--cc-font-serif);
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--cc-color-dark);
+    line-height: 1.1;
+}
+
+.cc-stat-box-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cc-color-text-muted);
+}
+
+/* ==========================================================================
+   5. INDUSTRIES WE SERVE SECTION (7 Cards Horizontal)
+   ========================================================================== */
+.cc-industries-section {
+    background-color: var(--cc-bg-cream);
+    padding: 45px 0;
+    position: relative;
+}
+
+.cc-industries-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.cc-industries-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cc-industries-title {
+    font-family: var(--cc-font-serif);
+    font-size: clamp(30px, 3.2vw, 40px);
+    font-weight: 800;
+    color: var(--cc-color-dark);
+    letter-spacing: -0.01em;
+}
+
+.cc-industries-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+}
+
+.cc-industry-card {
+    background: #ffffff;
+    border: 1px solid var(--cc-border-card);
+    border-radius: 16px;
+    padding: 24px 14px 20px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(13, 27, 42, 0.04);
+    transition: all 0.35s var(--cc-transition-bounce);
+    cursor: pointer;
+}
+
+.cc-industry-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cc-color-terracotta);
+    box-shadow: 0 12px 28px rgba(198, 108, 36, 0.16);
+}
+
+.cc-industry-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(198, 108, 36, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cc-color-terracotta);
+    font-size: 24px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.cc-industry-card:hover .cc-industry-icon {
+    background: var(--cc-color-terracotta);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.cc-industry-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cc-color-dark);
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   6. CALL TO ACTION SECTION (Ken Burns Zoom Animation)
+   ========================================================================== */
+.cc-cta-section {
+    position: relative;
+    background-color: #0d1b2a;
+    padding: 50px 0;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Ken Burns Continuous Zoom Animation */
+.cc-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: url('images/customs_cta_banner.jpg') center center / cover no-repeat;
+    opacity: 0.38;
+    z-index: 0;
+    animation: ccCtaZoom 8s ease-in-out infinite alternate;
+    will-change: transform;
+    transform-origin: center center;
+    pointer-events: none;
+}
+
+@keyframes ccCtaZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+.cc-cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.cc-cta-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.cc-cta-left {
+    max-width: 680px;
+}
+
+.cc-cta-title {
+    font-family: var(--cc-font-serif);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 800;
+    line-height: 1.18;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.cc-cta-desc {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+.cc-cta-btns {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.cc-cta-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.cc-cta-link-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.cc-cta-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cc-cta-feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    min-width: 130px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.cc-cta-feature-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--cc-color-terracotta);
+    transform: translateY(-3px);
+}
+
+.cc-cta-feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(198, 108, 36, 0.25);
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.cc-cta-feature-item span {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .cc-solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cc-industries-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .cc-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cc-hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cc-hero-badges-row {
+        justify-content: center;
+        max-width: 480px;
+        margin: 0 auto 30px;
+    }
+
+    .cc-hero-cta-row {
+        justify-content: center;
+    }
+
+    .cc-hero-visual-wrap {
+        min-height: auto;
+        padding-top: 10px;
+    }
+
+    .cc-officer-transparent-stage {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .cc-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cc-about-content {
+        max-width: 100%;
+    }
+
+    .cc-stats-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cc-stat-box-item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cc-brand-title {
+        font-size: clamp(36px, 8.5vw, 54px);
+        gap: 0.28em;
+    }
+
+    .cc-brand-divider-bar {
+        max-width: 90%;
+        gap: 10px;
+    }
+
+    .cc-hero-woman-cutout {
+        max-height: 420px;
+    }
+
+    .cc-holo-backdrop-box {
+        width: 290px;
+        height: 412px;
+        bottom: 8px;
+    }
+
+    .cc-badge-top-right {
+        top: 15px;
+        right: 0px;
+    }
+
+    .cc-badge-bottom-left {
+        bottom: 15px;
+        left: 0px;
+    }
+
+    .cc-industries-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cc-stats-box {
+        grid-template-columns: 1fr;
+    }
+
+    .cc-stat-box-item {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(198, 108, 36, 0.15);
+        padding-bottom: 12px;
+    }
+
+    .cc-stat-box-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .cc-cta-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .cc-cta-btns {
+        justify-content: center;
+    }
+
+    .cc-cta-right {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cc-hero-badges-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .cc-hero-woman-cutout {
+        max-height: 350px;
+    }
+
+    .cc-holo-backdrop-box {
+        width: 250px;
+        height: 342px;
+        bottom: 6px;
+    }
+
+    .cc-floating-badge {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .cc-badge-title {
+        font-size: 11.5px;
+    }
+
+    .cc-badge-sub {
+        font-size: 10px;
+    }
+
+    .cc-badge-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .cc-solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cc-industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cc-about-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cc-brand-title {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .cc-speed-box-wrap {
+        width: 42px;
+        height: 30px;
+    }
+}

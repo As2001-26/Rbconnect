@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Shipment | RB Connect - Real-Time Global Cargo Telemetry</title>
+    <meta name="description"
+        content="Track your air freight, ocean container, road transport, or project cargo in real-time with RB Connect's live milestone tracking desk.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/RBLOGO.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=cta_noblur_v4">
+    <link rel="stylesheet" href="track-shipment.css?v=v1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:ital,wght@0,600;0,700;1,600;1,700&family=Dancing+Script:wght@600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Montserrat:ital,wght@0,800;0,900;1,800;1,900&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="tracking-page">
+
+    <!-- =========================================
+         STANDARD HERO NAVBAR (Consistent Across Site)
+         ========================================= -->
+    <header class="hero-navbar container">
+        <a href="index.html" class="logo">
+            <img src="images/RBLOGO.png" alt="RB Connect Logo" class="site-logo-img">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex align-items-center gap-1">Services <i
+                        class="ph-bold ph-caret-down fs-sm"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-inner">
+                        <!-- Left Column -->
+                        <div class="mega-col-left">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="bg-primary" style="width: 25px; height: 2px;"></div>
+                                <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our
+                                    Services</span>
+                            </div>
+                            <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
+                                Complete Logistics Solutions for a <span class="text-primary">Connected
+                                    World</span>
+                            </h3>
+                            <p class="text-muted small mb-4">From air to sea, road to rail — we deliver
+                                reliable, efficient and customized logistics solutions tailored to your business
+                                needs.</p>
+                            <img src="images/mega_hero.jpg?v=unbranded_v1" alt="Global Logistics" class="mega-hero-img">
+                        </div>
+
+                        <!-- Middle Column (Grid) -->
+                        <div class="mega-col-middle">
+                            <a href="air-freight.html" class="mega-service-card">
+                                <img src="images/mega_air.jpg" alt="Air Freight">
+                                <div class="mega-card-content">
+                                    <h4>Air Freight</h4>
+                                    <p>Fast, secure and reliable air cargo solutions.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="sea-freight.html" class="mega-service-card">
+                                <img src="images/mega_sea.jpg" alt="Ocean Freight">
+                                <div class="mega-card-content">
+                                    <h4>Ocean Freight</h4>
+                                    <p>Cost-effective FCL and LCL ocean shipping worldwide.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="land-freight.html" class="mega-service-card">
+                                <img src="images/mega_road.jpg" alt="Road Freight">
+                                <div class="mega-card-content">
+                                    <h4>Road Transport</h4>
+                                    <p>Flexible regional trucking, FTL and LTL distribution.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="customs-clearance.html" class="mega-service-card">
+                                <img src="images/mega_import.jpg" alt="Customs Clearance">
+                                <div class="mega-card-content">
+                                    <h4>Customs Clearance</h4>
+                                    <p>Streamlined tariff classification and fast border clearance.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="warehouse-distribution.html" class="mega-service-card">
+                                <img src="images/mega_consolidated.jpg" alt="Warehousing">
+                                <div class="mega-card-content">
+                                    <h4>Warehousing &amp; Fulfillment</h4>
+                                    <p>Smart inventory management and temperature-controlled storage.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="project-cargo.html" class="mega-service-card">
+                                <img src="images/mega_multi.jpg" alt="Project Cargo">
+                                <div class="mega-card-content">
+                                    <h4>Project Cargo &amp; Heavy Lift</h4>
+                                    <p>Engineering specialized transport for out-of-gauge shipments.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="door-to-door.html" class="mega-service-card">
+                                <img src="images/mega_door.jpg?v=clean_unbranded" alt="Door to Door">
+                                <div class="mega-card-content">
+                                    <h4>Door-to-Door Logistics</h4>
+                                    <p>Complete logistics from origin pickup to final doorstep.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                        </div>
+
+                        <!-- Right Column (Featured Box) -->
+                        <div class="mega-col-right">
+                            <h4 class="right-col-heading"><span class="text-primary">Global Reach</span><br><span
+                                    class="text-dark">24/7 Operations</span></h4>
+                            <ul class="mega-feature-list">
+                                <li><i class="ph-fill ph-globe"></i> Global Coverage Across Key Trade Lanes</li>
+                                <li><i class="ph-fill ph-clock"></i> Rapid Response Support Desk</li>
+                                <li><i class="ph-fill ph-shield-check"></i> Complete Customs Coordination</li>
+                                <li><i class="ph-fill ph-headset"></i> Dedicated Key Account Manager</li>
+                            </ul>
+                            <div class="mega-cursive-footer">
+                                Moving Businesses Further
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="industries.html">Industries</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="track-shipment.html" class="btn-nav-outline active" style="background: rgba(198, 108, 36, 0.1); border-color: #c66c24; color: #c66c24;">
+                Track Shipment <i class="ph-fill ph-map-pin"></i>
+            </a>
+            <a href="get-a-quote.html" class="btn-nav-primary">
+                Get a Quote <i class="ph ph-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu"
+            aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-drawer-header">
+            <a href="index.html" class="logo mobile-drawer-logo">
+                <img src="images/RBLOGO.png" alt="RB Connect" class="site-logo-img">
+            </a>
+            <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+                <i class="ph-bold ph-x"></i>
+            </button>
+        </div>
+
+        <div class="mobile-drawer-body">
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-info"></i>
+                    <span>About Us</span>
+                </a>
+
+                <!-- Expandable Services Submenu -->
+                <div class="mobile-nav-accordion" id="mobileServicesAccordion">
+                    <button class="mobile-nav-accordion-btn" id="mobileServicesBtn" aria-expanded="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="ph-bold ph-squares-four"></i>
+                            <span>Services</span>
+                        </span>
+                        <i class="ph-bold ph-caret-down accordion-caret"></i>
+                    </button>
+                    <div class="mobile-nav-sublist" id="mobileServicesSublist">
+                        <a href="air-freight.html" class="mobile-nav-sublink">Air Freight</a>
+                        <a href="sea-freight.html" class="mobile-nav-sublink">Ocean Freight</a>
+                        <a href="land-freight.html" class="mobile-nav-sublink">Road Transport</a>
+                        <a href="customs-clearance.html" class="mobile-nav-sublink">Customs Clearance</a>
+                        <a href="warehouse-distribution.html" class="mobile-nav-sublink">Warehousing</a>
+                        <a href="project-cargo.html" class="mobile-nav-sublink">Project Cargo</a>
+                        <a href="door-to-door.html" class="mobile-nav-sublink">Door to Door</a>
+                    </div>
+                </div>
+
+                <a href="industries.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-buildings"></i>
+                    <span>Industries</span>
+                </a>
+                <a href="solutions.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-gear-six"></i>
+                    <span>Solutions</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+            </nav>
+
+            <div class="mobile-drawer-cta">
+                <a href="track-shipment.html" class="btn-drawer-primary">
+                    Track Shipment <i class="ph-bold ph-map-pin"></i>
+                </a>
+                <a href="get-a-quote.html" class="btn-drawer-outline">
+                    Get a Quote <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- =========================================
+             1. HERO & TRACKING SEARCH SECTION
+             ========================================= -->
+        <section class="trk-hero-section">
+            <div class="trk-hero-container">
+                <span class="trk-badge">
+                    <i class="ph-fill ph-navigation-arrow"></i> Real-Time Cargo Tracking
+                </span>
+                <h1 class="trk-hero-title">
+                    Track Your Shipment <span>Worldwide</span>
+                </h1>
+                <p class="trk-hero-subtitle">
+                    Enter your tracking number, Air Waybill (AWB), Bill of Lading (BOL), or container number for instant end-to-end milestone visibility and live telemetry.
+                </p>
+
+                <!-- Reference Type Switcher Tabs -->
+                <div class="trk-type-tabs">
+                    <button type="button" class="trk-tab-btn active" onclick="switchTrackType('all', this, 'Enter Waybill, Container ID, or Booking Reference...')">
+                        <i class="ph-bold ph-magnifying-glass"></i> All References
+                    </button>
+                    <button type="button" class="trk-tab-btn" onclick="switchTrackType('awb', this, 'Enter 11-digit Air Waybill # (e.g. 020-94810291)')">
+                        <i class="ph-bold ph-airplane-tilt"></i> Air Waybill (AWB)
+                    </button>
+                    <button type="button" class="trk-tab-btn" onclick="switchTrackType('ocean', this, 'Enter Container # or Bill of Lading (e.g. MSCU710492)')">
+                        <i class="ph-bold ph-boat"></i> Ocean Container / B/L
+                    </button>
+                    <button type="button" class="trk-tab-btn" onclick="switchTrackType('road', this, 'Enter CMR or Road Consignment Note #')">
+                        <i class="ph-bold ph-truck"></i> Road Consignment (CMR)
+                    </button>
+                </div>
+
+                <!-- Search Card -->
+                <div class="trk-search-card">
+                    <form id="trackingSearchForm" class="trk-search-form" onsubmit="event.preventDefault(); handleTrackingSearch();">
+                        <div class="trk-input-wrap">
+                            <i class="ph-bold ph-magnifying-glass trk-input-icon"></i>
+                            <input type="text" id="trackingInput" class="trk-input" 
+                                placeholder="Enter Waybill, Container ID, or Booking Reference..." 
+                                required autocomplete="off">
+                        </div>
+                        <button type="submit" class="trk-btn-submit" id="trackSearchBtn">
+                            Track Shipment <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <div class="trk-search-note">
+                        <span><i class="ph-bold ph-shield-check" style="color: var(--trk-primary);"></i> 256-Bit Encrypted Carrier Telemetry Network</span>
+                        <span>Need priority assistance? <a href="contact.html">Contact 24/7 Operations Desk</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             2. DEFAULT PORTAL OVERVIEW (Displayed Before Search)
+             ========================================= -->
+        <section class="trk-portal-state" id="trkInitialPortalState">
+            <div class="trk-portal-container">
+                <div class="trk-portal-header">
+                    <span class="trk-portal-tag">Carrier Reference Standards</span>
+                    <h2 class="trk-portal-title">Track By Document or Equipment Type</h2>
+                </div>
+
+                <!-- 4 Document Format Cards -->
+                <div class="trk-format-grid">
+                    <div class="trk-format-card">
+                        <div class="trk-format-icon">
+                            <i class="ph-bold ph-airplane-tilt"></i>
+                        </div>
+                        <h4>Air Waybill (AWB)</h4>
+                        <span class="trk-format-example">Prefix + 8 Digits</span>
+                        <p>Direct electronic linkage with IATA commercial flights and cargo freighters worldwide.</p>
+                    </div>
+
+                    <div class="trk-format-card">
+                        <div class="trk-format-icon">
+                            <i class="ph-bold ph-boat"></i>
+                        </div>
+                        <h4>Ocean Container / B/L</h4>
+                        <span class="trk-format-example">4 Letters + 7 Digits</span>
+                        <p>Satellite AIS oceanic transponder telemetry across major international shipping lines.</p>
+                    </div>
+
+                    <div class="trk-format-card">
+                        <div class="trk-format-icon">
+                            <i class="ph-bold ph-truck"></i>
+                        </div>
+                        <h4>Road Consignment (CMR)</h4>
+                        <span class="trk-format-example">Pro-Number / CMR</span>
+                        <p>Continuous terrestrial GPS telematics for cross-border linehaul and regional trucking.</p>
+                    </div>
+
+                    <div class="trk-format-card">
+                        <div class="trk-format-icon">
+                            <i class="ph-bold ph-identification-badge"></i>
+                        </div>
+                        <h4>RB Multimodal Reference</h4>
+                        <span class="trk-format-example">RBC-XXXXXX</span>
+                        <p>Unified door-to-door tracking code from origin collection through final mile delivery.</p>
+                    </div>
+                </div>
+
+                <!-- 24/7 Operations Desk Hotline Banner -->
+                <div class="trk-hotline-banner">
+                    <div class="trk-hotline-content">
+                        <h3>Need Priority Cargo Support?</h3>
+                        <p>Our 24/7 flight and marine dispatchers provide real-time clearance auditing, temperature logs, and emergency rerouting for time-critical shipments.</p>
+                    </div>
+                    <div class="trk-hotline-actions">
+                        <a href="tel:+919311514453" class="trk-hotline-btn">
+                            <i class="ph-bold ph-phone-call"></i> Call India Desk
+                        </a>
+                        <a href="tel:+447901380919" class="trk-hotline-btn outline">
+                            <i class="ph-bold ph-phone-call"></i> Call UK Desk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Not Found / Error State -->
+        <section class="trk-portal-state" id="trkNotFoundContainer" style="display: none;">
+            <div class="trk-portal-container">
+                <div class="trk-notfound-card">
+                    <div class="trk-notfound-icon">
+                        <i class="ph-bold ph-warning-circle"></i>
+                    </div>
+                    <h3 class="trk-notfound-title">Shipment Reference Not Located</h3>
+                    <p class="trk-notfound-desc" id="trkNotFoundText">
+                        We could not find an active consignment matching this reference. Please verify the code on your Bill of Lading, Air Waybill, or booking confirmation.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <button type="button" class="trk-btn-reset" onclick="resetTrackingSearch()">
+                            <i class="ph-bold ph-arrow-counter-clockwise"></i> Try Another Reference
+                        </button>
+                        <a href="contact.html" class="trk-hotline-btn" style="padding: 8px 18px; font-size: 13.5px;">
+                            <i class="ph-bold ph-headset"></i> Contact Support Desk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             3. SHIPMENT DETAILS & LIVE DASHBOARD (Displayed on Search)
+             ========================================= -->
+        <section class="trk-dashboard-section" id="trackingResultContainer" style="display: none;">
+            <div class="trk-dashboard-container">
+                <div class="trk-reset-bar">
+                    <span style="font-size: 13.5px; font-weight: 600; color: var(--trk-text-muted);">
+                        <i class="ph-bold ph-check-circle text-success"></i> Live Telemetry Sync Verified
+                    </span>
+                    <button type="button" class="trk-btn-reset" onclick="resetTrackingSearch()">
+                        <i class="ph-bold ph-arrow-counter-clockwise"></i> Clear &amp; Track Another Consignment
+                    </button>
+                </div>
+
+                <!-- Overview Card -->
+                <div class="trk-overview-card">
+                    <!-- Top Bar: Tracking # & Status -->
+                    <div class="trk-overview-top">
+                        <div class="trk-shipment-id-wrap">
+                            <h2 class="trk-shipment-number" id="displayTrackingId">RBC-928410</h2>
+                            <span class="trk-mode-badge" id="displayModeBadge">
+                                <i class="ph-bold ph-airplane-tilt" id="displayModeIcon"></i> <span id="displayModeText">Air Freight Express</span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="trk-status-pill in-transit" id="displayStatusPill">
+                                <span class="trk-pulse-dot"></span> <span id="displayStatusText">In Transit</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Route Visual Row -->
+                    <div class="trk-route-row">
+                        <!-- Origin Node -->
+                        <div class="trk-route-node">
+                            <span class="trk-node-label">Origin (India Office)</span>
+                            <div class="trk-node-city" id="displayOriginCity">Gautam Budh Nagar, IN</div>
+                            <div class="trk-node-sub" id="displayOriginFacility">Gaur Yamuna City Hub (YEIDA)</div>
+                        </div>
+
+                        <!-- Path / Progress Bar -->
+                        <div class="trk-route-path">
+                            <div class="trk-route-line">
+                                <div class="trk-route-progress" id="displayProgressBar" style="width: 65%;"></div>
+                                <div class="trk-route-vehicle" id="displayVehicleIcon">
+                                    <i class="ph-fill ph-airplane-tilt"></i>
+                                </div>
+                            </div>
+                            <div class="trk-eta-tag">
+                                Estimated Delivery: <span id="displayEta">Oct 29, 2026 • 16:30 GMT</span>
+                            </div>
+                        </div>
+
+                        <!-- Destination Node -->
+                        <div class="trk-route-node" style="text-align: right;">
+                            <span class="trk-node-label">Destination (UK Office)</span>
+                            <div class="trk-node-city" id="displayDestCity">London, UK (E7 8HA)</div>
+                            <div class="trk-node-sub" id="displayDestFacility">Upton Park Logistics Center</div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Metrics Grid -->
+                    <div class="trk-metrics-grid">
+                        <div class="trk-metric-box">
+                            <div class="trk-metric-label">
+                                <i class="ph-fill ph-map-pin"></i> Current Location
+                            </div>
+                            <div class="trk-metric-val" id="displayCurLocation">En Route - Indo-European Corridor</div>
+                        </div>
+                        <div class="trk-metric-box">
+                            <div class="trk-metric-label">
+                                <i class="ph-fill ph-airplane"></i> Carrier / Flight
+                            </div>
+                            <div class="trk-metric-val" id="displayCarrier">Flight RBC-702 (Boeing 777F)</div>
+                        </div>
+                        <div class="trk-metric-box">
+                            <div class="trk-metric-label">
+                                <i class="ph-fill ph-package"></i> Cargo Specs
+                            </div>
+                            <div class="trk-metric-val" id="displayCargoSpecs">1,420 kg • 4 Euro-Pallets</div>
+                        </div>
+                        <div class="trk-metric-box">
+                            <div class="trk-metric-label">
+                                <i class="ph-fill ph-shield-check"></i> Service Level
+                            </div>
+                            <div class="trk-metric-val" id="displayServiceLevel">Priority Express (GDP Certified)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column: Stepper & Event History Log -->
+                <div class="trk-timeline-layout">
+                    <!-- Left: Milestone Stepper -->
+                    <div class="trk-stepper-card">
+                        <div class="trk-card-title">
+                            <span>Shipment Milestones</span>
+                            <span style="font-size: 13px; font-weight: 600; color: #10b981;">
+                                <i class="ph-bold ph-check-circle"></i> Live Sync
+                            </span>
+                        </div>
+
+                        <div class="trk-stepper-list" id="displayStepperList">
+                            <!-- Step 1 -->
+                            <div class="trk-step-item completed">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-check"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">Shipment Picked Up</div>
+                                    <div class="trk-step-desc">Consignment picked up from India corporate center in Gaur Yamuna City, Sector 19, YEIDA, Gautam Budh Nagar.</div>
+                                    <div class="trk-step-time">Oct 26, 2026 - 09:30 IST</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="trk-step-item completed">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-check"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">Export Customs Cleared</div>
+                                    <div class="trk-step-desc">Export customs clearance processed at New Delhi Air Cargo Terminal.</div>
+                                    <div class="trk-step-time">Oct 26, 2026 - 17:45 IST</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="trk-step-item completed">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-check"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">Departed Origin Hub</div>
+                                    <div class="trk-step-desc">Loaded onto Flight RBC-702 and departed for London gateway.</div>
+                                    <div class="trk-step-time">Oct 27, 2026 - 04:15 IST</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="trk-step-item active">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-airplane-tilt"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">In Transit - International Air Corridor</div>
+                                    <div class="trk-step-desc">Active cruising altitude 36,000 ft. Temperature held steady at 18.2°C.</div>
+                                    <div class="trk-step-time">Oct 27, 2026 - Live In Flight</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 -->
+                            <div class="trk-step-item pending">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-stamp"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">Arrival &amp; Import Customs Clearance</div>
+                                    <div class="trk-step-desc">Touchdown at London gateway; pre-cleared electronic UK entry.</div>
+                                    <div class="trk-step-time">Expected: Oct 28, 2026 - 11:00 GMT</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 6 -->
+                            <div class="trk-step-item pending">
+                                <div class="trk-step-icon-wrap">
+                                    <i class="ph-bold ph-truck"></i>
+                                </div>
+                                <div class="trk-step-content">
+                                    <div class="trk-step-heading">Out for Final Delivery</div>
+                                    <div class="trk-step-desc">Dedicated final-mile courier dispatch to consignee facility in Upton Park, London, E7 8HA.</div>
+                                    <div class="trk-step-time">Expected: Oct 29, 2026 - 16:30 GMT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Activity History & Quick Actions -->
+                    <div class="trk-events-card">
+                        <div class="trk-card-title">
+                            <span>Detailed Activity Log</span>
+                            <i class="ph-bold ph-clock-counter-clockwise" style="color: var(--trk-primary);"></i>
+                        </div>
+
+                        <div class="trk-events-list" id="displayEventsList">
+                            <div class="trk-event-item">
+                                <div class="trk-event-head">
+                                    <span class="trk-event-location"><i class="ph-fill ph-navigation-arrow"></i> International Airway</span>
+                                    <span class="trk-event-date">Oct 27, 08:30 GMT</span>
+                                </div>
+                                <div class="trk-event-status">Waypoint reporting check completed. Telemetry sensors optimal.</div>
+                            </div>
+
+                            <div class="trk-event-item">
+                                <div class="trk-event-head">
+                                    <span class="trk-event-location"><i class="ph-fill ph-airplane-takeoff"></i> New Delhi (DEL)</span>
+                                    <span class="trk-event-date">Oct 27, 04:15 IST</span>
+                                </div>
+                                <div class="trk-event-status">Flight RBC-702 wheels up. Bound for London Heathrow (LHR).</div>
+                            </div>
+
+                            <div class="trk-event-item">
+                                <div class="trk-event-head">
+                                    <span class="trk-event-location"><i class="ph-fill ph-shield-check"></i> DEL Customs Gateway</span>
+                                    <span class="trk-event-date">Oct 26, 17:45 IST</span>
+                                </div>
+                                <div class="trk-event-status">Export customs documents signed and sealed by border authority.</div>
+                            </div>
+
+                            <div class="trk-event-item">
+                                <div class="trk-event-head">
+                                    <span class="trk-event-location"><i class="ph-fill ph-warehouse"></i> RB Connect Hub Noida / YEIDA</span>
+                                    <span class="trk-event-date">Oct 26, 13:10 IST</span>
+                                </div>
+                                <div class="trk-event-status">Consignment weighed, scanned, and unit load device (ULD) secured.</div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="trk-actions-box">
+                            <button type="button" class="trk-action-btn primary" onclick="alert('Digital e-Waybill & Proof of Cargo has been generated.');">
+                                <i class="ph-bold ph-file-arrow-down"></i> Download e-Waybill (PDF)
+                            </button>
+                            <a href="contact.html" class="trk-action-btn outline">
+                                <i class="ph-bold ph-headset"></i> Contact Duty Flight Coordinator
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             3. WHY TRACK WITH RB CONNECT FEATURES
+             ========================================= -->
+        <section class="trk-features-section">
+            <div class="trk-features-grid">
+                <div class="trk-feature-card">
+                    <div class="trk-feat-icon">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                    </div>
+                    <h3 class="trk-feat-title">Precision GPS &amp; Telemetry</h3>
+                    <p class="trk-feat-desc">
+                        Direct integration with commercial flight radar, oceanic AIS marine transponders, and terrestrial IoT telematics for live location coordinates.
+                    </p>
+                </div>
+
+                <div class="trk-feature-card">
+                    <div class="trk-feat-icon">
+                        <i class="ph-fill ph-shield-check"></i>
+                    </div>
+                    <h3 class="trk-feat-title">Customs Milestone Visibility</h3>
+                    <p class="trk-feat-desc">
+                        Get instant alerts when tariffs are assessed, documentation cleared, and border pre-clearances are granted without cargo delays.
+                    </p>
+                </div>
+
+                <div class="trk-feature-card">
+                    <div class="trk-feat-icon">
+                        <i class="ph-fill ph-headset"></i>
+                    </div>
+                    <h3 class="trk-feat-title">24/7 Human Dispatch Support</h3>
+                    <p class="trk-feat-desc">
+                        Our dedicated control desks at our India Corporate Office and UK International Office monitor time-sensitive cargo with active failover rerouting protocols.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+         STANDARD SITE FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/RBLOGO.png" alt="RB Connect" class="footer-logo-img">
+                </a>
+                <p>Delivering seamless global logistics solutions that drive your business forward. Speed, reliability,
+                    and transparency in every shipment.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="ph-bold ph-caret-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ph-bold ph-caret-right"></i> About Us</a></li>
+                    <li><a href="industries.html"><i class="ph-bold ph-caret-right"></i> Industries</a></li>
+                    <li><a href="solutions.html"><i class="ph-bold ph-caret-right"></i> Solutions</a></li>
+                    <li><a href="track-shipment.html"><i class="ph-bold ph-caret-right"></i> Tracking</a></li>
+                    <li><a href="contact.html"><i class="ph-bold ph-caret-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="land-freight.html"><i class="ph-bold ph-caret-right"></i> Road Freight</a></li>
+                    <li><a href="sea-freight.html"><i class="ph-bold ph-caret-right"></i> Ocean Freight</a></li>
+                    <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
+                    <li><a href="warehouse-distribution.html"><i class="ph-bold ph-caret-right"></i> Warehousing &amp; Distribution</a></li>
+                    <li><a href="customs-clearance.html"><i class="ph-bold ph-caret-right"></i> Customs Clearance</a></li>
+                    <li><a href="project-cargo.html"><i class="ph-bold ph-caret-right"></i> Project Cargo</a></li>
+                    <li><a href="door-to-door.html"><i class="ph-bold ph-caret-right"></i> Door-to-Door Logistics</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-widget">
+                <h4>Contact Us</h4>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>Head Office (India)</span>
+                            <p>1146, Gaurs Aero Suites, Gaur Yamuna City Sector 19, Yeida, Gautam Budh Nagar, UP 201310</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>UK Office</span>
+                            <p>19 Marlborough Road, Upton Park, London, E7 8HA, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call"></i>
+                        <div class="contact-item-text">
+                            <span>Call Us Anytime</span>
+                            <p><a href="tel:+919311514453" style="color: inherit; text-decoration: none;">+91-9311514453</a> &bull; <a href="tel:+447901380919" style="color: inherit; text-decoration: none;">+44 7901 380919</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <div class="contact-item-text">
+                            <span>Email Us</span>
+                            <p><a href="mailto:info@rbconnectglobal.com" style="color: inherit; text-decoration: none;">info@rbconnectglobal.com</a><br><a href="mailto:marketing@rbconnectglobal.com" style="color: inherit; text-decoration: none;">marketing@rbconnectglobal.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RB Connect. All rights reserved. | Created by <a href="https://myseosmo.com/" target="_blank" rel="noopener">MySEOSMO</a></p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js?v=dropdown_click_v2"></script>
+
+    <!-- Dynamic Tracking Script -->
+    <script>
+        const trackingDatabase = {
+            'RBC-928410': {
+                id: 'RBC-928410',
+                mode: 'Air Freight Express',
+                modeIcon: 'ph-airplane-tilt',
+                vehicleIcon: 'ph-airplane-tilt',
+                status: 'In Transit',
+                statusClass: 'in-transit',
+                originCity: 'Gautam Budh Nagar, IN',
+                originFacility: 'Gaur Yamuna City Hub (YEIDA)',
+                destCity: 'London, UK (E7 8HA)',
+                destFacility: 'Upton Park Logistics Center',
+                progress: '65%',
+                eta: 'Oct 29, 2026 • 16:30 GMT',
+                curLocation: 'En Route - Indo-European Corridor',
+                carrier: 'Flight RBC-702 (Boeing 777F)',
+                cargoSpecs: '1,420 kg • 4 Euro-Pallets',
+                serviceLevel: 'Priority Express (GDP Certified)',
+                steps: [
+                    { title: 'Shipment Picked Up', desc: 'Consignment picked up from India corporate center in Gaur Yamuna City, Sector 19, YEIDA, Gautam Budh Nagar.', time: 'Oct 26, 2026 - 09:30 IST', status: 'completed' },
+                    { title: 'Export Customs Cleared', desc: 'Export customs clearance processed at New Delhi Air Cargo Terminal.', time: 'Oct 26, 2026 - 17:45 IST', status: 'completed' },
+                    { title: 'Departed Origin Hub', desc: 'Loaded onto Flight RBC-702 and departed for London gateway.', time: 'Oct 27, 2026 - 04:15 IST', status: 'completed' },
+                    { title: 'In Transit - International Air Corridor', desc: 'Active cruising altitude 36,000 ft. Temperature held steady at 18.2°C.', time: 'Oct 27, 2026 - Live In Flight', status: 'active', icon: 'ph-airplane-tilt' },
+                    { title: 'Arrival & Import Customs Clearance', desc: 'Touchdown at London gateway; pre-cleared electronic UK entry.', time: 'Expected: Oct 28, 2026 - 11:00 GMT', status: 'pending', icon: 'ph-stamp' },
+                    { title: 'Out for Final Delivery', desc: 'Dedicated final-mile courier dispatch to consignee facility in Upton Park, London, E7 8HA.', time: 'Expected: Oct 29, 2026 - 16:30 GMT', status: 'pending', icon: 'ph-truck' }
+                ],
+                events: [
+                    { location: 'International Airway', time: 'Oct 27, 08:30 GMT', status: 'Waypoint reporting check completed. Telemetry sensors optimal.' },
+                    { location: 'New Delhi (DEL)', time: 'Oct 27, 04:15 IST', status: 'Flight RBC-702 wheels up. Bound for London Heathrow (LHR).' },
+                    { location: 'DEL Customs Gateway', time: 'Oct 26, 17:45 IST', status: 'Export customs documents signed and sealed by border authority.' },
+                    { location: 'RB Connect Hub Noida / YEIDA', time: 'Oct 26, 13:10 IST', status: 'Consignment weighed, scanned, and unit load device (ULD) secured.' }
+                ]
+            },
+            'MSCU-710492': {
+                id: 'MSCU-710492',
+                mode: 'Ocean FCL Freight',
+                modeIcon: 'ph-boat',
+                vehicleIcon: 'ph-truck',
+                status: 'Out for Delivery',
+                statusClass: 'in-transit',
+                originCity: 'Gautam Budh Nagar / ICD, IN',
+                originFacility: 'Inland Container Port Terminal',
+                destCity: 'London, UK (E7 8HA)',
+                destFacility: 'Thames Gateway / Upton Park Yard',
+                progress: '90%',
+                eta: 'Today • 14:00 GMT',
+                curLocation: 'Thames Port Corridor, Approaching Facility',
+                carrier: 'Ocean Liner Service / UK Drayage Fleet',
+                cargoSpecs: '26,500 kg • 1x 40ft High Cube Container',
+                serviceLevel: 'Standard Port-to-Door Logistics',
+                steps: [
+                    { title: 'Container Picked Up & Sealed', desc: 'Container packed and sealed under customs bond at Gautam Budh Nagar origin.', time: 'Oct 02, 2026 - 11:00 IST', status: 'completed' },
+                    { title: 'Loaded on Vessel', desc: 'Loaded onto commercial ocean liner at maritime container terminal.', time: 'Oct 05, 2026 - 19:30 IST', status: 'completed' },
+                    { title: 'Ocean Voyage Completed', desc: 'Vessel arrived and discharged at UK container terminal.', time: 'Oct 25, 2026 - 06:00 GMT', status: 'completed' },
+                    { title: 'Import Customs Cleared', desc: 'UK Customs inspection completed with zero exceptions.', time: 'Oct 26, 2026 - 14:20 GMT', status: 'completed' },
+                    { title: 'Out for Final Delivery', desc: 'Container chassis dispatched to Upton Park, London warehouse facility.', time: 'Today - Active On Road', status: 'active', icon: 'ph-truck' },
+                    { title: 'Delivered & De-vanned', desc: 'Final signature and unloading at destination loading dock.', time: 'Expected: Today - 14:00 GMT', status: 'pending', icon: 'ph-check-circle' }
+                ],
+                events: [
+                    { location: 'London Gateway Corridor', time: 'Today, 10:15 GMT', status: 'Truck driver checked in 20 km from Upton Park facility gate.' },
+                    { location: 'Thames Port Gate', time: 'Today, 07:45 GMT', status: 'Container gate-out approved from marine terminal.' },
+                    { location: 'UK Customs Gateway', time: 'Oct 26, 14:20 GMT', status: 'Customs green-light clearance release issued.' },
+                    { location: 'Marine Container Berth', time: 'Oct 25, 08:30 GMT', status: 'Discharged from vessel by gantry crane.' }
+                ]
+            },
+            'TRK-552019': {
+                id: 'TRK-552019',
+                mode: 'Express Dedicated Road Transport',
+                modeIcon: 'ph-truck',
+                vehicleIcon: 'ph-check-circle',
+                status: 'Delivered',
+                statusClass: 'delivered',
+                originCity: 'Gautam Budh Nagar, UP, IN',
+                originFacility: 'Gaur Yamuna City Fulfillment Center',
+                destCity: 'Regional Logistics Center, IN',
+                destFacility: 'Central Freight Hub',
+                progress: '100%',
+                eta: 'Delivered on Oct 27, 2026 • 11:15 IST',
+                curLocation: 'Delivered to Consignee Receiving Bay',
+                carrier: 'RB Fleet Unit #418 (Air-Ride Trailer)',
+                cargoSpecs: '4,850 kg • 8 Industrial Skids',
+                serviceLevel: 'Expedited Linehaul Road Freight',
+                steps: [
+                    { title: 'Loaded at Shipper', desc: 'Trailer loaded and sealed at Gautam Budh Nagar facility.', time: 'Oct 25, 2026 - 14:00 IST', status: 'completed' },
+                    { title: 'Dispatch Checkpoint Cleared', desc: 'Electronic e-waybill and barcode registered in system.', time: 'Oct 25, 2026 - 20:30 IST', status: 'completed' },
+                    { title: 'Express Corridor Transit', desc: 'Highway transit completed ahead of schedule.', time: 'Oct 26, 2026 - 02:40 IST', status: 'completed' },
+                    { title: 'Arrived at Regional Hub', desc: 'Staged for scheduled morning appointment.', time: 'Oct 26, 2026 - 19:00 IST', status: 'completed' },
+                    { title: 'Out for Final Delivery', desc: 'Local delivery vehicle dispatched for dock appointment.', time: 'Oct 27, 2026 - 08:30 IST', status: 'completed' },
+                    { title: 'Delivered & Signed', desc: 'Signed by receiving supervisor. Proof of delivery archived.', time: 'Oct 27, 2026 - 11:15 IST', status: 'completed', icon: 'ph-check-circle' }
+                ],
+                events: [
+                    { location: 'Consignee Receiving Bay', time: 'Oct 27, 11:15 IST', status: 'Delivery completed. Electronic signature collected.' },
+                    { location: 'Regional Gateway Corridor', time: 'Oct 27, 09:10 IST', status: 'Vehicle arrived within appointment window.' },
+                    { location: 'Transit Checkpoint', time: 'Oct 26, 02:40 IST', status: 'Safety check and transit milestone logged.' },
+                    { location: 'Gaur Yamuna City Hub', time: 'Oct 25, 14:30 IST', status: 'Consignment verified and driver departed.' }
+                ]
+            }
+        };
+
+        function renderTrackingData(data) {
+            document.getElementById('displayTrackingId').textContent = data.id;
+            document.getElementById('displayModeText').textContent = data.mode;
+            document.getElementById('displayModeIcon').className = `ph-bold ${data.modeIcon}`;
+            
+            const statusPill = document.getElementById('displayStatusPill');
+            statusPill.className = `trk-status-pill ${data.statusClass}`;
+            document.getElementById('displayStatusText').textContent = data.status;
+
+            document.getElementById('displayOriginCity').textContent = data.originCity;
+            document.getElementById('displayOriginFacility').textContent = data.originFacility;
+            document.getElementById('displayDestCity').textContent = data.destCity;
+            document.getElementById('displayDestFacility').textContent = data.destFacility;
+
+            document.getElementById('displayProgressBar').style.width = data.progress;
+            document.getElementById('displayVehicleIcon').style.left = data.progress;
+            document.getElementById('displayVehicleIcon').innerHTML = `<i class="ph-fill ${data.vehicleIcon}"></i>`;
+
+            document.getElementById('displayEta').textContent = data.eta;
+            document.getElementById('displayCurLocation').textContent = data.curLocation;
+            document.getElementById('displayCarrier').textContent = data.carrier;
+            document.getElementById('displayCargoSpecs').textContent = data.cargoSpecs;
+            document.getElementById('displayServiceLevel').textContent = data.serviceLevel;
+
+            // Render Stepper
+            const stepperContainer = document.getElementById('displayStepperList');
+            stepperContainer.innerHTML = data.steps.map(step => `
+                <div class="trk-step-item ${step.status}">
+                    <div class="trk-step-icon-wrap">
+                        <i class="ph-bold ${step.icon || (step.status === 'completed' ? 'ph-check' : 'ph-circle')}"></i>
+                    </div>
+                    <div class="trk-step-content">
+                        <div class="trk-step-heading">${step.title}</div>
+                        <div class="trk-step-desc">${step.desc}</div>
+                        <div class="trk-step-time">${step.time}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Event Log
+            const eventsContainer = document.getElementById('displayEventsList');
+            eventsContainer.innerHTML = data.events.map(ev => `
+                <div class="trk-event-item">
+                    <div class="trk-event-head">
+                        <span class="trk-event-location"><i class="ph-fill ph-map-pin"></i> ${ev.location}</span>
+                        <span class="trk-event-date">${ev.time}</span>
+                    </div>
+                    <div class="trk-event-status">${ev.status}</div>
+                </div>
+            `).join('');
+        }
+
+        function switchTrackType(type, btnEl, placeholderText) {
+            document.querySelectorAll('.trk-tab-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            const input = document.getElementById('trackingInput');
+            input.placeholder = placeholderText;
+            input.focus();
+        }
+
+        function resetTrackingSearch() {
+            const input = document.getElementById('trackingInput');
+            input.value = '';
+            document.getElementById('trackingResultContainer').style.display = 'none';
+            document.getElementById('trkNotFoundContainer').style.display = 'none';
+            document.getElementById('trkInitialPortalState').style.display = 'block';
+            input.focus();
+            document.getElementById('trackingSearchForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function handleTrackingSearch() {
+            const input = document.getElementById('trackingInput');
+            const inputVal = input.value.trim().toUpperCase();
+            const btn = document.getElementById('trackSearchBtn');
+
+            if (!inputVal) {
+                input.focus();
+                return;
+            }
+
+            if (inputVal.length < 3) {
+                document.getElementById('trkNotFoundText').textContent = `The reference code "${inputVal}" is too short. Please enter a valid Tracking ID, Air Waybill, or Container Number (at least 3 characters).`;
+                document.getElementById('trkInitialPortalState').style.display = 'none';
+                document.getElementById('trackingResultContainer').style.display = 'none';
+                document.getElementById('trkNotFoundContainer').style.display = 'block';
+                document.getElementById('trkNotFoundContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="ph-bold ph-spinner ph-spin"></i> Locating Telemetry...';
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = 'Track Shipment <i class="ph-bold ph-arrow-right"></i>';
+
+                let dataToRender = trackingDatabase[inputVal];
+
+                if (!dataToRender) {
+                    // Detect likely transport mode based on format
+                    const isAir = /^\d{3}[-\s]?\d{8}$/.test(inputVal) || inputVal.startsWith('AWB');
+                    const isOcean = /^[A-Z]{4}\d{7}$/.test(inputVal) || inputVal.startsWith('MSCU') || inputVal.startsWith('MEDU') || inputVal.startsWith('MAEU') || inputVal.startsWith('CMAU');
+
+                    if (isAir) {
+                        dataToRender = {
+                            id: inputVal,
+                            mode: 'Air Cargo Express',
+                            modeIcon: 'ph-airplane-tilt',
+                            vehicleIcon: 'ph-airplane-tilt',
+                            status: 'In Flight',
+                            statusClass: 'in-transit',
+                            originCity: 'Gautam Budh Nagar / New Delhi, IN',
+                            originFacility: 'Gaur Yamuna City Air Logistics Hub',
+                            destCity: 'London, UK (E7 8HA)',
+                            destFacility: 'Upton Park / Heathrow Cargo Vault',
+                            progress: '60%',
+                            eta: 'Estimated 24-48 Hours',
+                            curLocation: 'Cruising International Corridor',
+                            carrier: 'Scheduled Commercial Freighter',
+                            cargoSpecs: 'General Commercial Cargo • Secured ULD',
+                            serviceLevel: 'Express Air Freight (IATA Tracked)',
+                            steps: [
+                                { title: 'Cargo Picked Up', desc: 'Consignment collected from Gaur Yamuna City corporate hub, Gautam Budh Nagar.', time: 'Milestone 01 - Confirmed', status: 'completed' },
+                                { title: 'Export Customs Released', desc: 'Electronic customs export declaration cleared.', time: 'Milestone 02 - Confirmed', status: 'completed' },
+                                { title: 'Airway Manifest Loaded', desc: 'Air Waybill verified and stowed aboard aircraft.', time: 'Milestone 03 - Confirmed', status: 'completed' },
+                                { title: 'In Flight Telemetry Active', desc: 'Aircraft transponder operating normally.', time: 'Active Live Telemetry', status: 'active', icon: 'ph-airplane-tilt' },
+                                { title: 'UK Port Touchdown', desc: 'Scheduled touchdown and customs intake.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-stamp' },
+                                { title: 'Final Mile Delivery', desc: 'Direct carrier courier handover to Upton Park, London facility.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-truck' }
+                            ],
+                            events: [
+                                { location: 'Global Flight Telemetry', time: 'Live Stream', status: `Air Waybill ${inputVal} reporting normal altitude & routing coordinates.` },
+                                { location: 'India Air Gateway', time: 'Previous Milestone', status: 'ULD weighed, scanned, and manifest electronically transmitted.' }
+                            ]
+                        };
+                    } else if (isOcean) {
+                        dataToRender = {
+                            id: inputVal,
+                            mode: 'Ocean FCL / LCL Container',
+                            modeIcon: 'ph-boat',
+                            vehicleIcon: 'ph-boat',
+                            status: 'Vessel in Transit',
+                            statusClass: 'in-transit',
+                            originCity: 'Gautam Budh Nagar / ICD, IN',
+                            originFacility: 'Inland Container Port Berth',
+                            destCity: 'London, UK (E7 8HA)',
+                            destFacility: 'Upton Park Maritime Depot',
+                            progress: '70%',
+                            eta: 'Estimated 3-5 Days Port Arrival',
+                            curLocation: 'Maritime Shipping Channel',
+                            carrier: 'Container Line Liner Service',
+                            cargoSpecs: 'Standard Intermodal ISO Container',
+                            serviceLevel: 'Ocean Freight Trans-Oceanic Corridor',
+                            steps: [
+                                { title: 'Container Gate-In & Sealed', desc: 'Container packed, sealed, and audited at origin facility in Gautam Budh Nagar.', time: 'Milestone 01 - Confirmed', status: 'completed' },
+                                { title: 'Gantry Crane Vessel Loading', desc: 'Loaded into vessel container cell.', time: 'Milestone 02 - Confirmed', status: 'completed' },
+                                { title: 'Ocean Voyage in Progress', desc: 'Vessel sailing along designated navigational corridor.', time: 'Active AIS Satellite', status: 'active', icon: 'ph-boat' },
+                                { title: 'Berth Discharge & Customs Audit', desc: 'Scheduled crane discharge at UK terminal.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-stamp' },
+                                { title: 'Chassis Dispatch / Consignee Delivery', desc: 'Final drayage trucking to Upton Park, London warehouse dock.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-truck' }
+                            ],
+                            events: [
+                                { location: 'AIS Marine Transponder', time: 'Live AIS Update', status: `Container reference ${inputVal} vessel position verified by satellite telemetry.` },
+                                { location: 'Origin Marine Gate', time: 'Terminal Milestone', status: 'Seal verification and customs inspection passed with zero exceptions.' }
+                            ]
+                        };
+                    } else {
+                        dataToRender = {
+                            id: inputVal,
+                            mode: 'RB Connect Global Consignment',
+                            modeIcon: 'ph-cube',
+                            vehicleIcon: 'ph-truck',
+                            status: 'In Transit',
+                            statusClass: 'in-transit',
+                            originCity: 'Gautam Budh Nagar, UP (India)',
+                            originFacility: 'Gaur Yamuna City Dispatch Hub',
+                            destCity: 'London, E7 (United Kingdom)',
+                            destFacility: 'Upton Park Logistics Facility',
+                            progress: '55%',
+                            eta: 'On Schedule • 2-3 Business Days',
+                            curLocation: 'Transit Gateway',
+                            carrier: 'RB Connect Network',
+                            cargoSpecs: 'Commercial Freight Consignment',
+                            serviceLevel: 'End-to-End Monitored Freight',
+                            steps: [
+                                { title: 'Booking Confirmed & Waybill Generated', desc: 'Electronic cargo registration verified in dispatch desk.', time: 'Milestone 01 - Confirmed', status: 'completed' },
+                                { title: 'Picked Up by Carrier Fleet', desc: 'Consignment secured at Gaur Yamuna City facility, Sector 19, YEIDA.', time: 'Milestone 02 - Confirmed', status: 'completed' },
+                                { title: 'Transit Corridor', desc: 'Cargo currently moving on schedule through carrier network.', time: 'Active Live Telemetry', status: 'active', icon: 'ph-navigation-arrow' },
+                                { title: 'Arrival at UK Destination Facility', desc: 'Scheduled sorting at Upton Park, London.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-buildings' },
+                                { title: 'Out for Final Delivery', desc: 'Dedicated delivery to receiver facility in London, E7 8HA.', time: 'Upcoming Milestone', status: 'pending', icon: 'ph-truck' }
+                            ],
+                            events: [
+                                { location: 'Transit Telemetry Hub', time: 'Live Update', status: `Consignment reference ${inputVal} checked in and on schedule.` },
+                                { location: 'Gaur Yamuna City Hub', time: 'Earlier Today', status: 'Barcoded, security checked, and cleared for dispatch.' }
+                            ]
+                        };
+                    }
+                }
+
+                // Render and toggle visibility
+                renderTrackingData(dataToRender);
+                document.getElementById('trkInitialPortalState').style.display = 'none';
+                document.getElementById('trkNotFoundContainer').style.display = 'none';
+                document.getElementById('trackingResultContainer').style.display = 'block';
+
+                // Smooth scroll to results
+                document.getElementById('trackingResultContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 600);
+        }
+
+        // Automatic search if track param is present in URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const trackVal = params.get('track') || params.get('id');
+            if (trackVal) {
+                const trkInput = document.getElementById('trackingInput');
+                if (trkInput) {
+                    trkInput.value = trackVal;
+                    handleTrackingSearch();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

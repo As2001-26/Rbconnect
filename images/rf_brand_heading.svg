@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 180" width="100%" height="auto" class="rf-brand-title-svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
+      .rf-svg-navy { font-family: 'Montserrat', 'Inter', -apple-system, sans-serif; font-weight: 900; fill: #0b2546; }
+      .rf-svg-bronze { font-family: 'Montserrat', 'Inter', -apple-system, sans-serif; font-weight: 900; fill: #c66c24; }
+    </style>
+    <!-- Road Gradient -->
+    <linearGradient id="rfRoadGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a44e1c" />
+      <stop offset="35%" stop-color="#c66c24" />
+      <stop offset="70%" stop-color="#df822b" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Group for ROAD FREIGHT Typography -->
+  <g transform="translate(20, 16)">
+    <!-- Stylized Letter 'R' with highway swoosh & perspective dashes -->
+    <g transform="translate(0, 0)">
+      <!-- Navy 'R' Body -->
+      <path d="M 64,8 L 124,8 C 146,8 160,22 160,42 C 160,57 148,67 130,70 L 162,104 L 130,104 L 102,72 L 92,72 L 92,104 L 64,104 Z M 92,28 L 92,52 L 121,52 C 130,52 135,47 135,40 C 135,33 130,28 121,28 Z" fill="#0b2546" />
+
+      <!-- Outer Crescent Accent Swoosh -->
+      <path d="M 2,92 C 18,70 54,40 106,26 C 122,21 138,17 146,16 C 138,20 121,24 102,30 C 54,44 22,72 2,92 Z" fill="url(#rfRoadGrad)" />
+
+      <!-- White separator gap behind road -->
+      <path d="M 6,107 C 24,82 61,48 112,33 C 128,28 142,23 150,21 L 144,16 C 134,19 118,24 102,30 C 56,45 20,76 6,107 Z" fill="#ffffff" />
+      
+      <!-- Road Surface with perspective sweep -->
+      <path d="M 4,104 C 22,80 60,50 110,35 C 124,30 138,25 146,22 C 134,27 120,34 104,43 C 86,54 80,76 82,104 L 38,104 C 28,104 14,103 4,104 Z" fill="url(#rfRoadGrad)" />
+
+      <!-- Road Center Dashed Perspective Line (4 clean white dashes) -->
+      <path d="M 24,104 C 30,95 36,88 42,82" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" />
+      <path d="M 47,77 C 54,70 63,63 72,57" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round" />
+      <path d="M 78,53 C 86,48 95,43 105,38" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" />
+      <path d="M 112,35 C 120,31 128,28 136,25" stroke="#ffffff" stroke-width="2.0" stroke-linecap="round" />
+    </g>
+
+    <!-- 'OAD' in Dark Navy -->
+    <text x="175" y="104" font-size="108" class="rf-svg-navy" letter-spacing="1">OAD</text>
+
+    <!-- 'FREIGHT' in Bronze/Terracotta -->
+    <text x="445" y="104" font-size="108" class="rf-svg-bronze" letter-spacing="2">FREIGHT</text>
+  </g>
+
+  <!-- Sub Divider Bar with Isometric Speed Box -->
+  <g transform="translate(10, 148)">
+    <!-- Left Line -->
+    <line x1="10" y1="12" x2="400" y2="12" stroke="#c66c24" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+    
+    <!-- Center Box Icon & Speed Lines -->
+    <g transform="translate(420, -2)">
+      <!-- 3 Speed Motion Dash Lines -->
+      <line x1="0" y1="9" x2="10" y2="9" stroke="#c66c24" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="4" y1="14" x2="11" y2="14" stroke="#c66c24" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="0" y1="19" x2="9" y2="19" stroke="#c66c24" stroke-width="2.8" stroke-linecap="round" />
+
+      <!-- Isometric 3D Delivery Box -->
+      <g transform="translate(20, -1)">
+        <!-- Outer Box Hexagon -->
+        <path d="M 16,1 L 31,9.5 L 31,26.5 L 16,35 L 1,26.5 L 1,9.5 Z" stroke="#c66c24" stroke-width="2.8" stroke-linejoin="round" fill="#ffffff" />
+        <!-- Inner Box Y Split (Top, Left, Right faces) -->
+        <path d="M 16,1 L 16,18 M 1,9.5 L 16,18 L 31,9.5 M 16,18 L 16,35" stroke="#c66c24" stroke-width="2.8" stroke-linejoin="round" />
+      </g>
+    </g>
+
+    <!-- Right Line -->
+    <line x1="500" y1="12" x2="910" y2="12" stroke="#c66c24" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  </g>
+</svg>

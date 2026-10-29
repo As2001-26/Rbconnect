@@ -1,0 +1,1145 @@
+/* ==========================================================================
+   RB CONNECT — TRACK SHIPMENT STYLESHEET (track-shipment.css)
+   Real-Time Telemetry, Shipment Milestones & Dynamic Cargo Tracking
+   Brand Theme: Warm Cream (#f7f3ee), Terracotta (#c66c24), Navy Slate (#0b1a30)
+   ========================================================================== */
+
+:root {
+    --trk-primary: #c66c24;
+    --trk-primary-hover: #b05a18;
+    --trk-primary-light: #fff7ed;
+    --trk-primary-border: rgba(198, 108, 36, 0.25);
+
+    --trk-navy-dark: #0b1a30;
+    --trk-navy-deep: #060e18;
+    --trk-navy-surface: #12223a;
+    --trk-navy-light: #1e3557;
+
+    --trk-text-dark: #0f172a;
+    --trk-text-body: #334155;
+    --trk-text-muted: #64748b;
+    --trk-text-light: #f8fafc;
+
+    --trk-bg-page: #f7f3ee;
+    --trk-bg-card: #ffffff;
+    --trk-border-subtle: #e2e8f0;
+
+    --trk-success: #10b981;
+    --trk-success-light: #ecfdf5;
+    --trk-warning: #f59e0b;
+    --trk-warning-light: #fffbeb;
+    --trk-blue: #0284c7;
+    --trk-blue-light: #f0f9ff;
+
+    --trk-radius-sm: 8px;
+    --trk-radius-md: 12px;
+    --trk-radius-lg: 18px;
+    --trk-radius-xl: 24px;
+
+    --trk-shadow-sm: 0 2px 8px rgba(11, 26, 48, 0.04);
+    --trk-shadow-md: 0 8px 24px rgba(11, 26, 48, 0.06);
+    --trk-shadow-lg: 0 16px 40px rgba(11, 26, 48, 0.09);
+
+    --trk-transition: all 0.25s ease;
+}
+
+body.tracking-page {
+    background-color: var(--trk-bg-page) !important;
+    background: var(--trk-bg-page) !important;
+    color: var(--trk-text-body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. TRACKING HERO & SEARCH BAR
+   -------------------------------------------------------------------------- */
+.trk-hero-section {
+    padding-top: 130px;
+    padding-bottom: 45px;
+    background: var(--trk-bg-page);
+    position: relative;
+    text-align: center;
+}
+
+.trk-hero-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.trk-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--trk-primary-border);
+    color: var(--trk-primary);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    box-shadow: var(--trk-shadow-sm);
+}
+
+.trk-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    line-height: 1.18;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.trk-hero-title span {
+    color: var(--trk-primary);
+}
+
+.trk-hero-subtitle {
+    font-size: 16.5px;
+    line-height: 1.6;
+    color: var(--trk-text-muted);
+    margin: 0 auto 32px auto;
+    max-width: 680px;
+}
+
+/* Modern Tracking Search Box */
+.trk-search-card {
+    background: var(--trk-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--trk-radius-xl);
+    padding: 24px 28px;
+    box-shadow: var(--trk-shadow-lg);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.trk-search-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trk-input-wrap {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.trk-input-icon {
+    position: absolute;
+    left: 18px;
+    font-size: 22px;
+    color: var(--trk-primary);
+    pointer-events: none;
+}
+
+.trk-input {
+    width: 100%;
+    padding: 16px 18px 16px 52px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--trk-navy-dark);
+    background: #fafbfc;
+    border: 1.5px solid var(--trk-border-subtle);
+    border-radius: var(--trk-radius-md);
+    outline: none;
+    transition: var(--trk-transition);
+}
+
+.trk-input:focus {
+    background: #ffffff;
+    border-color: var(--trk-primary);
+    box-shadow: 0 0 0 4px rgba(198, 108, 36, 0.15);
+}
+
+.trk-input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.trk-btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--trk-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--trk-radius-md);
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--trk-transition);
+    box-shadow: 0 4px 14px rgba(198, 108, 36, 0.25);
+}
+
+.trk-btn-submit:hover {
+    background: var(--trk-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198, 108, 36, 0.35);
+}
+
+.trk-btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Professional Tracking Type Switcher Tabs */
+.trk-type-tabs {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(11, 26, 48, 0.08);
+}
+
+.trk-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--trk-text-muted);
+    cursor: pointer;
+    transition: var(--trk-transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trk-tab-btn:hover {
+    color: var(--trk-navy-dark);
+}
+
+.trk-tab-btn.active {
+    background: #ffffff;
+    color: var(--trk-primary);
+    box-shadow: 0 2px 6px rgba(11, 26, 48, 0.08);
+}
+
+.trk-search-note {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--trk-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trk-search-note span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trk-search-note a {
+    color: var(--trk-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.trk-search-note a:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   2. INITIAL PORTAL STATE (Displayed Before Search)
+   -------------------------------------------------------------------------- */
+.trk-portal-state {
+    padding-bottom: 70px;
+}
+
+.trk-portal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.trk-portal-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.trk-portal-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: var(--trk-primary);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.trk-portal-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin: 0;
+}
+
+/* 4-Column Supported Documents Grid */
+.trk-format-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.trk-format-card {
+    background: var(--trk-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--trk-radius-lg);
+    padding: 24px 20px;
+    box-shadow: var(--trk-shadow-sm);
+    transition: var(--trk-transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.trk-format-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--trk-shadow-md);
+    border-color: var(--trk-primary-border);
+}
+
+.trk-format-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--trk-radius-md);
+    background: var(--trk-primary-light);
+    color: var(--trk-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.trk-format-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--trk-navy-dark);
+    margin-bottom: 8px;
+}
+
+.trk-format-example {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.trk-format-card p {
+    font-size: 13px;
+    color: var(--trk-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 24/7 Operations Desk Hotline Banner */
+.trk-hotline-banner {
+    background: linear-gradient(135deg, var(--trk-navy-dark) 0%, var(--trk-navy-surface) 100%);
+    border-radius: var(--trk-radius-xl);
+    padding: 36px 40px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: var(--trk-shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trk-hotline-content h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.trk-hotline-content p {
+    font-size: 14.5px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 620px;
+}
+
+.trk-hotline-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.trk-hotline-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--trk-primary);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 14px 24px;
+    border-radius: var(--trk-radius-md);
+    text-decoration: none;
+    transition: var(--trk-transition);
+}
+
+.trk-hotline-btn:hover {
+    background: var(--trk-primary-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.trk-hotline-btn.outline {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.trk-hotline-btn.outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Not Found / Error Card */
+.trk-notfound-card {
+    background: var(--trk-bg-card);
+    border: 1px solid #fee2e2;
+    border-radius: var(--trk-radius-xl);
+    padding: 40px 32px;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 30px auto;
+    box-shadow: var(--trk-shadow-md);
+}
+
+.trk-notfound-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fef2f2;
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 18px auto;
+}
+
+.trk-notfound-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin-bottom: 10px;
+}
+
+.trk-notfound-desc {
+    font-size: 14.5px;
+    color: var(--trk-text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.trk-reset-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.trk-btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: var(--trk-navy-dark);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--trk-transition);
+}
+
+.trk-btn-reset:hover {
+    background: #e2e8f0;
+    color: var(--trk-primary);
+}
+
+/* --------------------------------------------------------------------------
+   3. SHIPMENT DETAILS & LIVE STATUS DASHBOARD
+   -------------------------------------------------------------------------- */
+.trk-dashboard-section {
+    padding-bottom: 70px;
+    display: none;
+}
+
+.trk-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Overview Card */
+.trk-overview-card {
+    background: var(--trk-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--trk-radius-xl);
+    padding: 32px;
+    box-shadow: var(--trk-shadow-md);
+    margin-bottom: 24px;
+}
+
+.trk-overview-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 28px;
+}
+
+.trk-shipment-id-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.trk-shipment-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin: 0;
+}
+
+.trk-mode-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--trk-primary-light);
+    color: var(--trk-primary);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--trk-primary-border);
+}
+
+.trk-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.trk-status-pill.in-transit {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.trk-status-pill.delivered {
+    background: var(--trk-success-light);
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.trk-status-pill.customs {
+    background: var(--trk-warning-light);
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.trk-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 8px currentColor;
+    animation: trkPulse 1.8s infinite;
+}
+
+@keyframes trkPulse {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+/* Route Visual Banner */
+.trk-route-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #faf8f5;
+    border: 1px solid rgba(198, 108, 36, 0.12);
+    border-radius: var(--trk-radius-lg);
+    padding: 24px 30px;
+    margin-bottom: 28px;
+}
+
+.trk-route-node {
+    display: flex;
+    flex-direction: column;
+}
+
+.trk-node-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--trk-primary);
+    margin-bottom: 4px;
+}
+
+.trk-node-city {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin-bottom: 2px;
+}
+
+.trk-node-sub {
+    font-size: 13px;
+    color: var(--trk-text-muted);
+}
+
+.trk-route-path {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.trk-route-line {
+    width: 100%;
+    height: 3px;
+    background: #e2e8f0;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.trk-route-progress {
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(90deg, #c66c24 0%, #f59e0b 100%);
+    transition: width 0.8s ease;
+}
+
+.trk-route-vehicle {
+    position: absolute;
+    top: -14px;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    background: var(--trk-primary);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(198, 108, 36, 0.4);
+    animation: trkVehicleFloat 2s ease-in-out infinite alternate;
+}
+
+@keyframes trkVehicleFloat {
+    from { transform: translateX(-50%) translateY(0); }
+    to { transform: translateX(-50%) translateY(-4px); }
+}
+
+.trk-eta-tag {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--trk-navy-dark);
+}
+
+.trk-eta-tag span {
+    color: var(--trk-primary);
+}
+
+/* 4 Metrics Grid */
+.trk-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.trk-metric-box {
+    background: #fafbfc;
+    border: 1px solid #eef2f6;
+    border-radius: var(--trk-radius-md);
+    padding: 16px 18px;
+}
+
+.trk-metric-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--trk-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trk-metric-label i {
+    color: var(--trk-primary);
+    font-size: 14px;
+}
+
+.trk-metric-val {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--trk-navy-dark);
+    line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   3. PROGRESS STEPPER TIMELINE & EVENT LOG
+   -------------------------------------------------------------------------- */
+.trk-timeline-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+}
+
+.trk-stepper-card,
+.trk-events-card {
+    background: var(--trk-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--trk-radius-xl);
+    padding: 30px;
+    box-shadow: var(--trk-shadow-md);
+}
+
+.trk-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trk-stepper-list {
+    position: relative;
+    padding-left: 20px;
+}
+
+.trk-stepper-list::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    bottom: 24px;
+    left: 35px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.trk-step-item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 28px;
+}
+
+.trk-step-item:last-child {
+    padding-bottom: 0;
+}
+
+.trk-step-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    z-index: 2;
+    flex-shrink: 0;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #e2e8f0;
+    transition: var(--trk-transition);
+}
+
+.trk-step-item.completed .trk-step-icon-wrap {
+    background: #22c55e;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #22c55e;
+}
+
+.trk-step-item.active .trk-step-icon-wrap {
+    background: var(--trk-primary);
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(198, 108, 36, 0.25);
+    animation: trkStepGlow 2s infinite;
+}
+
+@keyframes trkStepGlow {
+    0% { box-shadow: 0 0 0 2px rgba(198, 108, 36, 0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(198, 108, 36, 0.35); }
+    100% { box-shadow: 0 0 0 2px rgba(198, 108, 36, 0.2); }
+}
+
+.trk-step-content {
+    flex: 1;
+}
+
+.trk-step-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--trk-navy-dark);
+    margin-bottom: 3px;
+}
+
+.trk-step-item.pending .trk-step-heading {
+    color: #94a3b8;
+}
+
+.trk-step-desc {
+    font-size: 13.5px;
+    color: var(--trk-text-muted);
+    line-height: 1.45;
+    margin-bottom: 4px;
+}
+
+.trk-step-time {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--trk-primary);
+}
+
+/* Milestone Event Log (Right Column) */
+.trk-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trk-event-item {
+    background: #fafbfc;
+    border: 1px solid #eef2f6;
+    border-radius: var(--trk-radius-md);
+    padding: 16px;
+    transition: var(--trk-transition);
+}
+
+.trk-event-item:hover {
+    background: #ffffff;
+    border-color: var(--trk-primary-border);
+    box-shadow: var(--trk-shadow-sm);
+}
+
+.trk-event-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.trk-event-location {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--trk-navy-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trk-event-location i {
+    color: var(--trk-primary);
+}
+
+.trk-event-date {
+    font-size: 12px;
+    color: var(--trk-text-muted);
+}
+
+.trk-event-status {
+    font-size: 13px;
+    color: var(--trk-text-body);
+    line-height: 1.45;
+}
+
+/* Quick Actions Box */
+.trk-actions-box {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trk-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--trk-radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--trk-transition);
+}
+
+.trk-action-btn.primary {
+    background: var(--trk-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.trk-action-btn.primary:hover {
+    background: var(--trk-primary-hover);
+    color: #ffffff;
+}
+
+.trk-action-btn.outline {
+    background: transparent;
+    color: var(--trk-navy-dark);
+    border: 1px solid #cbd5e1;
+}
+
+.trk-action-btn.outline:hover {
+    background: #f8fafc;
+    border-color: var(--trk-navy-dark);
+}
+
+/* --------------------------------------------------------------------------
+   4. FEATURES / WHY TRACK WITH US SECTION
+   -------------------------------------------------------------------------- */
+.trk-features-section {
+    padding-bottom: 70px;
+}
+
+.trk-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.trk-feature-card {
+    background: var(--trk-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--trk-radius-lg);
+    padding: 30px 26px;
+    box-shadow: var(--trk-shadow-sm);
+    transition: var(--trk-transition);
+}
+
+.trk-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--trk-shadow-md);
+    border-color: var(--trk-primary-border);
+}
+
+.trk-feat-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--trk-primary-light);
+    color: var(--trk-primary);
+    border-radius: var(--trk-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.trk-feat-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--trk-navy-dark);
+    margin-bottom: 10px;
+}
+
+.trk-feat-desc {
+    font-size: 14px;
+    color: var(--trk-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVE QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .trk-timeline-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .trk-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trk-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trk-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trk-hotline-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 24px;
+    }
+
+    .trk-hotline-actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .trk-hero-section {
+        padding-top: 115px;
+    }
+
+    .trk-hero-title {
+        font-size: clamp(28px, 7vw, 36px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .trk-type-tabs {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        justify-content: flex-start !important;
+        padding: 4px 6px !important;
+        gap: 6px !important;
+    }
+
+    .trk-type-tabs::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .trk-tab-btn {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        font-size: 12.5px !important;
+        padding: 8px 14px !important;
+    }
+
+    .trk-search-card {
+        padding: 20px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .trk-search-form {
+        flex-direction: column !important;
+    }
+
+    .trk-input-wrapper input {
+        font-size: 16px !important;
+    }
+
+    .trk-btn-submit {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .trk-format-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .trk-route-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    .trk-route-path {
+        width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    .trk-metrics-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .trk-overview-card {
+        padding: 20px 16px !important;
+        border-radius: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .trk-hero-section {
+        padding-top: 105px !important;
+    }
+
+    .trk-hero-badge {
+        font-size: 11.5px !important;
+        padding: 5px 14px !important;
+    }
+
+    .trk-hero-title {
+        font-size: clamp(24px, 7.5vw, 28px) !important;
+    }
+
+    .trk-search-card {
+        padding: 18px 14px !important;
+    }
+
+    .trk-overview-card {
+        padding: 18px 14px !important;
+    }
+}

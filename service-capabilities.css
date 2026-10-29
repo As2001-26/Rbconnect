@@ -1,0 +1,139 @@
+/* ==========================================================================
+   RB CONNECT GLOBAL NETWORK - UNIFIED SERVICE CAPABILITY CARDS
+   Shared identically across all 7 service pages:
+   - Air Freight
+   - Ocean / Sea Freight
+   - Road Transportation / Land Freight
+   - Warehousing & Distribution
+   - Customs Clearance & Documentation
+   - Project Cargo & Heavy Lift
+   - Door-to-Door Logistics
+   ========================================================================== */
+
+/* All Services Sections Background matching Full Page (#f7f3ee) */
+.af-services-section,
+.sf-services-section,
+.lf-capabilities-section,
+.dd-solutions-section,
+.cc-solutions-section,
+.wd-solutions-section,
+.pc-solutions-section {
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+}
+
+.service-capability-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+}
+
+@media (max-width: 1200px) {
+    .service-capability-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-capability-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    .service-capability-card {
+        padding: 22px 18px !important;
+        border-radius: 16px !important;
+    }
+}
+
+.service-capability-card {
+    background: #ffffff !important;
+    border: 1.5px solid rgba(198, 108, 36, 0.28) !important;
+    border-radius: 18px !important;
+    padding: 30px 24px !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(198, 108, 36, 0.05) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.service-capability-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #c66c24, #e89149) !important;
+    opacity: 0.85 !important;
+    transition: all 0.3s ease !important;
+}
+
+.service-capability-card:hover {
+    transform: translateY(-6px) !important;
+    background: #ffffff !important;
+    box-shadow: 0 20px 42px rgba(198, 108, 36, 0.18), 0 6px 16px rgba(15, 23, 42, 0.08) !important;
+    border-color: rgba(198, 108, 36, 0.6) !important;
+}
+
+.service-capability-card:hover::before {
+    height: 4px !important;
+    opacity: 1 !important;
+}
+
+.service-capability-icon {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    border-radius: 14px !important;
+    background: #ffffff !important;
+    border: 1.5px solid rgba(198, 108, 36, 0.28) !important;
+    color: #c66c24 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 26px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 12px rgba(198, 108, 36, 0.12) !important;
+    transition: all 0.3s ease !important;
+}
+
+.service-capability-card:hover .service-capability-icon {
+    background: linear-gradient(135deg, #c66c24 0%, #b05c19 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 18px rgba(198, 108, 36, 0.32) !important;
+    transform: scale(1.08) rotate(2deg) !important;
+}
+
+.service-capability-tag {
+    display: inline-block !important;
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    color: #b45309 !important;
+    margin-bottom: 8px !important;
+}
+
+.service-capability-title {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 18.5px !important;
+    font-weight: 800 !important;
+    color: #091524 !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.service-capability-desc {
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-weight: 450 !important;
+    line-height: 1.65 !important;
+    margin: 0 !important;
+    flex-grow: 1 !important;
+}

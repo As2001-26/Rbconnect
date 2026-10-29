@@ -1,0 +1,1883 @@
+/* ==========================================================================
+   RB CONNECT - SEA FREIGHT SERVICES (Official Stylesheet)
+   Harmonious Ocean & Terracotta Color Palette, Luxury Typography, Micro-interactions
+   ========================================================================== */
+
+:root {
+    --sf-color-terracotta: #c66c24;
+    --sf-color-terracotta-dark: #a8542c;
+    --sf-color-bronze: #b26a38;
+    --sf-color-dark: #0d1b2a;
+    --sf-color-navy: #152538;
+    --sf-color-ocean: #0f2b48;
+    --sf-bg-cream: #f7f3ee;
+    --sf-bg-light: #faf8f5;
+    --sf-border-subtle: #e9e2d8;
+    --sf-border-card: #e2d9cd;
+    --sf-color-text-muted: #64748b;
+    --sf-color-text-body: #4b5563;
+
+    --sf-font-serif: 'Playfair Display', Georgia, serif;
+    --sf-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sf-font-display: 'Montserrat', sans-serif;
+    --sf-font-script: 'Caveat', cursive;
+
+    --sf-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --sf-transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Body Override for Sea Freight Page (Matches About Us Theme #f7f3ee) */
+html,
+html:has(.sea-freight-page),
+body.sea-freight-page {
+    background-color: var(--sf-bg-cream);
+    background: var(--sf-bg-cream);
+    color: var(--sf-color-dark);
+    font-family: var(--sf-font-sans);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ==========================================================================
+   REUSABLE TYPOGRAPHY & BUTTON STYLES
+   ========================================================================== */
+.sf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sf-font-sans);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sf-color-terracotta);
+    margin-bottom: 12px;
+}
+
+.sf-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background: var(--sf-color-terracotta);
+    opacity: 0.85;
+}
+
+.sf-title-accent {
+    color: var(--sf-color-terracotta);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.sf-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--sf-color-terracotta);
+    color: #ffffff !important;
+    font-family: var(--sf-font-sans);
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(198, 108, 36, 0.32);
+    transition: all 0.3s var(--sf-transition-smooth);
+    border: none;
+    cursor: pointer;
+}
+
+.sf-btn-primary:hover {
+    background-color: var(--sf-color-terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(168, 84, 44, 0.42);
+    color: #ffffff !important;
+}
+
+.sf-btn-primary i {
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.sf-btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+.sf-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sf-color-dark) !important;
+    font-family: var(--sf-font-sans);
+    font-size: 14.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    padding: 13px 18px;
+}
+
+.sf-btn-secondary:hover {
+    color: var(--sf-color-terracotta) !important;
+    transform: translateX(3px);
+}
+
+.sf-btn-secondary i {
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.sf-btn-secondary:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Global Shipping Solutions for a Connected World)
+   ========================================================================== */
+.sf-hero-section {
+    position: relative;
+    background-color: var(--sf-bg-cream);
+    background: var(--sf-bg-cream);
+    padding: 24px 0 56px 0;
+    overflow: hidden;
+}
+
+/* Faint ambient world map glow in hero background */
+.sf-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 35%, rgba(198, 108, 36, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sf-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ========================================================
+   TOP CENTERED BRANDED "SEA FREIGHT" HEADLINE BANNER
+   (Matching Reference Image & Site Transport Brand System)
+   ======================================================== */
+.sf-brand-emblem-headline {
+    margin: 28px auto 18px auto;
+    width: 100%;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.sf-brand-title {
+    font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(50px, 6.2vw, 80px);
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 1.8vw, 24px);
+    margin: 0 0 14px 0;
+    user-select: none;
+    text-align: center;
+}
+
+.sf-brand-sea {
+    color: #0b2546;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.sf-swoosh-s {
+    display: inline-block;
+    width: 1.28em;
+    height: 1.04em;
+    position: relative;
+    margin-right: -0.02em;
+    vertical-align: middle;
+}
+
+.sf-s-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+}
+
+.sf-brand-freight {
+    color: #c66c24;
+    letter-spacing: 2px;
+}
+
+/* Speed Box Divider Bar */
+.sf-brand-divider-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.sf-divider-streak {
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.sf-streak-left {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.05) 0%, rgba(198, 108, 36, 0.7) 100%);
+}
+
+.sf-streak-right {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.7) 0%, rgba(198, 108, 36, 0.05) 100%);
+}
+
+.sf-speed-box-wrap {
+    width: 52px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sf-speed-box-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sf-brand-emblem-headline {
+        margin: 4px auto 22px auto;
+    }
+
+    .sf-brand-title {
+        font-size: clamp(38px, 9vw, 56px);
+        gap: 0.28em;
+    }
+
+    .sf-brand-divider-bar {
+        max-width: 90%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sf-brand-title {
+        font-size: clamp(30px, 8.5vw, 42px);
+    }
+
+    .sf-speed-box-wrap {
+        width: 42px;
+        height: 30px;
+    }
+}
+
+.sf-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/* Left Hero Content */
+.sf-hero-content {
+    max-width: 580px;
+}
+
+.sf-hero-title {
+    font-family: var(--sf-font-serif);
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--sf-color-dark);
+    line-height: 1.12;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.sf-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--sf-color-text-body);
+    margin-bottom: 34px;
+}
+
+/* 4 Circular Feature Badges Row */
+.sf-hero-badges-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    margin-bottom: 38px;
+}
+
+.sf-hero-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    cursor: pointer;
+    transition: transform 0.35s var(--sf-transition-bounce);
+}
+
+.sf-hero-badge-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid rgba(198, 108, 36, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sf-color-terracotta);
+    font-size: 22px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(150, 75, 40, 0.08);
+    transition: all 0.35s var(--sf-transition-bounce);
+}
+
+.sf-hero-badge-circle i {
+    transition: transform 0.35s var(--sf-transition-bounce);
+}
+
+.sf-hero-badge-item:hover {
+    transform: translateY(-2px);
+}
+
+.sf-hero-badge-item:hover .sf-hero-badge-circle {
+    transform: translateY(-4px) scale(1.12);
+    background: linear-gradient(135deg, #a8542c 0%, #833918 100%);
+    color: #ffffff;
+    border-color: #a8542c;
+    box-shadow: 0 10px 24px rgba(150, 75, 40, 0.28);
+}
+
+.sf-hero-badge-item:hover .sf-hero-badge-circle i {
+    transform: scale(1.12);
+}
+
+.sf-hero-badge-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--sf-color-dark);
+    transition: color 0.25s ease;
+}
+
+.sf-hero-badge-item:hover .sf-hero-badge-label {
+    color: var(--sf-color-terracotta);
+}
+
+.sf-hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Right Hero Visual (Container Ship with Gentle Floating Waves) */
+.sf-hero-visual-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sf-hero-visual-wrap::before {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 40%;
+    bottom: -15px;
+    left: 8%;
+    background: radial-gradient(ellipse at center, rgba(11, 37, 70, 0.22) 0%, rgba(198, 108, 36, 0.08) 50%, transparent 75%);
+    filter: blur(28px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sf-hero-img-card {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    overflow: visible;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    z-index: 2;
+    animation: sf-ship-float 5.5s ease-in-out infinite alternate;
+}
+
+.sf-hero-ship-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 30px rgba(11, 37, 70, 0.26)) drop-shadow(0 8px 16px rgba(198, 108, 36, 0.12));
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    user-select: none;
+}
+
+.sf-hero-img-card:hover .sf-hero-ship-img {
+    transform: translateY(-6px) scale(1.025);
+    filter: drop-shadow(0 28px 40px rgba(11, 37, 70, 0.32)) drop-shadow(0 12px 20px rgba(198, 108, 36, 0.16));
+}
+
+/* Dynamic Moving Ocean Waves Layer (Photorealistic Waves with Liquid Displacement) */
+.sf-moving-waves-wrap {
+    position: absolute;
+    top: 0;
+    left: -23.25%;
+    width: 146.5%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: visible;
+}
+
+.sf-ocean-waves-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: url(#sfWaterDisplacement) drop-shadow(0 15px 25px rgba(9, 40, 80, 0.3));
+    animation: sf-waves-heave 4.8s ease-in-out infinite alternate;
+    transform-origin: 50% 85%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    user-select: none;
+}
+
+.sf-hero-img-card:hover .sf-ocean-waves-img {
+    transform: translateY(-6px) scale(1.025);
+    filter: url(#sfWaterDisplacement) drop-shadow(0 20px 32px rgba(9, 40, 80, 0.38));
+}
+
+@keyframes sf-ship-float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-0.4deg);
+    }
+
+    100% {
+        transform: translateY(-14px) rotate(0.4deg);
+    }
+}
+
+/* Natural Liquid Ocean Wave Surge & Undulation */
+@keyframes sf-waves-heave {
+    0% {
+        transform: translateY(0px) scale(1.0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-4px) scale(1.012) rotate(-0.25deg);
+    }
+
+    100% {
+        transform: translateY(3px) scale(0.992) rotate(0.25deg);
+    }
+}
+
+/* ==========================================================================
+   2. STATS BAR SECTION (4-Item Stat Counter Row)
+   ========================================================================== */
+.sf-stats-section {
+    background-color: var(--sf-bg-cream);
+    padding: 34px 0;
+    border-top: 1px solid var(--sf-border-subtle);
+    border-bottom: 1px solid var(--sf-border-subtle);
+}
+
+.sf-stats-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.sf-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.sf-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 12px;
+}
+
+.sf-stat-item:not(:last-child) {
+    border-right: 1px solid rgba(198, 108, 36, 0.2);
+}
+
+.sf-stat-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(198, 108, 36, 0.1);
+    color: var(--sf-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.sf-stat-item:hover .sf-stat-icon-wrap {
+    transform: scale(1.1);
+    background: var(--sf-color-terracotta);
+    color: #ffffff;
+}
+
+.sf-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sf-stat-number {
+    font-family: var(--sf-font-serif);
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.sf-stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sf-color-text-muted);
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   3. ABOUT SEA FREIGHT SECTION (Port Terminal Image & Copy)
+   ========================================================================== */
+.sf-about-section {
+    padding: 90px 0 50px 0;
+    background-color: var(--sf-bg-cream);
+    background: var(--sf-bg-cream);
+    position: relative;
+}
+
+.sf-about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.sf-about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+/* 3D Stacked Card Stage for About Image */
+.sf-about-image-stage {
+    position: relative;
+    perspective: 1200px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 36px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+/* 3D Stacked Back Card Layer (Loops: Original -> Top-Right 3D -> Original -> Bottom-Left 3D) */
+.sf-about-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(198, 108, 36, 0.38) 0%, rgba(13, 27, 42, 0.94) 100%),
+        url('images/sf_about_port.jpg') center/cover no-repeat;
+    border: 3px solid #c66c24;
+    box-shadow: 0 16px 36px rgba(13, 27, 42, 0.15);
+    transform: translate(0, 0);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    filter: brightness(0.82) contrast(1.15);
+    will-change: transform, opacity, box-shadow;
+    animation: sf-card-3d-back 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.45s ease,
+        box-shadow 0.55s ease;
+}
+
+/* Main Front Port Image Card (Loops: Original -> Top-Right 3D -> Original -> Bottom-Left 3D) */
+.sf-about-image-wrap {
+    position: relative;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(13, 27, 42, 0.14);
+    border: 3.5px solid #ffffff;
+    z-index: 2;
+    transform: translate(0, 0);
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
+    animation: sf-card-3d-front 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.55s ease,
+        border-color 0.4s ease;
+}
+
+.sf-about-image-wrap img {
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+    will-change: transform;
+    animation: sf-card-3d-img 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Badge Card at Bottom-Left */
+.sf-about-floating-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(13, 27, 42, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 3;
+    will-change: transform, box-shadow;
+    animation: sf-card-3d-badge 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transition: transform 0.3s ease;
+}
+
+/* On mouse hover, pause the continuous 3D loop cleanly without jarring snap */
+.sf-about-image-stage:hover .sf-about-image-wrap,
+.sf-about-image-stage:hover .sf-about-card-back,
+.sf-about-image-stage:hover .sf-about-image-wrap img,
+.sf-about-image-stage:hover .sf-about-floating-badge {
+    animation-play-state: paused;
+}
+
+/* ==========================================================================
+   Continuous 3D Card Animation Cycle (Top-Right 3D -> Flat -> Bottom-Left 3D -> Flat)
+   ========================================================================== */
+@keyframes sf-card-3d-front {
+
+    /* 1. Flat Original Initial State */
+    0%,
+    10% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        box-shadow: 0 20px 45px rgba(13, 27, 42, 0.14);
+        border-color: #ffffff;
+    }
+
+    /* 2. Top-Right 3D: Front Card shifts Down-Left */
+    20%,
+    40% {
+        transform: translate(-10px, 10px) rotateX(2deg) rotateY(-3deg);
+        box-shadow: -15px 35px 65px rgba(13, 27, 42, 0.28), 0 10px 24px rgba(198, 108, 36, 0.15);
+        border-color: #ffffff;
+    }
+
+    /* 3. Return to Flat Original State */
+    50%,
+    60% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        box-shadow: 0 20px 45px rgba(13, 27, 42, 0.14);
+        border-color: #ffffff;
+    }
+
+    /* 4. Bottom-Left 3D: Front Card shifts Up-Right */
+    70%,
+    90% {
+        transform: translate(10px, -10px) rotateX(-2deg) rotateY(3deg);
+        box-shadow: -15px 22px 50px rgba(13, 27, 42, 0.22), 0 8px 20px rgba(198, 108, 36, 0.12);
+        border-color: #ffffff;
+    }
+
+    /* 5. Complete Loop back to Flat Original */
+    100% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        box-shadow: 0 20px 45px rgba(13, 27, 42, 0.14);
+        border-color: #ffffff;
+    }
+}
+
+@keyframes sf-card-3d-back {
+
+    /* 1. Flat Original Initial State (Hidden) */
+    0%,
+    10% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+        box-shadow: 0 16px 36px rgba(13, 27, 42, 0.15);
+    }
+
+    /* 2. Top-Right 3D: Back Card emerges Up-Right */
+    20%,
+    40% {
+        transform: translate(26px, -26px) rotateX(2deg) rotateY(-3deg);
+        opacity: 1;
+        box-shadow: 20px -10px 50px rgba(13, 27, 42, 0.24), 0 12px 28px rgba(198, 108, 36, 0.25);
+    }
+
+    /* 3. Return to Flat Original State (Fades out) */
+    50%,
+    60% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+        box-shadow: 0 16px 36px rgba(13, 27, 42, 0.15);
+    }
+
+    /* 4. Bottom-Left 3D: Back Card emerges Down-Left */
+    70%,
+    90% {
+        transform: translate(-26px, 26px) rotateX(-2deg) rotateY(3deg);
+        opacity: 1;
+        box-shadow: -20px 25px 50px rgba(13, 27, 42, 0.24), 0 12px 28px rgba(198, 108, 36, 0.25);
+    }
+
+    /* 5. Complete Loop back to Flat Original (Fades out) */
+    100% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+        box-shadow: 0 16px 36px rgba(13, 27, 42, 0.15);
+    }
+}
+
+@keyframes sf-card-3d-img {
+
+    0%,
+    10% {
+        transform: scale(1.0);
+    }
+
+    20%,
+    40% {
+        transform: scale(1.035);
+    }
+
+    50%,
+    60% {
+        transform: scale(1.0);
+    }
+
+    70%,
+    90% {
+        transform: scale(1.035);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes sf-card-3d-badge {
+
+    0%,
+    10% {
+        transform: translateY(0) translateZ(0);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    20%,
+    40% {
+        transform: translateY(-4px) translateZ(30px);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
+    }
+
+    50%,
+    60% {
+        transform: translateY(0) translateZ(0);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    70%,
+    90% {
+        transform: translateY(-4px) translateZ(30px);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
+    }
+
+    100% {
+        transform: translateY(0) translateZ(0);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.sf-about-floating-badge:hover {
+    transform: translateY(-4px);
+}
+
+.sf-badge-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(198, 108, 36, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eab308;
+    font-size: 20px;
+}
+
+.sf-badge-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sf-badge-text-box strong {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+}
+
+.sf-badge-text-box span {
+    font-size: 11.5px;
+    color: #cbd5e1;
+}
+
+/* Right Content with Nautical Compass Watermark */
+.sf-about-content {
+    max-width: 560px;
+    position: relative;
+}
+
+.sf-compass-watermark {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 250px;
+    height: 250px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.sf-compass-watermark svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-origin: 50% 50%;
+    animation: sf-compass-rotate 40s linear infinite;
+    will-change: transform;
+}
+
+@keyframes sf-compass-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sf-about-title {
+    font-family: var(--sf-font-serif);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    line-height: 1.18;
+    margin-bottom: 22px;
+    letter-spacing: -0.015em;
+}
+
+.sf-about-desc {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--sf-color-text-body);
+    margin-bottom: 34px;
+}
+
+/* ==========================================================================
+   4. OUR SEA FREIGHT SERVICES (4-Card 3D Flip Grid)
+   ========================================================================== */
+.sf-services-section {
+    background-color: var(--sf-bg-cream);
+    padding: 95px 0 100px 0;
+    position: relative;
+}
+
+.sf-services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.sf-services-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px auto;
+}
+
+.sf-services-title {
+    font-family: var(--sf-font-serif);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.sf-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* 3D Flip Card Container */
+.sf-flip-card {
+    background-color: transparent;
+    height: 380px;
+    perspective: 1200px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    border-radius: 18px;
+}
+
+/* Inner 3D Wrapper */
+.sf-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.85s cubic-bezier(0.34, 1.35, 0.64, 1);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    border-radius: 18px;
+}
+
+.sf-flip-card:hover .sf-flip-card-inner,
+.sf-flip-card.is-flipped .sf-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common Face Setup strictly pinned to (0,0) to prevent any downward drop */
+.sf-flip-card-front,
+.sf-flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* Front Face: Photo Header, Overlapping Icon Badge, Title, Description, Link */
+.sf-flip-card-front {
+    background: #ffffff;
+    border: 1px solid var(--sf-border-subtle);
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(13, 27, 42, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+    transform: rotateY(0deg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.sf-flip-card:hover .sf-flip-card-front {
+    border-color: rgba(198, 108, 36, 0.4);
+    box-shadow: 0 16px 36px rgba(150, 75, 40, 0.12);
+}
+
+/* Top Photo Wrap */
+.sf-card-thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    overflow: visible;
+    flex-shrink: 0;
+    border-radius: 18px 18px 0 0;
+}
+
+.sf-card-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px 18px 0 0;
+    transition: transform 0.6s ease;
+}
+
+.sf-flip-card:hover .sf-card-thumb-wrap img {
+    transform: scale(1.06);
+}
+
+/* Overlapping Badge Circle */
+.sf-card-badge-circle {
+    position: absolute;
+    bottom: -18px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid rgba(198, 108, 36, 0.25);
+    box-shadow: 0 6px 16px rgba(13, 27, 42, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sf-color-terracotta);
+    font-size: 20px;
+    z-index: 5;
+    transition: all 0.35s ease;
+}
+
+.sf-flip-card:hover .sf-card-badge-circle {
+    transform: scale(1.1);
+    background: var(--sf-color-terracotta);
+    color: #ffffff;
+}
+
+/* Card Content Wrap */
+.sf-card-content-wrap {
+    padding: 26px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.sf-card-title {
+    font-family: var(--sf-font-sans);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    margin-bottom: 6px;
+    line-height: 1.35;
+    text-align: left;
+    width: 100%;
+}
+
+.sf-card-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #556270;
+    margin-bottom: 12px;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    flex-grow: 1;
+}
+
+.sf-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sf-color-terracotta);
+    margin-top: auto;
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.sf-flip-card:hover .sf-card-link {
+    gap: 9px;
+    color: var(--sf-color-terracotta-dark);
+}
+
+/* Back Face */
+.sf-flip-card-back {
+    background: linear-gradient(150deg, #0d1b2a 0%, #152538 55%, #1a2f47 100%);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    padding: 26px 22px 22px 22px;
+    color: #ffffff;
+    transform: rotateY(180deg);
+    box-shadow: 0 16px 36px rgba(13, 27, 42, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sf-flip-card-back::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sf-card-back-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #eab308;
+    background: rgba(234, 179, 8, 0.12);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 1px solid rgba(234, 179, 8, 0.22);
+}
+
+.sf-card-back-title {
+    font-family: var(--sf-font-sans);
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.sf-card-back-desc {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.sf-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sf-card-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: #f1f5f9;
+    font-weight: 500;
+}
+
+.sf-card-features li i {
+    color: #22c55e;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. OUR PROCESS SECTION (Twilight Harbor Timeline with Zoom Motion)
+   ========================================================================== */
+.sf-process-section {
+    position: relative;
+    background-color: #0d1b2a;
+    padding: 85px 0 90px 0;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Motion Background: Smooth Continuous Zoom In & Zoom Out (4s Fast Cycle) */
+.sf-process-section::before {
+    content: '';
+    position: absolute;
+    inset: -50px;
+    background: url('images/sf_process_bg.jpg') center center / cover no-repeat;
+    z-index: 0;
+    will-change: transform;
+    animation: sf-process-bg-zoom 4s ease-in-out infinite alternate;
+    pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-origin: center center;
+}
+
+/* Dark Vignette Overlay */
+.sf-process-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13, 27, 42, 0.88) 0%, rgba(13, 27, 42, 0.82) 50%, rgba(13, 27, 42, 0.94) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes sf-process-bg-zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.18);
+    }
+}
+
+.sf-process-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.sf-process-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.sf-process-eyebrow {
+    color: #eab308;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.sf-process-title {
+    font-family: var(--sf-font-serif);
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.22;
+}
+
+.sf-process-timeline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sf-process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 220px;
+    position: relative;
+    z-index: 3;
+}
+
+.sf-step-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sf-color-terracotta);
+    font-size: 28px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.35s var(--sf-transition-bounce);
+}
+
+.sf-process-step:hover .sf-step-circle {
+    transform: translateY(-5px) scale(1.08);
+    background: var(--sf-color-terracotta);
+    color: #ffffff;
+    box-shadow: 0 14px 30px rgba(198, 108, 36, 0.45);
+}
+
+.sf-step-title {
+    font-family: var(--sf-font-sans);
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.sf-step-desc {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.45;
+}
+
+.sf-process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 22px;
+    padding-top: 22px;
+}
+
+/* ==========================================================================
+   6. GLOBAL REACH SECTION (Panoramic Port World Map & Counter Stats)
+   ========================================================================== */
+/* Sea Freight Process Section Equal Gap Override */
+body.sea-freight-page .af-process-section {
+    padding: 45px 0 !important;
+}
+
+.sf-global-section {
+    position: relative;
+    background-color: var(--sf-bg-cream);
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sf-global-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 3;
+}
+
+.sf-global-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.sf-global-content {
+    max-width: 560px;
+    position: relative;
+    z-index: 5;
+}
+
+.sf-global-title {
+    font-family: var(--sf-font-serif);
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    line-height: 1.18;
+    margin-bottom: 22px;
+    letter-spacing: -0.015em;
+}
+
+.sf-global-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 32px;
+}
+
+.sf-global-stats {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 36px;
+}
+
+.sf-global-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.sf-global-num {
+    font-family: var(--sf-font-serif);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--sf-color-bronze);
+    line-height: 1.15;
+    margin-bottom: 4px;
+}
+
+.sf-global-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sf-color-text-muted);
+}
+
+/* Right Organic Arch Visual with Moving Outlines */
+.sf-global-visual {
+    position: relative;
+    width: 100%;
+    padding: 30px 0 30px 30px;
+    box-sizing: border-box;
+}
+
+/* SVG Moving Outlines Layer */
+.sf-global-outlines-svg {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 30px);
+    height: 420px;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Outer Outline 1: Flowing Dashed Border (Offset 14px) */
+.sf-outline-dashed-1 {
+    fill: none;
+    stroke: rgba(198, 108, 36, 0.55);
+    stroke-width: 2;
+    stroke-dasharray: 10 10;
+    animation: sfOutlineFlow 8s linear infinite;
+}
+
+/* Outer Outline 2: Glowing Luminous Tracer Beam (Travels along Outline 1) */
+.sf-outline-tracer {
+    fill: none;
+    stroke: #eab308;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    stroke-dasharray: 90 700;
+    filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.95)) drop-shadow(0 0 16px rgba(198, 108, 36, 0.6));
+    animation: sfOutlineTracer 4s linear infinite;
+}
+
+/* Outer Outline 3: Outer Secondary Dashed Contour (Offset 28px) */
+.sf-outline-dashed-2 {
+    fill: none;
+    stroke: rgba(198, 108, 36, 0.3);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 12;
+    animation: sfOutlineFlowReverse 14s linear infinite;
+}
+
+/* Border Beam directly around the Arch Card */
+@property --beam-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.sf-global-border-beam {
+    position: absolute;
+    top: -3.5px;
+    left: -3.5px;
+    right: -3.5px;
+    bottom: -3.5px;
+    border-radius: 223px 0 0 223px;
+    padding: 3.5px;
+    background: conic-gradient(from var(--beam-angle),
+            transparent 0%,
+            transparent 70%,
+            rgba(198, 108, 36, 0.4) 80%,
+            #eab308 90%,
+            #ffffff 94%,
+            #eab308 98%,
+            transparent 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 4;
+    animation: sfBeamSpin 4.5s linear infinite;
+}
+
+@keyframes sfOutlineFlow {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -200;
+    }
+}
+
+@keyframes sfOutlineFlowReverse {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+
+@keyframes sfOutlineTracer {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -790;
+    }
+}
+
+@keyframes sfBeamSpin {
+    to {
+        --beam-angle: 360deg;
+    }
+}
+
+.sf-global-arch-mask {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 220px 0 0 220px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(13, 27, 42, 0.16);
+    border: 3.5px solid #ffffff;
+    z-index: 2;
+}
+
+.sf-global-arch-mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.sf-global-visual:hover .sf-global-arch-mask img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   7. INDUSTRIES WE SERVE SECTION (7 Cards Horizontal)
+   ========================================================================== */
+.sf-industries-section {
+    background-color: var(--sf-bg-cream);
+    padding: 45px 0;
+    position: relative;
+}
+
+.sf-industries-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.sf-industries-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sf-industries-title {
+    font-family: var(--sf-font-serif);
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--sf-color-dark);
+    letter-spacing: -0.01em;
+}
+
+.sf-industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.sf-industry-card {
+    background: #ffffff;
+    border: 1px solid var(--sf-border-card);
+    border-radius: 16px;
+    padding: 24px 14px 20px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(13, 27, 42, 0.04);
+    transition: all 0.35s var(--sf-transition-bounce);
+    cursor: pointer;
+}
+
+.sf-industry-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--sf-color-terracotta);
+    box-shadow: 0 12px 28px rgba(198, 108, 36, 0.16);
+}
+
+.sf-industry-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(198, 108, 36, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sf-color-terracotta);
+    font-size: 24px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.sf-industry-card:hover .sf-industry-icon {
+    background: var(--sf-color-terracotta);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.sf-industry-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sf-color-dark);
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   8. CALL TO ACTION SECTION (Move Business Forward)
+   ========================================================================== */
+.sf-cta-section {
+    position: relative;
+    background-color: #0d1b2a;
+    padding: 50px 0;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Zooming Background Image */
+.sf-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('images/sf_cta_bg.jpg') center right / cover no-repeat;
+    z-index: 1;
+    transform-origin: 75% 50%;
+    animation: sfCtaZoomMotion 8s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* Dark Gradient Overlay for readability */
+.sf-cta-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(13, 27, 42, 0.94) 0%, rgba(13, 27, 42, 0.88) 55%, rgba(13, 27, 42, 0.45) 85%, rgba(13, 27, 42, 0.25) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes sfCtaZoomMotion {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.18);
+    }
+}
+
+.sf-cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 3;
+}
+
+.sf-cta-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.sf-cta-left {
+    max-width: 680px;
+}
+
+.sf-cta-title {
+    font-family: var(--sf-font-serif);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.18;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.sf-cta-desc {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 0;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.sf-cta-btns {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.sf-cta-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.sf-cta-link-secondary:hover {
+    color: #eab308 !important;
+    transform: translateX(4px);
+}
+
+.sf-cta-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.sf-cta-feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.sf-cta-feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eab308;
+    font-size: 20px;
+}
+
+.sf-cta-feature-item span {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .sf-hero-title {
+        font-size: 46px;
+    }
+
+    .sf-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sf-industries-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .sf-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sf-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sf-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .sf-stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .sf-process-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .sf-process-arrow {
+        transform: rotate(90deg);
+        padding: 0;
+    }
+
+    .sf-global-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sf-global-arch-mask {
+        border-radius: 36px;
+        height: 320px;
+    }
+
+    .sf-cta-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sf-cta-right {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sf-hero-title {
+        font-size: 36px;
+    }
+
+    .sf-hero-script-tag {
+        display: none;
+    }
+
+    .sf-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sf-stat-item {
+        border-right: none !important;
+    }
+
+    .sf-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sf-industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sf-cta-title {
+        font-size: 28px;
+    }
+}

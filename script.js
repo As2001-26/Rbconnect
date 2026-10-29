@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Universal Scroll-Triggered Stat Counter Animation ---
-    const statContainers = document.querySelectorAll('.stats-panel, .story-stats, .af-map-stats, .about-stats, .lf-dest-stats');
+    const statContainers = document.querySelectorAll('.stats-panel, .story-stats, .af-map-stats, .about-stats, .lf-dest-stats, .lf-global-stats, .sf-stats-section, .sf-global-stats');
 
     const animateStatGroup = (container) => {
-        const stats = container.querySelectorAll('.stat-number, .af-stat-num, .lf-stat-num');
+        const stats = container.querySelectorAll('.stat-number, .af-stat-num, .lf-stat-num, .lf-global-num, .sf-stat-number, .sf-global-num');
         stats.forEach(stat => {
             const target = parseFloat(stat.getAttribute('data-target'));
             if (isNaN(target)) return;
@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 animateStatGroup(entry.target);
             } else {
                 // Reset numbers when scrolled out of view so it replays
-                const stats = entry.target.querySelectorAll('.stat-number, .af-stat-num, .lf-stat-num');
+                const stats = entry.target.querySelectorAll('.stat-number, .af-stat-num, .lf-stat-num, .lf-global-num, .sf-stat-number, .sf-global-num');
                 stats.forEach(stat => {
+                    const target = parseFloat(stat.getAttribute('data-target'));
+                    if (isNaN(target)) return;
                     const suffix = stat.getAttribute('data-suffix') || '';
                     const prefix = stat.getAttribute('data-prefix') || '';
                     stat.innerText = prefix + '0' + suffix;
@@ -76,25 +78,58 @@ document.addEventListener('DOMContentLoaded', () => {
         animObserver.observe(animContainer);
     }
 
+    // --- Why Choose Us Animated Path & Progressive Points (Runs every time on scroll) ---
+    const wcuSection = document.querySelector('.wcuv2-section');
+    if (wcuSection) {
+        wcuSection.classList.add('wcu-anim-ready');
+
+        const triggerWcuAnim = () => {
+            wcuSection.classList.remove('wcu-anim-active');
+            void wcuSection.offsetWidth; // Force reflow so browser restarts all CSS transitions and keyframes from 0
+            wcuSection.classList.add('wcu-anim-active');
+        };
+
+        const resetWcuAnim = () => {
+            wcuSection.classList.remove('wcu-anim-active');
+        };
+
+        const wcuObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Triggers every time user scrolls into view (whether from top or bottom)
+                    triggerWcuAnim();
+                } else {
+                    // Resets whenever user scrolls out of view (so it's primed to re-run on next scroll)
+                    resetWcuAnim();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        wcuObserver.observe(wcuSection);
+
+        // Global function for instant replay button in preview
+        window.replayWcuAnimation = triggerWcuAnim;
+    }
+
     // --- Parallax Scrolling for Shipping Containers ---
     const containersSection = document.querySelector('.expert-containers-section');
     if (containersSection) {
         window.addEventListener('scroll', () => {
             const rect = containersSection.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-            
+
             // Only calculate if section is in viewport
             if (rect.top <= windowHeight && rect.bottom >= 0) {
                 const sectionCenter = rect.top + (rect.height / 2);
                 const viewCenter = windowHeight / 2;
                 const diff = viewCenter - sectionCenter;
-                
+
                 // Adjust multiplier for parallax speed
                 const offset = diff * 0.15;
-                
+
                 // Clamp the offset to prevent extreme movement downwards onto FAQ section
                 const clampedOffset = Math.max(-40, Math.min(20, offset));
-                
+
                 // Update the custom property which drives the CSS transforms
                 containersSection.style.setProperty('--parallax-offset', `${clampedOffset}px`);
             }
@@ -103,18 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FAQ Accordion Logic ---
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        
+
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
             });
-            
+
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
@@ -131,20 +166,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const testiMobilePrev = document.querySelector('.testi-mobile-btn.prev');
     const testiMobileNext = document.querySelector('.testi-mobile-btn.next');
     const testiMobileDots = document.querySelectorAll('.testi-mobile-dots .dot');
-    
+
     if (testiTrack && testiCards.length > 0) {
         let currentIndex = 0;
-        
+
         const isMobile = () => window.innerWidth <= 768;
         const getTotalMobileCards = () => 3;
-        
+
         const updateCarousel = () => {
             if (isMobile()) {
                 const cardWidth = testiCards[0].offsetWidth;
                 const gap = 20; // 20px gap on mobile
                 const moveAmount = (cardWidth + gap) * currentIndex;
                 testiTrack.style.transform = `translateX(-${moveAmount}px)`;
-                
+
                 // Update mobile dots
                 testiMobileDots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentIndex);
@@ -154,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const gap = 30; // gap from desktop CSS
                 const moveAmount = (cardWidth + gap) * currentIndex;
                 testiTrack.style.transform = `translateX(-${moveAmount}px)`;
-                
+
                 // Update desktop dots
                 testiDots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentIndex);
@@ -283,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (servicesTrack && serviceCards.length > 0) {
         let currentServiceIndex = 0;
-        
+
         const isMobileView = () => window.innerWidth <= 768;
 
         const getVisibleServiceCards = () => {
@@ -296,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateServicesSlider = () => {
             const isMob = isMobileView();
             const maxIndex = Math.max(0, serviceCards.length - getVisibleServiceCards());
-            
+
             if (currentServiceIndex > maxIndex) {
                 currentServiceIndex = maxIndex;
             }
@@ -326,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const gap = 30; // gap from desktop CSS
                 const moveAmount = (cardWidth + gap) * currentServiceIndex;
                 servicesTrack.style.transform = `translateX(-${moveAmount}px)`;
-                
+
                 // Update desktop buttons
                 if (servicesPrev) servicesPrev.disabled = currentServiceIndex === 0;
                 if (servicesNext) servicesNext.disabled = currentServiceIndex >= maxIndex;
@@ -371,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             updateServicesSlider();
         });
-        
+
         setTimeout(updateServicesSlider, 50);
     }
 
@@ -421,10 +456,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const animateGnNumbers = () => {
             gnStatNumbers.forEach(stat => {
                 const target = parseFloat(stat.getAttribute('data-target'));
+                if (isNaN(target)) return;
                 const suffix = stat.getAttribute('data-suffix') || '';
                 const duration = 1800;
                 const startTime = performance.now();
-                const isFloat = !Number.isInteger(target) || stat.getAttribute('data-target').includes('.');
+                const isFloat = !Number.isInteger(target) || (stat.getAttribute('data-target') && stat.getAttribute('data-target').includes('.'));
 
                 const updateGnNumber = (currentTime) => {
                     const elapsed = currentTime - startTime;
@@ -610,12 +646,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function startTyping() {
         if (isTyping) return;
         isTyping = true;
-        
+
         clearTimeout(typeTimer);
         typedSpan.textContent = '';
         cursiveEl.classList.remove('writing-done');
         cursiveEl.classList.add('is-writing');
-        
+
         let index = 0;
 
         function typeNextLetter() {
@@ -670,7 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = cursiveEl.getBoundingClientRect();
         const winH = window.innerHeight;
         const inView = rect.top < winH * 0.88 && rect.bottom > winH * 0.12;
-        
+
         if (inView && !isTyping && !hasPlayed) {
             startTyping();
         } else if (!inView && hasPlayed) {
@@ -862,7 +898,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const spanLine1 = quoteContainer.querySelector('.af-typed-text-1');
     const spanLine2 = quoteContainer.querySelector('.af-typed-text-2');
-    
+
     const text1 = quoteContainer.getAttribute('data-line1') || 'More Than Freight,';
     const text2 = quoteContainer.getAttribute('data-line2') || 'We Deliver Possibilities.';
 
@@ -879,7 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startTypewriter() {
         if (isTyping || hasCompleted) return;
         isTyping = true;
-        
+
         // Reset classes and content
         quoteContainer.classList.remove('writing-done', 'is-writing-line2');
         quoteContainer.classList.add('is-writing-line1');
@@ -897,7 +933,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Line 1 finished -> brief pause before Line 2
                 quoteContainer.classList.remove('is-writing-line1');
                 quoteContainer.classList.add('is-writing-line2');
-                
+
                 pauseTimer = setTimeout(() => {
                     let j = 0;
                     function typeLine2() {
@@ -959,7 +995,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = quoteContainer.getBoundingClientRect();
         const winH = window.innerHeight;
         const inView = rect.top < winH * 0.9 && rect.bottom > winH * 0.1;
-        
+
         if (inView && !isTyping && !hasCompleted) {
             startTypewriter();
         } else if (!inView && (rect.top > winH * 1.4 || rect.bottom < -winH * 0.4)) {
@@ -973,115 +1009,119 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // AIR FREIGHT: 5-STEP FLIGHT PROCESS ANIMATION
 // ==========================================
-(function initAirFreightProcessAnimation() {
-    const processSection = document.querySelector('.af-process-section');
-    const flowPlane = document.getElementById('afFlowPlane');
-    const flowProgress = document.getElementById('afFlowProgress');
-    const cards = document.querySelectorAll('.af-process-card');
-    const arrows = document.querySelectorAll('.af-process-arrow');
+(function initAllProcessFlowAnimations() {
+    const processSections = document.querySelectorAll('.af-process-section');
+    if (!processSections.length) return;
 
-    if (!processSection || !flowPlane || cards.length === 0) return;
+    processSections.forEach(processSection => {
+        const flowRunner = processSection.querySelector('.af-flow-plane-runner');
+        const flowProgress = processSection.querySelector('.af-flow-line-progress');
+        const cards = processSection.querySelectorAll('.af-process-card');
+        const arrows = processSection.querySelectorAll('.af-process-arrow');
 
-    // Relative percentages across the 5 cards
-    const stepPercentages = [8, 29, 50, 71, 92];
-    let currentStep = 0;
-    let sequenceTimer = null;
-    let isRunning = false;
+        if (!flowRunner || cards.length === 0) return;
 
-    function setStep(stepIndex) {
-        if (stepIndex < 0 || stepIndex >= cards.length) return;
+        // Relative percentages across the 5 cards
+        const stepPercentages = [8, 29, 50, 71, 92];
+        let currentStep = 0;
+        let sequenceTimer = null;
+        let isRunning = false;
 
-        const targetPct = stepPercentages[stepIndex];
-        flowPlane.style.left = `${targetPct}%`;
-        if (flowProgress) {
-            flowProgress.style.width = `${targetPct}%`;
+        function setStep(stepIndex) {
+            if (stepIndex < 0 || stepIndex >= cards.length) return;
+
+            const targetPct = stepPercentages[stepIndex] !== undefined ? stepPercentages[stepIndex] : ((stepIndex + 0.5) / cards.length) * 100;
+            flowRunner.style.left = `${targetPct}%`;
+            if (flowProgress) {
+                flowProgress.style.width = `${targetPct}%`;
+            }
+
+            cards.forEach((card, idx) => {
+                if (idx === stepIndex) {
+                    card.classList.add('is-active');
+                    card.classList.remove('is-passed');
+                } else if (idx < stepIndex) {
+                    card.classList.remove('is-active');
+                    card.classList.add('is-passed');
+                } else {
+                    card.classList.remove('is-active', 'is-passed');
+                }
+            });
+
+            arrows.forEach((arrow, idx) => {
+                if (idx < stepIndex) {
+                    arrow.classList.add('is-active');
+                } else {
+                    arrow.classList.remove('is-active');
+                }
+            });
         }
 
-        cards.forEach((card, idx) => {
-            if (idx === stepIndex) {
-                card.classList.add('is-active');
-                card.classList.remove('is-passed');
-            } else if (idx < stepIndex) {
-                card.classList.remove('is-active');
-                card.classList.add('is-passed');
-            } else {
-                card.classList.remove('is-active', 'is-passed');
-            }
-        });
-
-        arrows.forEach((arrow, idx) => {
-            if (idx < stepIndex) {
-                arrow.classList.add('is-active');
-            } else {
-                arrow.classList.remove('is-active');
-            }
-        });
-    }
-
-    function runProcessSequence() {
-        if (isRunning) return;
-        isRunning = true;
-        currentStep = 0;
-
-        function nextStep() {
-            setStep(currentStep);
-            currentStep++;
-
-            if (currentStep < cards.length) {
-                sequenceTimer = setTimeout(nextStep, 1400); // 1.4s per card reveal
-            } else {
-                // All 5 steps completed - keep illuminated and loop smoothly
-                sequenceTimer = setTimeout(() => {
-                    cards.forEach(card => {
-                        card.classList.add('is-active');
-                        card.classList.remove('is-passed');
-                    });
-                    arrows.forEach(arr => arr.classList.add('is-active'));
-                    if (flowProgress) flowProgress.style.width = '100%';
-                    flowPlane.style.left = '96%';
-
-                    // Smooth loop after pause
-                    sequenceTimer = setTimeout(() => {
-                        isRunning = false;
-                        runProcessSequence();
-                    }, 4200);
-                }, 1400);
-            }
-        }
-
-        nextStep();
-    }
-
-    function resetProcessSequence() {
-        clearTimeout(sequenceTimer);
-        isRunning = false;
-        currentStep = 0;
-        if (flowPlane) flowPlane.style.left = '0%';
-        if (flowProgress) flowProgress.style.width = '0%';
-        cards.forEach(card => card.classList.remove('is-active', 'is-passed'));
-        arrows.forEach(arr => arr.classList.remove('is-active'));
-    }
-
-    // IntersectionObserver to start when user scrolls into process section
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                resetProcessSequence();
-                setTimeout(runProcessSequence, 350);
-            } else {
-                resetProcessSequence();
-            }
-        });
-    }, { threshold: 0.25 });
-
-    observer.observe(processSection);
-
-    // Interactive Hover: user can hover any card to guide the plane directly
-    cards.forEach((card, idx) => {
-        card.addEventListener('mouseenter', () => {
-            clearTimeout(sequenceTimer);
+        function runProcessSequence() {
+            if (isRunning) return;
             isRunning = true;
-            setStep(idx);
+            currentStep = 0;
+
+            function nextStep() {
+                setStep(currentStep);
+                currentStep++;
+
+                if (currentStep < cards.length) {
+                    sequenceTimer = setTimeout(nextStep, 1400); // 1.4s per card reveal
+                } else {
+                    // All 5 steps completed - keep illuminated and loop smoothly
+                    sequenceTimer = setTimeout(() => {
+                        cards.forEach(card => {
+                            card.classList.add('is-active');
+                            card.classList.remove('is-passed');
+                        });
+                        arrows.forEach(arr => arr.classList.add('is-active'));
+                        if (flowProgress) flowProgress.style.width = '100%';
+                        flowRunner.style.left = '96%';
+
+                        // Smooth loop after pause
+                        sequenceTimer = setTimeout(() => {
+                            isRunning = false;
+                            runProcessSequence();
+                        }, 4200);
+                    }, 1400);
+                }
+            }
+
+            nextStep();
+        }
+
+        function resetProcessSequence() {
+            clearTimeout(sequenceTimer);
+            isRunning = false;
+            currentStep = 0;
+            if (flowRunner) flowRunner.style.left = '0%';
+            if (flowProgress) flowProgress.style.width = '0%';
+            cards.forEach(card => card.classList.remove('is-active', 'is-passed'));
+            arrows.forEach(arr => arr.classList.remove('is-active'));
+        }
+
+        // IntersectionObserver to start when user scrolls into process section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    resetProcessSequence();
+                    setTimeout(runProcessSequence, 350);
+                } else {
+                    resetProcessSequence();
+                }
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(processSection);
+
+        // Interactive Hover: user can hover any card to guide the runner directly
+        cards.forEach((card, idx) => {
+            card.addEventListener('mouseenter', () => {
+                clearTimeout(sequenceTimer);
+                isRunning = true;
+                setStep(idx);
+            });
         });
     });
 })();
@@ -1156,7 +1196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = document.getElementById('mobileDrawerClose');
         const accordionToggle = document.querySelector('.mobile-nav-accordion-toggle');
         const accordion = document.querySelector('.mobile-nav-accordion');
-        
+
         if (!drawer || !overlay) return;
 
         function openDrawer() {
@@ -1249,5 +1289,317 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })();
 
+// Ensure Background Video Autoplay Across Browsers
+(function () {
+    const bgVideo = document.querySelector('.fixed-video-bg');
+    if (bgVideo) {
+        bgVideo.muted = true;
+        const tryPlay = () => {
+            const p = bgVideo.play();
+            if (p !== undefined) {
+                p.catch(() => {
+                    window.addEventListener('click', () => bgVideo.play(), { once: true });
+                    window.addEventListener('scroll', () => bgVideo.play(), { once: true });
+                    window.addEventListener('touchstart', () => bgVideo.play(), { once: true });
+                });
+            }
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', tryPlay);
+        } else {
+            tryPlay();
+        }
+    }
+})();
 
+// Dynamic Active Nav Link Underline on Click
+(function initActiveNavLinks() {
+    function setupNavActive() {
+        const navLinks = document.querySelectorAll('.hero-navbar .nav-links a, .navbar .nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                const href = this.getAttribute('href');
+                if (href && (href.startsWith('#') || href.includes('#'))) {
+                    navLinks.forEach(item => item.classList.remove('active', 'active-dark'));
+                    this.classList.add('active');
+                }
+            });
+        });
+    }
 
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupNavActive);
+    } else {
+        setupNavActive();
+    }
+})();
+
+// --- Road Freight Interactive Animated Card (CodePen style reveal) ---
+(() => {
+    function initRoadFreightCard() {
+        const wrapCard = document.querySelector('.lf-about-section .wrap');
+        if (!wrapCard) return;
+
+        // Click / touch toggle for mobile and tablet devices
+        wrapCard.addEventListener('click', (e) => {
+            if (!e.target.closest('a') && !e.target.closest('button')) {
+                wrapCard.classList.toggle('active');
+            }
+        });
+
+        // Re-trigger entrance animations when scrolled into view
+        if ('IntersectionObserver' in window) {
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animElements = wrapCard.querySelectorAll('.animate');
+                        animElements.forEach(el => {
+                            el.style.animation = 'none';
+                            void el.offsetWidth; // Force reflow
+                            el.style.animation = '';
+                        });
+                        cardObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            cardObserver.observe(wrapCard);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initRoadFreightCard);
+    } else {
+        initRoadFreightCard();
+    }
+})();
+
+// --- 3D Sequential Flip Cards (Road & Sea Freight) ---
+(() => {
+    function initFlipCards() {
+        const sections = document.querySelectorAll('.lf-services-section, .sf-services-section');
+        sections.forEach(section => {
+            const cards = section.querySelectorAll('.lf-flip-card, .sf-flip-card');
+            const replayBtn = section.querySelector('#lfReplayFlip, #sfReplayFlip');
+            if (!cards.length) return;
+
+            let sequenceTimeouts = [];
+            let isSequencing = false;
+
+            function clearSequence() {
+                sequenceTimeouts.forEach(t => clearTimeout(t));
+                sequenceTimeouts = [];
+                isSequencing = false;
+            }
+
+            function runFlipSequence() {
+                clearSequence();
+                isSequencing = true;
+                cards.forEach(card => card.classList.remove('is-flipped'));
+
+                cards.forEach((card, index) => {
+                    const flipBackTimeout = setTimeout(() => {
+                        card.classList.add('is-flipped');
+                    }, 200 + (index * 340));
+                    sequenceTimeouts.push(flipBackTimeout);
+                });
+
+                const holdTime = 3800;
+                const startFlipFront = 200 + (cards.length * 340) + holdTime;
+
+                cards.forEach((card, index) => {
+                    const flipFrontTimeout = setTimeout(() => {
+                        card.classList.remove('is-flipped');
+                        if (index === cards.length - 1) {
+                            isSequencing = false;
+                        }
+                    }, startFlipFront + (index * 260));
+                    sequenceTimeouts.push(flipFrontTimeout);
+                });
+            }
+
+            if (replayBtn) {
+                replayBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    runFlipSequence();
+                });
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a') || e.target.closest('button')) return;
+                    if (isSequencing) clearSequence();
+                    card.classList.toggle('is-flipped');
+                });
+
+                card.addEventListener('mouseenter', () => {
+                    if (isSequencing) {
+                        clearSequence();
+                        cards.forEach(c => c.classList.remove('is-flipped'));
+                    }
+                });
+            });
+
+            if ('IntersectionObserver' in window) {
+                let hasPlayed = false;
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (!hasPlayed) {
+                                hasPlayed = true;
+                                setTimeout(runFlipSequence, 450);
+                            }
+                        } else {
+                            hasPlayed = false;
+                        }
+                    });
+                }, { threshold: 0.25 });
+
+                observer.observe(section);
+            } else {
+                setTimeout(runFlipSequence, 700);
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFlipCards);
+    } else {
+        initFlipCards();
+    }
+})();
+
+// ========================================================
+// Sea Freight Global Reach - Dynamic Arch Moving Outlines
+// ========================================================
+(function() {
+    function initArchOutlines() {
+        const card = document.getElementById('sfArchMaskCard');
+        const pathMid = document.getElementById('sfPathOutlineMid');
+        const pathOuter = document.getElementById('sfPathOutlineOuter');
+        const pathTracer = document.getElementById('sfPathOutlineTracer');
+        if (!card || !pathMid || !pathOuter || !pathTracer) return;
+
+        function updateArchPaths() {
+            const w = card.offsetWidth;
+            const h = card.offsetHeight;
+            if (w === 0 || h === 0) return;
+
+            // Check if card has full 50% arch or standard rounded corners
+            const computedStyle = window.getComputedStyle(card);
+            const radiusStr = computedStyle.borderTopLeftRadius || '';
+            const isFullArch = parseFloat(radiusStr) > 100;
+            const r = isFullArch ? (h / 2) : (parseFloat(radiusStr) || 36);
+
+            if (isFullArch) {
+                // Mid Outline (Offset 14px)
+                const off1 = 14;
+                const r1 = r + off1;
+                const d1 = `M ${w} ${-off1} L ${r} ${-off1} A ${r1} ${r1} 0 0 0 ${-off1} ${r} A ${r1} ${r1} 0 0 0 ${r} ${h + off1} L ${w} ${h + off1} Z`;
+                pathMid.setAttribute('d', d1);
+                pathTracer.setAttribute('d', d1);
+
+                // Outer Outline (Offset 28px)
+                const off2 = 28;
+                const r2 = r + off2;
+                const d2 = `M ${w} ${-off2} L ${r} ${-off2} A ${r2} ${r2} 0 0 0 ${-off2} ${r} A ${r2} ${r2} 0 0 0 ${r} ${h + off2} L ${w} ${h + off2} Z`;
+                pathOuter.setAttribute('d', d2);
+            } else {
+                // Responsive rectangular rounded card
+                const off1 = 10;
+                const r1 = r + off1;
+                const d1 = `M ${w + off1} ${-off1} L ${r} ${-off1} A ${r1} ${r1} 0 0 0 ${-off1} ${r} L ${-off1} ${h - r} A ${r1} ${r1} 0 0 0 ${r} ${h + off1} L ${w + off1} ${h + off1} Z`;
+                pathMid.setAttribute('d', d1);
+                pathTracer.setAttribute('d', d1);
+
+                const off2 = 20;
+                const r2 = r + off2;
+                const d2 = `M ${w + off2} ${-off2} L ${r} ${-off2} A ${r2} ${r2} 0 0 0 ${-off2} ${r} L ${-off2} ${h - r} A ${r2} ${r2} 0 0 0 ${r} ${h + off2} L ${w + off2} ${h + off2} Z`;
+                pathOuter.setAttribute('d', d2);
+            }
+        }
+
+        updateArchPaths();
+        window.addEventListener('resize', updateArchPaths);
+        if (window.ResizeObserver) {
+            new ResizeObserver(updateArchPaths).observe(card);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initArchOutlines);
+    } else {
+        initArchOutlines();
+    }
+})();
+
+// --- Warehousing & Distribution: 3D Cardboard Box Unboxing Animation ---
+(function() {
+    function initCardboardBoxUnbox() {
+        const boxStage = document.getElementById('wdBoxStage');
+        const cardboardBox = document.getElementById('wdCardboardBox');
+
+        if (!boxStage || !cardboardBox) return;
+
+        let unboxTimer = null;
+        let isOpening = false;
+
+        const openBox = () => {
+            if (boxStage.classList.contains('is-unboxed') || isOpening) return;
+            isOpening = true;
+
+            // Step 1: Laser slice glow on the security tape
+            boxStage.classList.add('is-unboxing');
+
+            clearTimeout(unboxTimer);
+            unboxTimer = setTimeout(() => {
+                boxStage.classList.remove('is-unboxing');
+                boxStage.classList.add('is-unboxed');
+                isOpening = false;
+            }, 260);
+        };
+
+        const resealBox = (instant = true) => {
+            clearTimeout(unboxTimer);
+            isOpening = false;
+            if (instant) {
+                // Instantly reseal while offscreen without awkward transitions
+                boxStage.classList.add('is-instant-reset');
+                boxStage.classList.remove('is-unboxed', 'is-unboxing');
+                void boxStage.offsetWidth; // Force reflow
+                boxStage.classList.remove('is-instant-reset');
+            } else {
+                boxStage.classList.remove('is-unboxed', 'is-unboxing');
+            }
+        };
+
+        // Scroll observer: triggers every time user scrolls into or out of the about section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Dramatic suspense pause so user sees the sealed cardboard parcel first
+                    clearTimeout(unboxTimer);
+                    unboxTimer = setTimeout(() => {
+                        openBox();
+                    }, 350);
+                } else {
+                    // Every time user leaves the section, reseal it so it replays on next visit
+                    clearTimeout(unboxTimer);
+                    resealBox(true);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(boxStage);
+
+        // Click directly on cardboard package or stage to unbox immediately
+        boxStage.addEventListener('click', () => {
+            openBox();
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCardboardBoxUnbox);
+    } else {
+        initCardboardBoxUnbox();
+    }
+})();

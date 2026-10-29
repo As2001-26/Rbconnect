@@ -1,0 +1,1211 @@
+/* ==========================================================================
+   PROJECT CARGO & SPECIALIZED LOGISTICS STYLESHEET
+   RB Connect Global Network
+   ========================================================================== */
+
+:root {
+    --pc-color-terracotta: #c66c24;
+    --pc-color-terracotta-dark: #a8542c;
+    --pc-color-terracotta-light: #ea580c;
+    --pc-color-dark: #0b2546;
+    --pc-color-navy-deep: #071c38;
+    --pc-color-charcoal: #1e293b;
+    --pc-color-bg-warm: #f7f3ee;
+    --pc-color-bg-light: #f7f3ee;
+    --pc-color-bg-white: #ffffff;
+    --pc-color-text-body: #475569;
+    --pc-color-text-muted: #64748b;
+    --pc-border-subtle: rgba(198, 108, 36, 0.18);
+    --pc-font-serif: 'Playfair Display', Georgia, serif;
+    --pc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --pc-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.project-cargo-page {
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    color: var(--pc-color-charcoal);
+    font-family: var(--pc-font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   TOP BRANDED EMBLEM HEADLINE (PROJECT CARGO)
+   ========================================================================== */
+.pc-brand-emblem-headline {
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 5;
+}
+
+.pc-brand-title {
+    font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(48px, 6vw, 78px);
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 1.8vw, 24px);
+    margin: 0 0 14px 0;
+    user-select: none;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.pc-brand-project {
+    color: var(--pc-color-dark);
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.pc-p-svg-wrap {
+    display: inline-block;
+    width: 1.05em;
+    height: 0.98em;
+    position: relative;
+    margin-right: -0.02em;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.pc-p-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 2px 6px rgba(11, 37, 70, 0.15));
+}
+
+.pc-brand-cargo {
+    color: var(--pc-color-terracotta);
+    letter-spacing: 2px;
+}
+
+/* Speed Box Divider Bar */
+.pc-brand-divider-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.pc-divider-streak {
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.pc-streak-left {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.05) 0%, rgba(198, 108, 36, 0.7) 100%);
+}
+
+.pc-streak-right {
+    background: linear-gradient(90deg, rgba(198, 108, 36, 0.7) 0%, rgba(198, 108, 36, 0.05) 100%);
+}
+
+.pc-speed-box-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pc-speed-box-svg {
+    width: 44px;
+    height: 30px;
+    overflow: visible;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.pc-hero-section {
+    position: relative;
+    padding: 130px 0 70px;
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    border-bottom: 1px solid rgba(198, 108, 36, 0.12);
+    overflow: hidden;
+}
+
+.pc-hero-section::before {
+    display: none !important;
+}
+
+.pc-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.pc-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 52px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pc-hero-content {
+    max-width: 620px;
+}
+
+.pc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--pc-color-terracotta);
+    margin-bottom: 12px;
+}
+
+.pc-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background: var(--pc-color-terracotta);
+    opacity: 0.85;
+}
+
+.pc-hero-title {
+    font-family: var(--pc-font-serif);
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 800;
+    line-height: 1.14;
+    color: var(--pc-color-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+}
+
+.pc-title-accent {
+    color: var(--pc-color-terracotta);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.pc-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.68;
+    color: var(--pc-color-text-body);
+    margin-bottom: 28px;
+}
+
+/* 4 Feature Badges Row */
+.pc-hero-badges-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.pc-hero-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.pc-hero-badge-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid var(--pc-border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pc-color-terracotta);
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(13, 27, 42, 0.05);
+    transition: var(--pc-transition);
+}
+
+.pc-hero-badge-item:hover .pc-hero-badge-circle {
+    background: var(--pc-color-terracotta);
+    color: #ffffff;
+    border-color: var(--pc-color-terracotta);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(198, 108, 36, 0.25);
+}
+
+.pc-hero-badge-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--pc-color-dark);
+    line-height: 1.3;
+}
+
+.pc-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+/* Hero Visual Showcase - Transparent Floating Cutout with Land Stage */
+.pc-hero-visual-card {
+    position: relative;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 20px 0 45px;
+    display: block;
+}
+
+.pc-hero-visual-card::before {
+    display: none;
+}
+
+/* Stationary Realistic Industrial Land Bed */
+.pc-ground-stage-container {
+    position: absolute;
+    top: 73%;
+    left: -5%;
+    width: 110%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    transform: rotate(2.2deg);
+    transform-origin: 10% 20%;
+}
+
+.pc-ground-bed-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: contrast(1.05) brightness(0.96);
+}
+
+/* Transporter Drive Motion Wrapper */
+.pc-transporter-anim-wrap {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    will-change: transform;
+    animation: pc-spmt-drive-loop 4.5s ease-in-out infinite alternate;
+}
+
+.pc-hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 14px 24px rgba(11, 37, 70, 0.14));
+    transition: filter 0.5s ease;
+}
+
+.pc-hero-visual-card:hover .pc-hero-img {
+    filter: drop-shadow(0 18px 30px rgba(11, 37, 70, 0.22));
+}
+
+/* Wheel Rotation SVG Overlay Layer */
+.pc-wheels-svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Synchronized Wheel Rotation */
+.pc-wheel-rot {
+    transform-origin: 0 0;
+    will-change: transform;
+    animation: pc-wheel-roll 4.5s ease-in-out infinite alternate;
+}
+
+/* Physically Synchronized Drive & Wheel Rotation Keyframes */
+@keyframes pc-spmt-drive-loop {
+    0% {
+        transform: translateX(14px) translateY(0px) rotate(0.06deg);
+    }
+    30% {
+        transform: translateX(-4px) translateY(-1.2px) rotate(-0.04deg);
+    }
+    60% {
+        transform: translateX(-20px) translateY(-0.6px) rotate(-0.12deg);
+    }
+    85% {
+        transform: translateX(-28px) translateY(0.6px) rotate(-0.08deg);
+    }
+    100% {
+        transform: translateX(-32px) translateY(0px) rotate(-0.03deg);
+    }
+}
+
+@keyframes pc-wheel-roll {
+    0% {
+        transform: rotate(48deg);
+    }
+    30% {
+        transform: rotate(-14deg);
+    }
+    60% {
+        transform: rotate(-68deg);
+    }
+    85% {
+        transform: rotate(-98deg);
+    }
+    100% {
+        transform: rotate(-110deg);
+    }
+}
+
+@keyframes pc-shadow-drive-sync {
+    0% {
+        transform: translateX(14px);
+        opacity: 0.85;
+    }
+    60% {
+        transform: translateX(-20px);
+        opacity: 0.95;
+    }
+    100% {
+        transform: translateX(-32px);
+        opacity: 0.85;
+    }
+}
+
+.pc-hero-overlay-tag {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #0b2546;
+    box-shadow: 0 8px 24px rgba(11, 37, 70, 0.15);
+    border: 1px solid rgba(198, 108, 36, 0.3);
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+}
+
+.pc-tag-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    animation: pcPulse 2s infinite;
+}
+
+@keyframes pcPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.pc-hero-floating-stat {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid var(--pc-border-subtle);
+    border-radius: 14px;
+    padding: 14px 20px;
+    box-shadow: 0 16px 36px rgba(11, 37, 70, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 290px;
+    z-index: 3;
+}
+
+.pc-stat-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(198, 108, 36, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pc-color-terracotta);
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.pc-stat-num {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--pc-color-dark);
+    line-height: 1.1;
+}
+
+.pc-stat-label {
+    font-size: 11.5px;
+    color: var(--pc-color-text-muted);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   2. KEY STATS SECTION
+   ========================================================================== */
+.pc-stats-section {
+    padding: 40px 0 60px;
+    background: transparent;
+}
+
+.pc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.pc-stat-card {
+    background: #ffffff;
+    border: 1.5px solid var(--pc-border-subtle);
+    border-radius: 16px;
+    padding: 26px 22px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(11, 37, 70, 0.04);
+    transition: var(--pc-transition);
+}
+
+.pc-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pc-color-terracotta);
+    box-shadow: 0 16px 36px rgba(198, 108, 36, 0.14);
+}
+
+.pc-stat-big-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--pc-color-terracotta);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.pc-stat-card-title {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--pc-color-dark);
+    margin-bottom: 4px;
+}
+
+.pc-stat-card-desc {
+    font-size: 12.5px;
+    color: var(--pc-color-text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   3. ABOUT SECTION
+   ========================================================================== */
+.pc-about-section {
+    padding: 0 0 90px;
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    position: relative;
+    border-top: 2px solid rgba(198, 108, 36, 0.28);
+    overflow: hidden; /* Guarantees no element can ever cross into the hero section above */
+}
+
+.pc-about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   DUAL CRANE BLOCKS & CHAINS RIGGING SYSTEM
+   Top Overhead: 100% FIXED & ANCHORED AT HERO BOUNDARY LINE
+   Bottom Load: SMOOTH TO-AND-FRO PENDULUM SWAY
+   ========================================================================== */
+.pc-about-visual-rigging {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    padding-top: 0px;
+}
+
+/* 1. TOP OVERHEAD CRANE RIGGING - 100% FIXED (NEVER MOVES) */
+.pc-overhead-crane-fixed {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 75px;
+    position: relative;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.pc-crane-hoist-fixed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+}
+
+/* Top Anchor Bracket - Firmly locked at the Hero Ending Line */
+.pc-crane-top-bracket {
+    width: 44px;
+    height: 12px;
+    background: linear-gradient(180deg, #0b2546 0%, #1e293b 100%);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+    border: 1px solid #334155;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: -1px;
+    z-index: 5;
+}
+
+.pc-bracket-bolt {
+    width: 4px;
+    height: 4px;
+    background: #94a3b8;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px #ffffff;
+}
+
+/* 1. Wire Ropes hanging straight from bracket */
+.pc-wire-cables-svg {
+    width: 32px;
+    height: 55px;
+    overflow: visible;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+/* 2. Crane Sheave Block with Red/White Hazard Chevrons & Heavy Hook */
+.pc-crane-block-svg {
+    width: 60px;
+    height: 74px;
+    margin-top: -3px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+}
+
+/* 2. SUSPENDED LOAD ASSEMBLY - SWINGS TO AND FRO FROM HOOKS */
+.pc-suspended-load-sway {
+    position: relative;
+    margin-top: -14px; /* Hooks into the master rings */
+    transform-origin: 50% 10px; /* Pivots directly at the crane hooks */
+    animation: loadToAndFroSway 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    will-change: transform;
+    filter: drop-shadow(0 25px 35px rgba(11, 37, 70, 0.18));
+    z-index: 10;
+}
+
+/* Dual Chains Row hanging from the hooks */
+.pc-dual-chains-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 86px;
+    position: relative;
+    z-index: 8;
+}
+
+/* 3. Multi-Strand Heavy Chains hanging from hook */
+.pc-hoist-chains-svg {
+    width: 48px;
+    height: 70px;
+    filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.3));
+}
+
+/* 4. Suspended Framed Image Card */
+.pc-suspended-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0b2546;
+    border: 3px solid #1e293b;
+    box-shadow: 0 20px 45px rgba(11, 37, 70, 0.22);
+    margin-top: -10px;
+}
+
+/* Heavy Pad Eyes on Card Frame connecting to Chains */
+.pc-card-pad-eye {
+    position: absolute;
+    top: 50px;
+    width: 32px;
+    height: 24px;
+    background: linear-gradient(180deg, #94a3b8 0%, #475569 50%, #1e293b 100%);
+    border: 2px solid #64748b;
+    border-radius: 8px 8px 3px 3px;
+    z-index: 12;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pc-card-pad-eye::after {
+    content: '';
+    width: 14px;
+    height: 12px;
+    background: #09131f;
+    border-radius: 50%;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.9);
+}
+.pc-pad-eye-left {
+    left: 94px;
+}
+.pc-pad-eye-right {
+    right: 94px;
+}
+
+.pc-about-img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Heavy Suspended Cargo To-and-Fro Pendulum Sway (Pivots at Hook) */
+@keyframes loadToAndFroSway {
+    0% {
+        transform: rotate(-1.8deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1.8deg);
+    }
+}
+
+.pc-about-content {
+    max-width: 600px;
+    padding-top: 150px;
+}
+
+.pc-about-spec-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(11, 37, 70, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 18px 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.pc-spec-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #f59e0b;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pc-spec-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.pc-about-content {
+    max-width: 600px;
+}
+
+.pc-section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--pc-color-terracotta);
+    margin-bottom: 12px;
+}
+
+.pc-section-title {
+    font-family: var(--pc-font-serif);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 800;
+    color: var(--pc-color-dark);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.pc-about-p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--pc-color-text-body);
+    margin-bottom: 24px;
+}
+
+.pc-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.pc-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.pc-feat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(198, 108, 36, 0.12);
+    color: var(--pc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pc-feat-text h4 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--pc-color-dark);
+    margin: 0 0 3px 0;
+}
+
+.pc-feat-text p {
+    font-size: 13.5px;
+    color: var(--pc-color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. SOLUTIONS SECTION (Grid of 6 Specialized Solutions)
+   ========================================================================== */
+.pc-solutions-section {
+    padding: 90px 0;
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(198, 108, 36, 0.12);
+}
+
+.pc-header-center {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 50px;
+}
+
+.pc-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.pc-solution-card {
+    background: #ffffff;
+    border: 1.5px solid var(--pc-border-subtle);
+    border-radius: 18px;
+    padding: 34px 28px;
+    box-shadow: 0 10px 30px rgba(11, 37, 70, 0.05);
+    transition: var(--pc-transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.pc-solution-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--pc-color-terracotta);
+    box-shadow: 0 20px 45px rgba(198, 108, 36, 0.16);
+}
+
+.pc-card-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(198, 108, 36, 0.12);
+    color: var(--pc-color-terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 22px;
+    transition: var(--pc-transition);
+}
+
+.pc-solution-card:hover .pc-card-icon-box {
+    background: var(--pc-color-terracotta);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.pc-card-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--pc-color-dark);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.pc-card-desc {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--pc-color-text-body);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.pc-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pc-tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(11, 37, 70, 0.06);
+    color: var(--pc-color-dark);
+}
+
+/* ==========================================================================
+   5. INDUSTRIES SECTION
+   ========================================================================== */
+.pc-industries-section {
+    padding: 85px 0;
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(198, 108, 36, 0.12);
+}
+
+.pc-industries-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.pc-industry-card {
+    background: #ffffff;
+    border: 1.5px solid var(--pc-border-subtle);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: var(--pc-transition);
+}
+
+.pc-industry-card:hover {
+    background: #ffffff;
+    border-color: var(--pc-color-terracotta);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(198, 108, 36, 0.15);
+}
+
+.pc-industry-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pc-color-terracotta);
+    font-size: 24px;
+    border: 1px solid var(--pc-border-subtle);
+    transition: var(--pc-transition);
+}
+
+.pc-industry-card:hover .pc-industry-icon {
+    background: var(--pc-color-terracotta);
+    color: #ffffff;
+    transform: rotate(6deg) scale(1.08);
+}
+
+.pc-industry-name {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--pc-color-dark);
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   6. CALL TO ACTION SECTION (Matching warehouse-distribution.html standard)
+   ========================================================================== */
+.pc-cta-section {
+    position: relative;
+    background-color: #0d1b2a;
+    padding: 50px 0;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.pc-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: url('images/project_cargo.jpg') center center / cover no-repeat;
+    opacity: 0.36;
+    z-index: 0;
+    animation: pcCtaZoom 8s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
+}
+
+@keyframes pcCtaZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+.pc-cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.pc-cta-content {
+    max-width: 680px;
+}
+
+.pc-cta-title {
+    font-family: var(--pc-font-serif);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 800;
+    line-height: 1.18;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.pc-cta-desc {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 28px;
+}
+
+.pc-cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+/* Primary Button */
+.pc-btn-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background-color: #c66c24 !important;
+    background: #c66c24 !important;
+    color: #ffffff !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    padding: 13px 28px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(198, 108, 36, 0.32) !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+    line-height: 1.2 !important;
+}
+
+.pc-btn-primary:hover {
+    background-color: #a8542c !important;
+    background: #a8542c !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(168, 84, 44, 0.42) !important;
+    color: #ffffff !important;
+}
+
+.pc-btn-primary i {
+    font-size: 15px !important;
+    transition: transform 0.25s ease !important;
+}
+
+.pc-btn-primary:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* Ghost Button (Transparent, No Blur, No Blue Tint) */
+.pc-btn-ghost {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 13px 26px !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+    color: #ffffff !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    line-height: 1.2 !important;
+}
+
+.pc-btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
+}
+
+.pc-btn-ghost i {
+    font-size: 15px !important;
+    transition: transform 0.25s ease !important;
+}
+
+.pc-btn-ghost:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .pc-hero-grid,
+    .pc-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pc-hero-content,
+    .pc-about-content {
+        max-width: 100%;
+    }
+
+    .pc-hero-img,
+    .pc-about-img {
+        height: 380px;
+    }
+
+    .pc-industries-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .pc-solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pc-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pc-hero-section {
+        padding: 100px 0 50px;
+    }
+
+    .pc-brand-title {
+        font-size: clamp(34px, 8vw, 48px);
+    }
+
+    .pc-hero-title {
+        font-size: 28px;
+    }
+
+    .pc-hero-badges-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .pc-solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pc-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pc-industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pc-hero-floating-stat {
+        position: static;
+        margin: 16px;
+        max-width: calc(100% - 32px);
+    }
+}
+
+@media (max-width: 576px) {
+    .pc-chain-rig {
+        padding: 0 34px;
+    }
+    .pc-pad-eye-left {
+        left: 32px;
+    }
+    .pc-pad-eye-right {
+        right: 32px;
+    }
+    .pc-spreader-beam {
+        width: 92%;
+        height: 20px;
+    }
+    .pc-beam-center-tag {
+        font-size: 8px;
+        padding: 2px 6px;
+    }
+}
+
+/* ==========================================================================
+   PROJECT CARGO PROCESS SECTION (Consistent with Air, Land, Sea & Customs)
+   ========================================================================== */
+body.project-cargo-page .af-process-section {
+    padding: 60px 0 !important;
+    background: #f7f3ee !important;
+    background-color: #f7f3ee !important;
+    background-image: none !important;
+    border-top: 1px solid rgba(198, 108, 36, 0.12) !important;
+}
+
+body.project-cargo-page .af-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+

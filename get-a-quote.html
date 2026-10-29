@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Freight Quote | RB Connect - Instant Global Shipping Rates</title>
+    <meta name="description"
+        content="Request an instant, transparent freight quote from RB Connect for air cargo, ocean container shipping, regional trucking, customs clearance, and 3PL warehousing.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/RBLOGO.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=cta_noblur_v4">
+    <link rel="stylesheet" href="get-a-quote.css?v=v1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:ital,wght@0,600;0,700;1,600;1,700&family=Dancing+Script:wght@600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Montserrat:ital,wght@0,800;0,900;1,800;1,900&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="quote-page">
+
+    <!-- =========================================
+         STANDARD HERO NAVBAR (Consistent Across Site)
+         ========================================= -->
+    <header class="hero-navbar container">
+        <a href="index.html" class="logo">
+            <img src="images/RBLOGO.png" alt="RB Connect Logo" class="site-logo-img">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex align-items-center gap-1">Services <i
+                        class="ph-bold ph-caret-down fs-sm"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-inner">
+                        <!-- Left Column -->
+                        <div class="mega-col-left">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="bg-primary" style="width: 25px; height: 2px;"></div>
+                                <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our
+                                    Services</span>
+                            </div>
+                            <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
+                                Complete Logistics Solutions for a <span class="text-primary">Connected
+                                    World</span>
+                            </h3>
+                            <p class="text-muted small mb-4">From air to sea, road to rail — we deliver
+                                reliable, efficient and customized logistics solutions tailored to your business
+                                needs.</p>
+                            <img src="images/mega_hero.jpg?v=unbranded_v1" alt="Global Logistics" class="mega-hero-img">
+                        </div>
+
+                        <!-- Middle Column (Grid) -->
+                        <div class="mega-col-middle">
+                            <a href="air-freight.html" class="mega-service-card">
+                                <img src="images/mega_air.jpg" alt="Air Freight">
+                                <div class="mega-card-content">
+                                    <h4>Air Freight</h4>
+                                    <p>Fast, secure and reliable air cargo solutions.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="sea-freight.html" class="mega-service-card">
+                                <img src="images/mega_sea.jpg" alt="Ocean Freight">
+                                <div class="mega-card-content">
+                                    <h4>Ocean Freight</h4>
+                                    <p>Cost-effective FCL and LCL ocean shipping worldwide.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="land-freight.html" class="mega-service-card">
+                                <img src="images/mega_road.jpg" alt="Road Freight">
+                                <div class="mega-card-content">
+                                    <h4>Road Transport</h4>
+                                    <p>Flexible regional trucking, FTL and LTL distribution.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="customs-clearance.html" class="mega-service-card">
+                                <img src="images/mega_import.jpg" alt="Customs Clearance">
+                                <div class="mega-card-content">
+                                    <h4>Customs Clearance</h4>
+                                    <p>Streamlined tariff classification and fast border clearance.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="warehouse-distribution.html" class="mega-service-card">
+                                <img src="images/mega_consolidated.jpg" alt="Warehousing">
+                                <div class="mega-card-content">
+                                    <h4>Warehousing &amp; Fulfillment</h4>
+                                    <p>Smart inventory management and temperature-controlled storage.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="project-cargo.html" class="mega-service-card">
+                                <img src="images/mega_multi.jpg" alt="Project Cargo">
+                                <div class="mega-card-content">
+                                    <h4>Project Cargo &amp; Heavy Lift</h4>
+                                    <p>Engineering specialized transport for out-of-gauge shipments.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="door-to-door.html" class="mega-service-card">
+                                <img src="images/mega_door.jpg?v=clean_unbranded" alt="Door to Door">
+                                <div class="mega-card-content">
+                                    <h4>Door-to-Door Logistics</h4>
+                                    <p>Complete logistics from origin pickup to final doorstep.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                        </div>
+
+                        <!-- Right Column (Featured Box) -->
+                        <div class="mega-col-right">
+                            <h4 class="right-col-heading"><span class="text-primary">Global Reach</span><br><span
+                                    class="text-dark">24/7 Operations</span></h4>
+                            <ul class="mega-feature-list">
+                                <li><i class="ph-fill ph-globe"></i> Global Coverage Across Key Trade Lanes</li>
+                                <li><i class="ph-fill ph-clock"></i> Rapid Response Support Desk</li>
+                                <li><i class="ph-fill ph-shield-check"></i> Complete Customs Coordination</li>
+                                <li><i class="ph-fill ph-headset"></i> Dedicated Key Account Manager</li>
+                            </ul>
+                            <div class="mega-cursive-footer">
+                                Moving Businesses Further
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="industries.html">Industries</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="track-shipment.html" class="btn-nav-outline">
+                Track Shipment <i class="ph ph-map-pin"></i>
+            </a>
+            <a href="get-a-quote.html" class="btn-nav-primary active" style="box-shadow: 0 4px 15px rgba(198, 108, 36, 0.4);">
+                Get a Quote <i class="ph ph-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu"
+            aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-drawer-header">
+            <a href="index.html" class="logo mobile-drawer-logo">
+                <img src="images/RBLOGO.png" alt="RB Connect" class="site-logo-img">
+            </a>
+            <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+                <i class="ph-bold ph-x"></i>
+            </button>
+        </div>
+
+        <div class="mobile-drawer-body">
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-info"></i>
+                    <span>About Us</span>
+                </a>
+
+                <!-- Expandable Services Submenu -->
+                <div class="mobile-nav-accordion" id="mobileServicesAccordion">
+                    <button class="mobile-nav-accordion-btn" id="mobileServicesBtn" aria-expanded="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="ph-bold ph-squares-four"></i>
+                            <span>Services</span>
+                        </span>
+                        <i class="ph-bold ph-caret-down accordion-caret"></i>
+                    </button>
+                    <div class="mobile-nav-sublist" id="mobileServicesSublist">
+                        <a href="air-freight.html" class="mobile-nav-sublink">Air Freight</a>
+                        <a href="sea-freight.html" class="mobile-nav-sublink">Ocean Freight</a>
+                        <a href="land-freight.html" class="mobile-nav-sublink">Road Transport</a>
+                        <a href="customs-clearance.html" class="mobile-nav-sublink">Customs Clearance</a>
+                        <a href="warehouse-distribution.html" class="mobile-nav-sublink">Warehousing</a>
+                        <a href="project-cargo.html" class="mobile-nav-sublink">Project Cargo</a>
+                        <a href="door-to-door.html" class="mobile-nav-sublink">Door to Door</a>
+                    </div>
+                </div>
+
+                <a href="industries.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-buildings"></i>
+                    <span>Industries</span>
+                </a>
+                <a href="solutions.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-gear-six"></i>
+                    <span>Solutions</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+            </nav>
+
+            <div class="mobile-drawer-cta">
+                <a href="get-a-quote.html" class="btn-drawer-primary">
+                    Get a Quote <i class="ph-bold ph-arrow-right"></i>
+                </a>
+                <a href="track-shipment.html" class="btn-drawer-outline">
+                    Track Shipment <i class="ph-bold ph-map-pin"></i>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- =========================================
+             1. HERO HEADER
+             ========================================= -->
+        <section class="rfq-hero-section">
+            <div class="rfq-hero-wrap">
+                <span class="rfq-hero-badge">
+                    <i class="ph-fill ph-calculator"></i> Fast Freight RFQ
+                </span>
+                <h1 class="rfq-hero-title">
+                    Request an Instant <span>Freight Quote</span>
+                </h1>
+                <p class="rfq-hero-desc">
+                    Get competitive, transparent, and all-inclusive shipping rates across Air, Ocean, Road, and Customs Clearance tailored directly to your supply chain requirements.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================================
+             2. MAIN RFQ FORM & DIRECT CONTACT
+             ========================================= -->
+        <section class="rfq-main-section">
+            <div class="rfq-container">
+                <!-- Left: Clean, Normal RFQ Form -->
+                <div class="rfq-form-card">
+                    <div class="rfq-form-header">
+                        <h2 class="rfq-form-title">Shipment Quotation Request</h2>
+                        <p class="rfq-form-subtitle">Fill in your shipment details below and our rate team will provide an official competitive quote.</p>
+                    </div>
+
+                    <form id="freightQuoteForm" onsubmit="event.preventDefault(); handleQuoteSubmit();">
+                        <!-- Contact Info Row -->
+                        <div class="rfq-form-row">
+                            <div class="rfq-field">
+                                <label class="rfq-label">Full Name <span>*</span></label>
+                                <input type="text" class="rfq-input" id="rfqName" placeholder="e.g. Rajesh Sharma" required>
+                            </div>
+                            <div class="rfq-field">
+                                <label class="rfq-label">Business Email <span>*</span></label>
+                                <input type="email" class="rfq-input" id="rfqEmail" placeholder="e.g. rajesh@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="rfq-form-row">
+                            <div class="rfq-field">
+                                <label class="rfq-label">Phone Number <span>*</span></label>
+                                <input type="tel" class="rfq-input" id="rfqPhone" placeholder="e.g. +91 98765 43210" required>
+                            </div>
+                            <div class="rfq-field">
+                                <label class="rfq-label">Company Name</label>
+                                <input type="text" class="rfq-input" id="rfqCompany" placeholder="e.g. Apex Global Trade">
+                            </div>
+                        </div>
+
+                        <!-- Service Selection -->
+                        <div class="rfq-field">
+                            <label class="rfq-label">Service Required <span>*</span></label>
+                            <select class="rfq-select" id="rfqService" required>
+                                <option value="" disabled selected>Select a Freight Service...</option>
+                                <option value="air">Air Freight Express</option>
+                                <option value="ocean">Ocean Freight (FCL / LCL)</option>
+                                <option value="road">Road Transport (FTL / LTL)</option>
+                                <option value="customs">Customs Clearance &amp; Brokerage</option>
+                                <option value="warehouse">Warehousing &amp; Distribution</option>
+                                <option value="project">Project Cargo &amp; Heavy Lift</option>
+                                <option value="door">Door-to-Door Logistics</option>
+                            </select>
+                        </div>
+
+                        <!-- Origin & Destination -->
+                        <div class="rfq-form-row">
+                            <div class="rfq-field">
+                                <label class="rfq-label">Origin City / Port / Country <span>*</span></label>
+                                <input type="text" class="rfq-input" id="rfqOrigin" placeholder="e.g. Gautam Budh Nagar / New Delhi, India" required>
+                            </div>
+                            <div class="rfq-field">
+                                <label class="rfq-label">Destination City / Port / Country <span>*</span></label>
+                                <input type="text" class="rfq-input" id="rfqDest" placeholder="e.g. Upton Park / London, United Kingdom" required>
+                            </div>
+                        </div>
+
+                        <!-- Cargo details -->
+                        <div class="rfq-form-row">
+                            <div class="rfq-field">
+                                <label class="rfq-label">Approx. Weight or Units</label>
+                                <input type="text" class="rfq-input" id="rfqWeight" placeholder="e.g. 500 kg / 4 Pallets / 1x 20ft Container">
+                            </div>
+                            <div class="rfq-field">
+                                <label class="rfq-label">Cargo / Commodity Type</label>
+                                <input type="text" class="rfq-input" id="rfqCommodity" placeholder="e.g. Commercial Goods, Electronics, Machinery">
+                            </div>
+                        </div>
+
+                        <!-- Message / Special Instructions -->
+                        <div class="rfq-field">
+                            <label class="rfq-label">Additional Details / Special Requirements</label>
+                            <textarea class="rfq-textarea" id="rfqMessage" rows="3" placeholder="Provide any additional cargo details, target dock loading dates, or specific customs requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="rfq-submit-btn" id="rfqSubmitBtn">
+                            Submit Quote Request <i class="ph-bold ph-paper-plane-tilt"></i>
+                        </button>
+
+                        <!-- Success Alert -->
+                        <div class="rfq-success-modal" id="rfqSuccessNotice">
+                            <div class="rfq-success-head">
+                                <i class="ph-bold ph-check-circle fs-4"></i> Quote Request Transmitted Successfully!
+                            </div>
+                            <div class="rfq-success-body">
+                                <strong>Reference ID: <span id="quoteRefNumber">RFQ-2026-8819</span></strong><br>
+                                Thank you for your request. Our specialized regional rate desk is auditing the route tariffs and carrier capacities. You will receive an official quotation in your email inbox promptly.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right: Direct Support & Info Column -->
+                <div class="rfq-side-column">
+                    <!-- Direct Contact Card -->
+                    <div class="rfq-support-card">
+                        <div class="rfq-support-title">
+                            <i class="ph-fill ph-headset"></i> Direct Desk Support
+                        </div>
+                        <p class="rfq-support-desc">
+                            Need urgent cargo booking, charter services, or immediate assistance? Connect directly with our freight desk team.
+                        </p>
+                        
+                        <div class="rfq-contact-list">
+                            <div class="rfq-contact-item">
+                                <i class="ph-fill ph-phone-call"></i>
+                                <div class="rfq-contact-text">
+                                    <span>India Hotline</span>
+                                    <a href="tel:+919311514453">+91-9311514453</a>
+                                </div>
+                            </div>
+                            <div class="rfq-contact-item">
+                                <i class="ph-fill ph-phone-call"></i>
+                                <div class="rfq-contact-text">
+                                    <span>UK Hotline</span>
+                                    <a href="tel:+447901380919">+44 7901 380919</a>
+                                </div>
+                            </div>
+                            <div class="rfq-contact-item">
+                                <i class="ph-fill ph-envelope-simple"></i>
+                                <div class="rfq-contact-text">
+                                    <span>Email Enquiries</span>
+                                    <a href="mailto:info@rbconnectglobal.com">info@rbconnectglobal.com</a>
+                                </div>
+                            </div>
+                            <div class="rfq-contact-item">
+                                <i class="ph-fill ph-envelope-simple"></i>
+                                <div class="rfq-contact-text">
+                                    <span>Marketing &amp; Commercial</span>
+                                    <a href="mailto:marketing@rbconnectglobal.com">marketing@rbconnectglobal.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust / Why RB Connect Card -->
+                    <div class="rfq-trust-card">
+                        <div class="rfq-trust-title">
+                            <i class="ph-fill ph-shield-check" style="color: var(--rfq-primary);"></i> Why Request With Us?
+                        </div>
+                        <ul class="rfq-trust-list">
+                            <li>
+                                <i class="ph-bold ph-check"></i>
+                                <div><strong>Guaranteed Response:</strong> Official rate quote delivered within 2-4 business hours.</div>
+                            </li>
+                            <li>
+                                <i class="ph-bold ph-check"></i>
+                                <div><strong>Transparent Pricing:</strong> All-inclusive quotations with no hidden port or terminal surcharges.</div>
+                            </li>
+                            <li>
+                                <i class="ph-bold ph-check"></i>
+                                <div><strong>Customs &amp; Compliance:</strong> In-house documentation and tariff audit included with every shipment.</div>
+                            </li>
+                            <li>
+                                <i class="ph-bold ph-check"></i>
+                                <div><strong>Global Carrier Capacity:</strong> Priority space allocations across top maritime shipping lines and airlines.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- =========================================
+         STANDARD SITE FOOTER
+         ========================================= -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/RBLOGO.png" alt="RB Connect" class="footer-logo-img">
+                </a>
+                <p>Delivering seamless global logistics solutions that drive your business forward. Speed, reliability,
+                    and transparency in every shipment.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="ph-bold ph-caret-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ph-bold ph-caret-right"></i> About Us</a></li>
+                    <li><a href="industries.html"><i class="ph-bold ph-caret-right"></i> Industries</a></li>
+                    <li><a href="solutions.html"><i class="ph-bold ph-caret-right"></i> Solutions</a></li>
+                    <li><a href="track-shipment.html"><i class="ph-bold ph-caret-right"></i> Tracking</a></li>
+                    <li><a href="contact.html"><i class="ph-bold ph-caret-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="land-freight.html"><i class="ph-bold ph-caret-right"></i> Road Freight</a></li>
+                    <li><a href="sea-freight.html"><i class="ph-bold ph-caret-right"></i> Ocean Freight</a></li>
+                    <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
+                    <li><a href="warehouse-distribution.html"><i class="ph-bold ph-caret-right"></i> Warehousing &amp; Distribution</a></li>
+                    <li><a href="customs-clearance.html"><i class="ph-bold ph-caret-right"></i> Customs Clearance</a></li>
+                    <li><a href="project-cargo.html"><i class="ph-bold ph-caret-right"></i> Project Cargo</a></li>
+                    <li><a href="door-to-door.html"><i class="ph-bold ph-caret-right"></i> Door-to-Door Logistics</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-widget">
+                <h4>Contact Us</h4>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>Head Office (India)</span>
+                            <p>1146, Gaurs Aero Suites, Gaur Yamuna City Sector 19, Yeida, Gautam Budh Nagar, UP 201310</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>UK Office</span>
+                            <p>19 Marlborough Road, Upton Park, London, E7 8HA, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call"></i>
+                        <div class="contact-item-text">
+                            <span>Call Us Anytime</span>
+                            <p><a href="tel:+919311514453" style="color: inherit; text-decoration: none;">+91-9311514453</a> &bull; <a href="tel:+447901380919" style="color: inherit; text-decoration: none;">+44 7901 380919</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <div class="contact-item-text">
+                            <span>Email Us</span>
+                            <p><a href="mailto:info@rbconnectglobal.com" style="color: inherit; text-decoration: none;">info@rbconnectglobal.com</a><br><a href="mailto:marketing@rbconnectglobal.com" style="color: inherit; text-decoration: none;">marketing@rbconnectglobal.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RB Connect. All rights reserved. | Created by <a href="https://myseosmo.com/" target="_blank" rel="noopener">MySEOSMO</a></p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js?v=dropdown_click_v2"></script>
+
+    <!-- Simple Quote Form Handler Script -->
+    <script>
+        function handleQuoteSubmit() {
+            const btn = document.getElementById('rfqSubmitBtn');
+            const notice = document.getElementById('rfqSuccessNotice');
+            const randomRef = 'RFQ-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="ph-bold ph-spinner ph-spin"></i> Submitting Quote Request...';
+
+            setTimeout(() => {
+                btn.style.display = 'none';
+                document.getElementById('quoteRefNumber').textContent = randomRef;
+                notice.style.display = 'block';
+                notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>

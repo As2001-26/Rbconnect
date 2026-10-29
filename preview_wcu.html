@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body style="margin:0; background:#F4F7FB;">
+<section class="wcuv2-section" id="wcu">
+        <!-- Centered Section Header -->
+        <div class="wcuv2-header-centered">
+            <div class="wcu-badge" style="margin-bottom: 20px;">
+                <div class="wcu-badge-line"></div>
+                <span class="wcu-badge-text">Why Choose Us</span>
+                <div class="wcu-badge-line"></div>
+            </div>
+            <div class="services-icon-wrapper" style="margin-bottom: 20px;">
+                <i class="ph-fill ph-shield-check"></i>
+            </div>
+        </div>
+
+        <div class="wcuv2-container">
+            <!-- Left Column -->
+            <div class="wcuv2-left">
+
+                <!-- Heading -->
+                <h2 class="wcuv2-heading">
+                    <span class="wcuv2-heading-dark">More Than Logistics.</span><br>
+                    <span class="wcuv2-heading-orange">A Partner in Your Growth.</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="wcuv2-desc">
+                    We deliver reliable, efficient and customized<br>
+                    logistics solutions to help your business move<br>
+                    faster, reach further and grow stronger.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="get-a-quote.html" class="wcuv2-cta">Get a Quote &nbsp;&rarr;</a>
+
+                <!-- World Map Artwork Area -->
+                <div class="wcuv2-map-area" id="map-art">
+                    <!-- Dotted World Map Background -->
+                    <img src="images/wcu_dotted_world_map.png" alt="World Logistics Map" class="wcuv2-dotted-map-img">
+
+                    <!-- Logistics Transport Network SVG -->
+                    <svg class="wcuv2-route-svg" viewBox="0 0 703 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Drop Shadow Filter for Pins & Box -->
+                            <filter id="wcu-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#0a1e3f"
+                                    flood-opacity="0.16" />
+                            </filter>
+
+                            <!-- Progressive mask for left map routes -->
+                            <mask id="wcu-map-routes-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="850"
+                                height="350">
+                                <rect class="wcu-map-mask-rect" x="0" y="0" width="850" height="350" fill="#FFFFFF" />
+                            </mask>
+                        </defs>
+
+                        <!-- Masked Logistics Transport Network Routes -->
+                        <g mask="url(#wcu-map-routes-mask)">
+                            <!-- Upper Route Path -->
+                            <path
+                                d="M 15,160 C 24,145 34,134 44,123 C 60,102 78,82 99,106 C 122,128 145,124 168,114 C 178,110 178,98 186,94 C 208,76 238,62 270,53 C 285,49 288,44 290,43 C 315,38 340,38 368,43 C 392,48 402,68 406,84 C 418,102 432,106 450,108 C 475,115 500,128 524,141"
+                                stroke="#C87533" stroke-width="1.8" stroke-dasharray="5 4.5" fill="none" />
+
+                            <!-- Lower Route Path -->
+                            <path
+                                d="M 99,106 C 135,135 195,142 254,141 C 275,141 292,140 308,140 C 335,140 360,158 386,160 C 418,162 445,156 467,150 C 490,144 510,142 524,141"
+                                stroke="#C87533" stroke-width="1.8" stroke-dasharray="5 4.5" fill="none" />
+
+                            <!-- Branch from Airplane Nose upwards -->
+                            <path d="M 290,43 C 312,28 340,18 375,14" stroke="#C87533" stroke-width="1.8"
+                                stroke-dasharray="5 4.5" fill="none" />
+
+                            <!-- Seamless Connection to the Bottom Pointer (Item 7 - Trophy) -->
+                            <path
+                                d="M 524,141 C 540,142 552,144 562,145 C 590,148 640,240 701,241 C 726,264 782,332 820,308"
+                                stroke="#C87533" stroke-width="1.8" stroke-dasharray="5 4.5" fill="none" />
+
+                            <!-- Route Nodes (Hollow White Circles with Orange Border) -->
+                            <circle cx="44" cy="123" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="168" cy="114" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="186" cy="94" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="290" cy="43" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="254" cy="141" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="386" cy="160" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="467" cy="150" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+                            <circle cx="562" cy="145" r="4.2" stroke="#C87533" stroke-width="1.8" fill="#FFFFFF" />
+
+                            <!-- Solid Waypoint Dots on the swooping path into the bottom pointer -->
+                            <circle cx="20" cy="155" r="2.8" fill="#C87533" />
+                            <circle cx="375" cy="14" r="2.8" fill="#C87533" />
+                            <circle cx="701" cy="241" r="3.5" fill="#B85413" />
+                        </g>
+
+                        <!-- Airplane (Flying northeast along upper curve) -->
+                        <g class="wcu-map-wp wcu-map-plane" transform="translate(270, 53) rotate(-32)"
+                            filter="url(#wcu-shadow)">
+                            <path
+                                d="M 0,-15 C 1.5,-15 3,-10 3,-3 L 17,6 L 17,9.5 L 3,6 L 3,14 L 8,18 L 8,20.5 L 0,19 L -8,20.5 L -8,18 L -3,14 L -3,6 L -17,9.5 L -17,6 L -3,-3 C -3,-10 -1.5,-15 0,-15 Z"
+                                fill="#B85413" />
+                        </g>
+
+                        <!-- Pin 2 (Center-Right crest of upper path) -->
+                        <g class="wcu-map-wp wcu-map-pin2" transform="translate(406, 84)">
+                            <ellipse cx="0" cy="2" rx="6" ry="2" fill="#0A1E3F" opacity="0.12" />
+                            <g filter="url(#wcu-shadow)">
+                                <path d="M 0,0 C -5,-5 -8,-10 -8,-15 A 8 8 0 0 1 8,-15 C 8,-10 5,-5 0,0 Z"
+                                    fill="#B85413" />
+                                <circle cx="0" cy="-15" r="3.2" fill="#FFFFFF" />
+                            </g>
+                        </g>
+
+                        <!-- Cargo Delivery Truck (Driving southeast along downward slope) -->
+                        <g class="wcu-map-wp wcu-map-truck" transform="translate(450, 108) rotate(25)">
+                            <ellipse cx="0" cy="13" rx="18" ry="3" fill="#0A1E3F" opacity="0.12" />
+                            <g filter="url(#wcu-shadow)">
+                                <!-- Cargo Container Body -->
+                                <rect x="-20" y="-11" width="26" height="18" rx="1.2" fill="#B85413" />
+                                <line x1="-15" y1="-9" x2="-15" y2="5" stroke="#FFFFFF" stroke-width="1.1"
+                                    opacity="0.65" />
+                                <line x1="-10" y1="-9" x2="-10" y2="5" stroke="#FFFFFF" stroke-width="1.1"
+                                    opacity="0.65" />
+                                <line x1="-5" y1="-9" x2="-5" y2="5" stroke="#FFFFFF" stroke-width="1.1"
+                                    opacity="0.65" />
+                                <line x1="0" y1="-9" x2="0" y2="5" stroke="#FFFFFF" stroke-width="1.1" opacity="0.65" />
+                                <!-- Truck Cab -->
+                                <path d="M 6,-4 L 13,-4 L 17,2 L 17,7 L 6,7 Z" fill="#B85413" />
+                                <!-- Windshield -->
+                                <path d="M 8,-2 L 12,-2 L 15,2 L 8,2 Z" fill="#FFFFFF" opacity="0.85" />
+                                <!-- Wheels -->
+                                <circle cx="-13" cy="9" r="3.6" fill="#222222" />
+                                <circle cx="-13" cy="9" r="1.6" fill="#FFFFFF" />
+                                <circle cx="-3" cy="9" r="3.6" fill="#222222" />
+                                <circle cx="-3" cy="9" r="1.6" fill="#FFFFFF" />
+                                <circle cx="12" cy="9" r="3.6" fill="#222222" />
+                                <circle cx="12" cy="9" r="1.6" fill="#FFFFFF" />
+                            </g>
+                        </g>
+
+                        <!-- Waypoint 1: CONNECTING BUSINESSES -->
+                        <g class="wcu-map-wp wcu-map-wp1" transform="translate(99, 106)">
+                            <ellipse cx="0" cy="2" rx="7" ry="2.2" fill="#0A1E3F" opacity="0.12" />
+                            <!-- Teardrop Pin -->
+                            <g filter="url(#wcu-shadow)">
+                                <path d="M 0,0 C -6,-6 -9.5,-12 -9.5,-17 A 9.5 9.5 0 0 1 9.5,-17 C 9.5,-12 6,-6 0,0 Z"
+                                    fill="#B85413" />
+                                <circle cx="0" cy="-17" r="3.8" fill="#FFFFFF" />
+                            </g>
+                            <!-- Label Text in warm copper/caramel -->
+                            <text x="0" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">CONNECTING</text>
+                            <text x="0" y="56" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">BUSINESSES</text>
+                            <!-- Underline Bar -->
+                            <line x1="-15" y1="65" x2="15" y2="65" stroke="#B86D3B" stroke-width="2.2"
+                                stroke-linecap="round" />
+                        </g>
+
+                        <!-- Waypoint 2: FROM HERE TO EVERYWHERE (Isometric Cardboard Box) -->
+                        <g class="wcu-map-wp wcu-map-wp2" transform="translate(308, 140)">
+                            <ellipse cx="0" cy="24" rx="16" ry="4" fill="#0A1E3F" opacity="0.14" />
+                            <!-- 3D Cardboard Parcel -->
+                            <g filter="url(#wcu-shadow)">
+                                <!-- Top face -->
+                                <polygon points="0,-16 18,-6 0,4 -18,-6" fill="#DF9856" stroke="#9E541C"
+                                    stroke-width="0.8" />
+                                <!-- Left face -->
+                                <polygon points="-18,-6 0,4 0,24 -18,14" fill="#9C4F18" stroke="#9E541C"
+                                    stroke-width="0.8" />
+                                <!-- Right face -->
+                                <polygon points="0,4 18,-6 18,14 0,24" fill="#C47330" stroke="#9E541C"
+                                    stroke-width="0.8" />
+                                <!-- White Straps -->
+                                <polygon points="-9,-11 0,-6 9,-11 0,-16" fill="#FFFFFF" opacity="0.95" />
+                                <polygon points="-9,-1 0,4 9,-1 0,-6" fill="#FFFFFF" opacity="0.95" />
+                                <polygon points="-9,-1 0,4 0,24 -9,19" fill="#E8E8E8" opacity="0.92" />
+                                <polygon points="0,4 9,-1 9,19 0,24" fill="#FFFFFF" opacity="0.95" />
+                            </g>
+                            <!-- Label Text in warm copper/caramel -->
+                            <text x="0" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">FROM HERE</text>
+                            <text x="0" y="56" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">TO EVERYWHERE</text>
+                            <!-- Underline Bar -->
+                            <line x1="-15" y1="65" x2="15" y2="65" stroke="#B86D3B" stroke-width="2.2"
+                                stroke-linecap="round" />
+                        </g>
+
+                        <!-- Waypoint 3: GROWING TOGETHER -->
+                        <g class="wcu-map-wp wcu-map-wp3" transform="translate(524, 141)">
+                            <ellipse cx="0" cy="2" rx="7" ry="2.2" fill="#0A1E3F" opacity="0.12" />
+                            <!-- Teardrop Pin -->
+                            <g filter="url(#wcu-shadow)">
+                                <path d="M 0,0 C -6,-6 -9.5,-12 -9.5,-17 A 9.5 9.5 0 0 1 9.5,-17 C 9.5,-12 6,-6 0,0 Z"
+                                    fill="#B85413" />
+                                <circle cx="0" cy="-17" r="3.8" fill="#FFFFFF" />
+                            </g>
+                            <!-- Label Text in warm copper/caramel -->
+                            <text x="0" y="26" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">GROWING</text>
+                            <text x="0" y="40" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11"
+                                font-weight="800" fill="#B86D3B" letter-spacing="0.8">TOGETHER</text>
+                            <!-- Underline Bar -->
+                            <line x1="-15" y1="49" x2="15" y2="49" stroke="#B86D3B" stroke-width="2.2"
+                                stroke-linecap="round" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Column — Benefits with Wavy Timeline -->
+            <div class="wcuv2-right">
+                <!-- SVG S-Curve Connecting Path that flows through each icon -->
+                <svg class="wcuv2-zigzag-path" viewBox="0 0 620 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Progressive reveal mask for the S-curve line -->
+                        <mask id="wcu-zigzag-mask" maskUnits="userSpaceOnUse" x="-50" y="-50" width="720" height="1000">
+                            <path class="wcu-zigzag-mask-line"
+                                d="M 90,15 C 120,25 155,38 177,56 C 125,75 48,105 57,167 C 65,228 160,252 267,298 C 275,360 175,370 167,430 C 160,490 255,485 257,560 C 260,630 160,650 155,725 C 105,785 145,845 228,849"
+                                stroke="#FFFFFF" stroke-width="70" stroke-linecap="round" fill="none"
+                                pathLength="1000" />
+                        </mask>
+                    </defs>
+
+                    <!-- Masked S-curve path and connector dots -->
+                    <g mask="url(#wcu-zigzag-mask)">
+                        <!-- Main S-curve path connecting all 7 icons -->
+                        <path class="wcuv2-scurve-line"
+                            d="M 90,15 C 120,25 155,38 177,56 C 125,75 48,105 57,167 C 65,228 160,252 267,298 C 275,360 175,370 167,430 C 160,490 255,485 257,560 C 260,630 160,650 155,725 C 105,785 145,845 228,849"
+                            stroke="#C87533" stroke-width="1.8" stroke-dasharray="6 5" fill="none" opacity="0.6" />
+
+                        <!-- Waypoint connector dots along the curve matching reference image -->
+                        <g class="wcuv2-path-dots">
+                            <!-- Lead-in dot above item 1 -->
+                            <circle cx="122.2" cy="26.5" r="3.5" fill="#C87533" />
+                            <!-- Dot between item 1 and item 2 -->
+                            <circle cx="66" cy="124" r="3.5" fill="#C87533" />
+                            <!-- Two dots connecting item 2 (Customer-Focused) and item 3 (Competitive Pricing) -->
+                            <circle cx="108" cy="228.9" r="3.5" fill="#C87533" />
+                            <circle cx="170.2" cy="258.6" r="3.5" fill="#C87533" />
+                            <!-- Dot between item 3 and item 4 -->
+                            <circle cx="176.1" cy="406.1" r="3.5" fill="#C87533" />
+                            <!-- Dot between item 4 and item 5 -->
+                            <circle cx="253.9" cy="540" r="3.5" fill="#C87533" />
+                            <!-- Dot between item 5 and item 6 (Transparency) -->
+                            <circle cx="186.8" cy="661.8" r="3.5" fill="#C87533" />
+                            <!-- Two dots connecting item 6 (Transparency) and item 7 (Commitment to Excellence) -->
+                            <circle cx="133.6" cy="786.1" r="3.5" fill="#C87533" />
+                            <circle cx="159.1" cy="826.9" r="3.5" fill="#C87533" />
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="wcuv2-benefits-list">
+                    <!-- Benefit 1: Global Connectivity -->
+                    <div class="wcuv2-benefit-row wcuv2-row-right">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-globe"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Global Connectivity</h3>
+                            <p>Our growing international network helps connect businesses across countries and
+                                continents.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 2: Customer-Focused Solutions -->
+                    <div class="wcuv2-benefit-row wcuv2-row-left">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-fill ph-users"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Customer-Focused Solutions</h3>
+                            <p>Every customer has different logistics requirements. We provide customized solutions
+                                based on cargo type, destination, timeline, and budget.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3: Competitive Pricing -->
+                    <div class="wcuv2-benefit-row wcuv2-row-right">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-coins"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Competitive Pricing</h3>
+                            <p>We work to provide cost-effective and practical freight solutions without compromising
+                                service quality.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 4: Reliable Coordination -->
+                    <div class="wcuv2-benefit-row wcuv2-row-left">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-shield-check"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Reliable Coordination</h3>
+                            <p>Our team focuses on proper communication, documentation, planning, and shipment
+                                coordination.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 5: End-to-End Solutions -->
+                    <div class="wcuv2-benefit-row wcuv2-row-right">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-gear"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>End-to-End Solutions</h3>
+                            <p>From cargo pickup to final delivery, we coordinate the complete logistics process.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 6: Transparency -->
+                    <div class="wcuv2-benefit-row wcuv2-row-left">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-file-text"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Transparency</h3>
+                            <p>We believe in honest communication and keeping customers informed throughout the shipment
+                                journey.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 7: Commitment to Excellence -->
+                    <div class="wcuv2-benefit-row wcuv2-row-right">
+                        <div class="wcuv2-icon-circle">
+                            <i class="ph-bold ph-trophy"></i>
+                        </div>
+                        <div class="wcuv2-benefit-info">
+                            <h3>Commitment to Excellence</h3>
+                            <p>Customer satisfaction, reliability, and continuous improvement remain to the center of
+                                everything we do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

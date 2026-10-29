@@ -1,0 +1,465 @@
+/* ==========================================================================
+   RB CONNECT — GET A QUOTE STYLESHEET (get-a-quote.css)
+   Clean, Streamlined Freight Quotation Request Desk
+   Brand Theme: Warm Cream (#f7f3ee), Terracotta (#c66c24), Navy Slate (#0b1a30)
+   ========================================================================== */
+
+:root {
+    --rfq-primary: #c66c24;
+    --rfq-primary-hover: #b05a18;
+    --rfq-primary-light: #fff7ed;
+    --rfq-primary-border: rgba(198, 108, 36, 0.25);
+    --rfq-primary-glow: rgba(198, 108, 36, 0.2);
+
+    --rfq-navy-dark: #0b1a30;
+    --rfq-navy-surface: #13243d;
+    --rfq-navy-light: #1c3354;
+
+    --rfq-text-dark: #0f172a;
+    --rfq-text-body: #334155;
+    --rfq-text-muted: #64748b;
+    --rfq-text-light: #f8fafc;
+
+    --rfq-bg-page: #f7f3ee;
+    --rfq-bg-card: #ffffff;
+    --rfq-border-subtle: #e2e8f0;
+
+    --rfq-radius-sm: 8px;
+    --rfq-radius-md: 12px;
+    --rfq-radius-lg: 18px;
+    --rfq-radius-xl: 24px;
+
+    --rfq-shadow-sm: 0 2px 8px rgba(11, 26, 48, 0.04);
+    --rfq-shadow-md: 0 8px 24px rgba(11, 26, 48, 0.06);
+    --rfq-shadow-lg: 0 16px 40px rgba(11, 26, 48, 0.09);
+
+    --rfq-transition: all 0.25s ease;
+}
+
+body.quote-page {
+    background-color: var(--rfq-bg-page) !important;
+    background: var(--rfq-bg-page) !important;
+    color: var(--rfq-text-body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO HEADER
+   -------------------------------------------------------------------------- */
+.rfq-hero-section {
+    padding-top: 130px;
+    padding-bottom: 35px;
+    background: var(--rfq-bg-page);
+    text-align: center;
+    position: relative;
+}
+
+.rfq-hero-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rfq-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--rfq-primary-border);
+    color: var(--rfq-primary);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    box-shadow: var(--rfq-shadow-sm);
+}
+
+.rfq-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--rfq-navy-dark);
+    line-height: 1.18;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.rfq-hero-title span {
+    color: var(--rfq-primary);
+}
+
+.rfq-hero-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--rfq-text-muted);
+    margin: 0 auto;
+    max-width: 660px;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN RFQ FORM & SIDEBAR LAYOUT
+   -------------------------------------------------------------------------- */
+.rfq-main-section {
+    padding-bottom: 75px;
+}
+
+.rfq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Left: RFQ Form Card */
+.rfq-form-card {
+    background: var(--rfq-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--rfq-radius-xl);
+    padding: 36px 34px;
+    box-shadow: var(--rfq-shadow-md);
+}
+
+.rfq-form-header {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.rfq-form-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--rfq-navy-dark);
+    margin: 0 0 6px 0;
+}
+
+.rfq-form-subtitle {
+    font-size: 14px;
+    color: var(--rfq-text-muted);
+    margin: 0;
+}
+
+/* Form Fields */
+.rfq-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.rfq-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.rfq-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--rfq-navy-dark);
+    margin-bottom: 6px;
+}
+
+.rfq-label span {
+    color: var(--rfq-primary);
+}
+
+.rfq-input,
+.rfq-select,
+.rfq-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    font-family: inherit;
+    color: var(--rfq-text-dark);
+    background-color: #fafbfc;
+    border: 1px solid var(--rfq-border-subtle);
+    border-radius: var(--rfq-radius-md);
+    outline: none;
+    transition: var(--rfq-transition);
+}
+
+.rfq-input:focus,
+.rfq-select:focus,
+.rfq-textarea:focus {
+    background-color: #ffffff;
+    border-color: var(--rfq-primary);
+    box-shadow: 0 0 0 3px rgba(198, 108, 36, 0.15);
+}
+
+.rfq-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 256 256'%3E%3Cpath fill='%2364748b' d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 38px;
+}
+
+.rfq-textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+/* Submit Action Button */
+.rfq-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 28px;
+    background: var(--rfq-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--rfq-radius-md);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--rfq-transition);
+    box-shadow: 0 4px 16px rgba(198, 108, 36, 0.25);
+    margin-top: 10px;
+}
+
+.rfq-submit-btn:hover {
+    background: var(--rfq-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(198, 108, 36, 0.35);
+}
+
+/* Success Banner */
+.rfq-success-modal {
+    display: none;
+    background: #ecfdf5;
+    border: 1.5px solid #a7f3d0;
+    border-radius: var(--rfq-radius-lg);
+    padding: 24px;
+    margin-top: 20px;
+    color: #065f46;
+}
+
+.rfq-success-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 6px;
+}
+
+.rfq-success-body {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #047857;
+}
+
+/* --------------------------------------------------------------------------
+   3. RIGHT COLUMN: DIRECT SUPPORT & VALUE CARDS
+   -------------------------------------------------------------------------- */
+.rfq-side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Direct Support / Urgent Card */
+.rfq-support-card {
+    background: linear-gradient(135deg, #0b1a30 0%, #172d4c 100%);
+    border-radius: var(--rfq-radius-lg);
+    padding: 28px;
+    color: #ffffff;
+    box-shadow: var(--rfq-shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rfq-support-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rfq-support-desc {
+    font-size: 13.5px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.rfq-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rfq-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 14px;
+    border-radius: var(--rfq-radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rfq-contact-item i {
+    font-size: 20px;
+    color: var(--rfq-primary);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.rfq-contact-text span {
+    display: block;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.rfq-contact-text a,
+.rfq-contact-text p {
+    font-size: 13.5px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.rfq-contact-text a:hover {
+    color: var(--rfq-primary);
+}
+
+/* Value / Trust Card */
+.rfq-trust-card {
+    background: var(--rfq-bg-card);
+    border: 1px solid rgba(11, 26, 48, 0.08);
+    border-radius: var(--rfq-radius-lg);
+    padding: 26px;
+    box-shadow: var(--rfq-shadow-sm);
+}
+
+.rfq-trust-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--rfq-navy-dark);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rfq-trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rfq-trust-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--rfq-text-body);
+    line-height: 1.45;
+}
+
+.rfq-trust-list li i {
+    font-size: 18px;
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   4. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .rfq-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .rfq-hero-section {
+        padding-top: 110px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .rfq-hero-title {
+        font-size: clamp(28px, 7vw, 36px) !important;
+        line-height: 1.22 !important;
+    }
+
+    .rfq-hero-desc {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+    }
+
+    .rfq-form-row {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .rfq-form-card {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    .rfq-support-card,
+    .rfq-trust-card {
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .rfq-hero-section {
+        padding-top: 105px !important;
+    }
+
+    .rfq-hero-badge {
+        font-size: 11.5px !important;
+        padding: 5px 14px !important;
+    }
+
+    .rfq-hero-title {
+        font-size: clamp(24px, 7.5vw, 28px) !important;
+    }
+
+    .rfq-form-card {
+        padding: 20px 14px !important;
+    }
+
+    .rfq-input,
+    .rfq-select,
+    .rfq-textarea {
+        font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    }
+
+    .rfq-submit-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 20px !important;
+    }
+}

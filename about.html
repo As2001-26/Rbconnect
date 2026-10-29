@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - LogiXpress</title>
+    <title>About Us - RB Connect</title>
     <meta name="description"
-        content="Learn more about LogiXpress, our history, mission, and the global logistics network we operate.">
+        content="Learn more about RB Connect, our history, mission, and the global logistics network we operate.">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230060df'><path d='M12 2.25L3.75 6.75V17.25L12 21.75L20.25 17.25V6.75L12 2.25ZM12 4.5L18 7.875L15 9.5625L9 6.1875L12 4.5ZM5.25 8.25L11.25 11.625V18.375L5.25 15V8.25ZM12.75 18.375V11.625L18.75 8.25V15L12.75 18.375Z'/></svg>">
+    <link rel="icon" type="image/png" href="images/RBLOGO.png">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=cta_noblur_v4">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,150 +23,142 @@
 </head>
 
 <body class="about-page">
-    <!-- Navbar Section -->
-    <div class="about-navbar-wrapper">
-        <div class="container">
-            <!-- Header / Navbar -->
-            <header class="navbar">
-                <!-- Brand Logo -->
-                <a href="index.html" class="logo">
-                    <i class="ph-fill ph-cube"></i>
-                    <div class="logo-text">
-                        <span class="brand-name">LogiXpress</span>
-                        <span class="brand-tagline">Delivering Possibilities</span>
-                    </div>
-                </a>
+    <!-- Header / Navbar (Standard Across All Pages) -->
+    <header class="hero-navbar container">
+        <a href="index.html" class="logo">
+            <img src="images/RBLOGO.png" alt="RB Connect Logo" class="site-logo-img">
+        </a>
 
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" class="active">About Us</a>
-                    <div class="nav-item dropdown">
-                    <a href="#" class="nav-link d-flex align-items-center gap-1">Services <i class="ph-bold ph-caret-down fs-sm"></i></a>
-                    <div class="mega-menu">
-                        <div class="mega-menu-inner">
-                            <!-- Left Column -->
-                            <div class="mega-col-left">
-                                <div class="d-flex align-items-center gap-2 mb-3">
-                                    <div class="bg-primary" style="width: 25px; height: 2px;"></div>
-                                    <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our Services</span>
-                                </div>
-                                <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
-                                    Complete Logistics Solutions for a <span class="text-primary">Connected World</span>
-                                </h3>
-                                <p class="text-muted small mb-4">From air to sea, road to rail — we deliver reliable, efficient and customized logistics solutions tailored to your business needs.</p>
-                                <img src="images/mega_hero.jpg" alt="Global Logistics" class="mega-hero-img">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex align-items-center gap-1">Services <i
+                        class="ph-bold ph-caret-down fs-sm"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-inner">
+                        <!-- Left Column -->
+                        <div class="mega-col-left">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="bg-primary" style="width: 25px; height: 2px;"></div>
+                                <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our
+                                    Services</span>
                             </div>
+                            <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
+                                Complete Logistics Solutions for a <span class="text-primary">Connected
+                                    World</span>
+                            </h3>
+                            <p class="text-muted small mb-4">From air to sea, road to rail — we deliver
+                                reliable, efficient and customized logistics solutions tailored to your business
+                                needs.</p>
+                            <img src="images/mega_hero.jpg?v=unbranded_v1" alt="Global Logistics" class="mega-hero-img">
+                        </div>
 
-                            <!-- Middle Column (Grid) -->
-                            <div class="mega-col-middle">
-                                <a href="air-freight.html" class="mega-service-card">
-                                    <img src="images/mega_air.jpg" alt="Air Freight">
-                                    <div class="mega-card-content">
-                                        <h4>Air Freight</h4>
-                                        <p>Fast, secure and reliable air cargo solutions.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="#" class="mega-service-card">
-                                    <img src="images/mega_sea.jpg" alt="Sea Freight">
-                                    <div class="mega-card-content">
-                                        <h4>Sea Freight</h4>
-                                        <p>Cost-effective ocean freight for international shipping.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="land-freight.html" class="mega-service-card">
-                                    <img src="images/mega_road.jpg" alt="Road Freight">
-                                    <div class="mega-card-content">
-                                        <h4>Road Freight</h4>
-                                        <p>Efficient transportation across domestic routes.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="#" class="mega-service-card">
-                                    <img src="images/warehousing.jpg" alt="Warehousing & Distribution">
-                                    <div class="mega-card-content">
-                                        <h4>Warehousing & Distribution</h4>
-                                        <p>Secure storage and efficient distribution solutions.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="#" class="mega-service-card">
-                                    <img src="images/customs_clearance.jpg" alt="Customs Clearance">
-                                    <div class="mega-card-content">
-                                        <h4>Customs Clearance</h4>
-                                        <p>Hassle-free customs and documentation processes.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="#" class="mega-service-card">
-                                    <img src="images/project_cargo.jpg" alt="Project Cargo">
-                                    <div class="mega-card-content">
-                                        <h4>Project Cargo</h4>
-                                        <p>Customized logistics for specialized and complex cargo.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                                <a href="#" class="mega-service-card">
-                                    <img src="images/mega_door.jpg" alt="Door-to-Door Logistics">
-                                    <div class="mega-card-content">
-                                        <h4>Door-to-Door Logistics</h4>
-                                        <p>Complete logistics from pickup to final delivery.</p>
-                                    </div>
-                                    <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
-                                </a>
-                            </div>
-
-                            <!-- Right Column -->
-                            <div class="mega-col-right">
-                                <h4 class="right-col-heading"><span class="text-primary">Global Logistics</span><br><span class="text-dark">Local Commitment</span></h4>
-                                <ul class="mega-feature-list">
-                                    <li><i class="ph-fill ph-globe"></i> Global Reach</li>
-                                    <li><i class="ph-fill ph-clock"></i> On-Time Delivery</li>
-                                    <li><i class="ph-fill ph-shield-check"></i> Safe & Secure</li>
-                                    <li><i class="ph-fill ph-headset"></i> Dedicated Support</li>
-                                </ul>
-                                <div class="mega-cursive-footer">
-                                    Moving Businesses Further
+                        <!-- Middle Column (Grid) -->
+                        <div class="mega-col-middle">
+                            <a href="air-freight.html" class="mega-service-card">
+                                <img src="images/mega_air.jpg" alt="Air Freight">
+                                <div class="mega-card-content">
+                                    <h4>Air Freight</h4>
+                                    <p>Fast, secure and reliable air cargo solutions.</p>
                                 </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="sea-freight.html" class="mega-service-card">
+                                <img src="images/mega_sea.jpg" alt="Sea Freight">
+                                <div class="mega-card-content">
+                                    <h4>Sea Freight</h4>
+                                    <p>Cost-effective ocean freight for international shipping.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="land-freight.html" class="mega-service-card">
+                                <img src="images/mega_road.jpg" alt="Road Freight">
+                                <div class="mega-card-content">
+                                    <h4>Road Freight</h4>
+                                    <p>Efficient transportation across domestic routes.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="warehouse-distribution.html" class="mega-service-card">
+                                <img src="images/wd_hero_warehouse.jpg" alt="Warehousing & Distribution">
+                                <div class="mega-card-content">
+                                    <h4>Warehousing & Distribution</h4>
+                                    <p>Secure storage and efficient distribution solutions.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="customs-clearance.html" class="mega-service-card">
+                                <img src="images/customs_clearance.jpg" alt="Customs Clearance">
+                                <div class="mega-card-content">
+                                    <h4>Customs Clearance</h4>
+                                    <p>Hassle-free customs and documentation processes.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="project-cargo.html" class="mega-service-card">
+                                <img src="images/project_cargo.jpg" alt="Project Cargo">
+                                <div class="mega-card-content">
+                                    <h4>Project Cargo</h4>
+                                    <p>Customized logistics for specialized and complex cargo.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                            <a href="door-to-door.html" class="mega-service-card">
+                                <img src="images/mega_door.jpg?v=clean_unbranded" alt="Door-to-Door Logistics">
+                                <div class="mega-card-content">
+                                    <h4>Door-to-Door Logistics</h4>
+                                    <p>Complete logistics from pickup to final delivery.</p>
+                                </div>
+                                <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                            </a>
+                        </div>
+
+                        <!-- Right Column (Featured Box) -->
+                        <div class="mega-col-right">
+                            <h4 class="right-col-heading"><span class="text-primary">Global Logistics</span><br><span
+                                    class="text-dark">Local Commitment</span></h4>
+                            <ul class="mega-feature-list">
+                                <li><i class="ph-fill ph-globe"></i> Global Reach</li>
+                                <li><i class="ph-fill ph-clock"></i> On-Time Delivery</li>
+                                <li><i class="ph-fill ph-shield-check"></i> Safe & Secure</li>
+                                <li><i class="ph-fill ph-headset"></i> Dedicated Support</li>
+                            </ul>
+                            <div class="mega-cursive-footer">
+                                Moving Businesses Further
                             </div>
                         </div>
                     </div>
                 </div>
-                    <a href="index.html#industries">Industries</a>
-                    <a href="index.html#solutions">Solutions</a>
-                    <a href="index.html#contact">Contact</a>
-                </nav>
+            </div>
+            <a href="industries.html">Industries</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-                <div class="nav-actions">
-                    <a href="index.html#tracking" class="btn btn-outline">
-                        Track Shipment <i class="ph ph-map-pin"></i>
-                    </a>
-                    <a href="index.html#quote" class="btn btn-primary">
-                        Get a Quote <i class="ph ph-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Hamburger Button (3 lines) -->
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                </button>
-            </header>
+        <div class="nav-actions">
+            <a href="track-shipment.html" class="btn-nav-outline">
+                Track Shipment <i class="ph ph-map-pin"></i>
+            </a>
+            <a href="get-a-quote.html" class="btn-nav-primary">
+                Get a Quote <i class="ph ph-arrow-right"></i>
+            </a>
         </div>
-    </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </header>
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
     <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
         <div class="mobile-drawer-header">
             <a href="index.html" class="logo mobile-drawer-logo">
-                <i class="ph-fill ph-cube"></i>
-                <div class="logo-text">
-                    <span class="brand-name">LogiXpress</span>
-                    <span class="brand-tagline">Delivering Possibilities</span>
-                </div>
+                <img src="images/RBLOGO.png" alt="RB Connect" class="site-logo-img">
             </a>
             <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
                 <i class="ph-bold ph-x"></i>
@@ -204,7 +196,7 @@
                         <a href="land-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-truck text-primary"></i>
                             <div class="mobile-sublink-text">
-                                <strong>Road / Land Freight</strong>
+                                <strong>Road Freight</strong>
                                 <small>Nationwide ground logistics</small>
                             </div>
                         </a>
@@ -215,7 +207,7 @@
                                 <small>Global ocean shipping</small>
                             </div>
                         </a>
-                        <a href="index.html#services" class="mobile-sublink">
+                        <a href="warehouse-distribution.html" class="mobile-sublink">
                             <i class="ph-bold ph-warehouse text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Warehousing & Distribution</strong>
@@ -229,7 +221,7 @@
                                 <small>Hassle-free documentation</small>
                             </div>
                         </a>
-                        <a href="index.html#services" class="mobile-sublink">
+                        <a href="project-cargo.html" class="mobile-sublink">
                             <i class="ph-bold ph-package text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Project Cargo</strong>
@@ -246,25 +238,25 @@
                     </div>
                 </div>
 
-                <a href="index.html#industries" class="mobile-nav-link">
+                <a href="industries.html" class="mobile-nav-link">
                     <i class="ph-bold ph-buildings"></i>
                     <span>Industries</span>
                 </a>
-                <a href="index.html#solutions" class="mobile-nav-link">
-                    <i class="ph-bold ph-chart-polar"></i>
+                <a href="solutions.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-gear-six"></i>
                     <span>Solutions</span>
                 </a>
-                <a href="index.html#contact" class="mobile-nav-link">
+                <a href="contact.html" class="mobile-nav-link">
                     <i class="ph-bold ph-envelope-simple"></i>
                     <span>Contact</span>
                 </a>
             </nav>
 
             <div class="mobile-drawer-cta">
-                <a href="index.html#tracking" class="btn btn-outline">
+                <a href="track-shipment.html" class="btn btn-outline">
                     <i class="ph ph-map-pin"></i> Track Shipment
                 </a>
-                <a href="index.html#quote" class="btn btn-primary">
+                <a href="get-a-quote.html" class="btn btn-primary">
                     <i class="ph ph-arrow-right"></i> Get a Quote
                 </a>
             </div>
@@ -273,11 +265,11 @@
                 <div class="mobile-footer-contact">
                     <div class="contact-item">
                         <i class="ph-fill ph-phone-call text-primary"></i>
-                        <span>+1 (800) 555-0199</span>
+                        <span>+91-9311514453 / +44 7901 380919</span>
                     </div>
                     <div class="contact-item">
                         <i class="ph-fill ph-envelope text-primary"></i>
-                        <span>support@logixpress.com</span>
+                        <span>info@rbconnectglobal.com</span>
                     </div>
                 </div>
                 <p class="mobile-footer-tagline">Moving Businesses Further • Worldwide</p>
@@ -285,7 +277,7 @@
         </div>
     </aside>
 
-    <div class="about-top-container" style="padding-top: 95px;">
+    <div class="about-top-container" style="padding-top: 10px; width: 100%; background-color: #f7f3ee;">
         <main class="about-main pt-0">
             <!-- The Animation Container -->
             <div class="animation-container mb-0">
@@ -301,7 +293,7 @@
                                 <span class="o-swoosh"></span>
                             </span>UT
                         </span>
-                        <span class="text-blue">US</span>
+                        <span class="text-orange">US</span>
                     </div>
                     <div class="title-divider">
                         <div class="line"></div>
@@ -320,98 +312,88 @@
             </div>
 
             <section class="story-section mb-5 position-relative">
-                <div class="story-top">
-                    <div class="row g-0 align-items-stretch">
-                        <!-- Left Text Content -->
-                        <div class="col-lg-5 story-text-col d-flex align-items-center">
-                            <div class="story-text-inner pb-5">
-                                <h2 class="display-4 fw-900 mb-4 story-heading d-flex align-items-center" style="letter-spacing: -1.5px; white-space: nowrap;">
-                                    <span class="text-dark me-2">Our</span><span class="text-primary">Story</span>
-                                </h2>
-                                <div class="story-content-wrapper mt-3">
-                                    <p class="lead fw-normal text-secondary mb-4" style="line-height: 1.8;">
-                                        <strong class="text-dark fw-bold">RB Connect Global Network</strong> was founded to create a reliable platform connecting businesses with global logistics opportunities. Driven by a new generation of entrepreneurs, we combine deep financial expertise with modern logistics solutions to create unmatched value.
-                                    </p>
-                                    
-                                    <div class="d-flex align-items-start mb-4">
-                                        <div class="icon-box bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 mt-1 shadow-sm" style="width: 45px; height: 45px; min-width: 45px;">
-                                            <i class="ph-fill ph-graduation-cap fs-4"></i>
-                                        </div>
-                                        <p class="text-muted mb-0" style="line-height: 1.7;">
-                                            Supported by a highly-educated, family-driven leadership team—including a founder with a Master's in International Finance and Accounting—we bring professional knowledge and modern business perspectives to every shipment.
-                                        </p>
-                                    </div>
+                <div class="story-main-grid">
+                    <!-- Story Intro (Heading + Text) -->
+                    <div class="story-intro-col">
+                        <h2 class="story-heading">
+                            <span class="story-heading-our">Our</span><span class="story-heading-story">Story</span>
+                        </h2>
+                        <p class="story-intro-text">
+                            <strong class="text-dark fw-bold">RB Connect Global Network</strong> was founded to create a reliable platform connecting businesses with global logistics opportunities. Driven by a new generation of entrepreneurs, we combine deep financial expertise with modern logistics solutions to create unmatched value.
+                        </p>
+                    </div>
 
-                                    <div class="vision-box p-4 rounded-3 border-start border-4 border-primary bg-light mt-4 shadow-sm">
-                                        <p class="mb-2 text-uppercase fw-bold text-primary small" style="letter-spacing: 1px;">Our Shared Vision</p>
-                                        <p class="h5 fw-bold text-dark mb-0 lh-base" style="font-family: var(--font-heading, 'Montserrat', sans-serif);">
-                                            "To build RB Connect Global Network into a trusted global leader in logistics, freight forwarding, and international business connectivity."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Story Image Card -->
+                    <div class="story-image-col">
+                        <div class="story-image-card">
+                            <img src="images/story_truck_brown.jpg?v=2" alt="RB Connect Logistics Truck" class="story-banner-img">
                         </div>
-                        <!-- Right Image Content -->
-                        <div class="col-lg-7 position-relative story-image-col">
-                            <div class="story-image-mask h-100">
-                                <img src="images/story_truck_banner.jpg" alt="Logistics Truck" class="story-banner-img">
-                                <div class="story-gradient-overlay"></div>
-                                <div class="story-map-overlay"></div>
+                    </div>
+
+                    <!-- Story Details (Leadership + Vision) -->
+                    <div class="story-details-col">
+                        <!-- Leadership Box -->
+                        <div class="story-leadership-box">
+                            <div class="story-leader-icon">
+                                <i class="ph-fill ph-graduation-cap"></i>
                             </div>
+                            <p class="story-leader-text">
+                                Supported by a highly-educated, family-driven leadership team—including a founder with a Master's in International Finance and Accounting—we bring professional knowledge and modern business perspectives to every shipment.
+                            </p>
+                        </div>
+
+                        <!-- Vision Box -->
+                        <div class="story-vision-card">
+                            <span class="story-vision-tag">OUR SHARED VISION</span>
+                            <p class="story-vision-quote">
+                                “To build RB Connect Global Network into a trusted global leader in logistics, freight forwarding, and international business connectivity.”
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bottom Stat Cards -->
                 <div class="story-stats">
-                    <div class="row g-4 justify-content-center">
+                    <div class="story-stats-grid">
                         <!-- Card 1 -->
-                        <div class="col-6 col-lg-3">
-                            <div class="story-stat-card">
-                                <div class="stat-icon-wrapper text-primary mb-3">
-                                    <i class="ph-fill ph-globe-hemisphere-west fs-1"></i>
-                                </div>
-                                <i class="ph-fill ph-globe-hemisphere-west stat-watermark"></i>
-                                <h3 class="stat-number display-5 fw-900 text-dark mb-1" data-target="150" data-suffix="+">0</h3>
-                                <p class="stat-label text-muted mb-3 fw-500">Countries Served</p>
-                                <div class="stat-underline bg-primary"></div>
+                        <div class="story-stat-card">
+                            <div class="stat-icon-wrapper">
+                                <i class="ph-fill ph-globe-hemisphere-west"></i>
                             </div>
+                            <i class="ph-fill ph-globe-hemisphere-west stat-watermark"></i>
+                            <h3 class="stat-number display-5 fw-900 text-dark mb-1">Global</h3>
+                            <p class="stat-label text-muted mb-3 fw-500">Worldwide Coverage</p>
+                            <div class="stat-underline bg-primary"></div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="col-6 col-lg-3">
-                            <div class="story-stat-card">
-                                <div class="stat-icon-wrapper text-primary mb-3">
-                                    <i class="ph-fill ph-truck fs-1"></i>
-                                </div>
-                                <i class="ph-fill ph-truck stat-watermark"></i>
-                                <h3 class="stat-number display-5 fw-900 text-dark mb-1" data-target="25" data-suffix="K+">0</h3>
-                                <p class="stat-label text-muted mb-3 fw-500">Daily Deliveries</p>
-                                <div class="stat-underline bg-primary"></div>
+                        <div class="story-stat-card">
+                            <div class="stat-icon-wrapper">
+                                <i class="ph-fill ph-truck"></i>
                             </div>
+                            <i class="ph-fill ph-truck stat-watermark"></i>
+                            <h3 class="stat-number display-5 fw-900 text-dark mb-1">End-to-End</h3>
+                            <p class="stat-label text-muted mb-3 fw-500">Freight Operations</p>
+                            <div class="stat-underline bg-primary"></div>
                         </div>
                         <!-- Card 3 -->
-                        <div class="col-6 col-lg-3">
-                            <div class="story-stat-card">
-                                <div class="stat-icon-wrapper text-primary mb-3">
-                                    <i class="ph-fill ph-users fs-1"></i>
-                                </div>
-                                <i class="ph-fill ph-users stat-watermark"></i>
-                                <h3 class="stat-number display-5 fw-900 text-dark mb-1" data-target="10" data-suffix="K+">0</h3>
-                                <p class="stat-label text-muted mb-3 fw-500">Happy Clients</p>
-                                <div class="stat-underline bg-primary"></div>
+                        <div class="story-stat-card">
+                            <div class="stat-icon-wrapper">
+                                <i class="ph-fill ph-users"></i>
                             </div>
+                            <i class="ph-fill ph-users stat-watermark"></i>
+                            <h3 class="stat-number display-5 fw-900 text-dark mb-1">Trusted</h3>
+                            <p class="stat-label text-muted mb-3 fw-500">Client Partnerships</p>
+                            <div class="stat-underline bg-primary"></div>
                         </div>
                         <!-- Card 4 -->
-                        <div class="col-6 col-lg-3">
-                            <div class="story-stat-card">
-                                <div class="stat-icon-wrapper text-primary mb-3">
-                                    <i class="ph-fill ph-shield-check fs-1"></i>
-                                </div>
-                                <i class="ph-fill ph-shield-check stat-watermark"></i>
-                                <h3 class="stat-number display-5 fw-900 text-dark mb-1" data-target="99.9" data-suffix="%">0</h3>
-                                <p class="stat-label text-muted mb-3 fw-500">Safety Record</p>
-                                <div class="stat-underline bg-primary"></div>
+                        <div class="story-stat-card">
+                            <div class="stat-icon-wrapper">
+                                <i class="ph-fill ph-shield-check"></i>
                             </div>
+                            <i class="ph-fill ph-shield-check stat-watermark"></i>
+                            <h3 class="stat-number display-5 fw-900 text-dark mb-1">Assured</h3>
+                            <p class="stat-label text-muted mb-3 fw-500">Safety &amp; Compliance</p>
+                            <div class="stat-underline bg-primary"></div>
                         </div>
                     </div>
                 </div>
@@ -441,16 +423,16 @@
                     <h2 class="cv-main-title">Our Core <span>Values</span></h2>
                     <!-- Flying Airplane starting from "Our Core Values" -->
                     <div class="cv-plane-flying-track">
-                        <img src="images/rb_connect_plane_transparent.png" alt="RB Connect Airplane" class="cv-airplane-img" id="cvAirplane">
+                        <img src="images/rb_connect_plane_transparent.png?v=brown" alt="RB Connect Airplane" class="cv-airplane-img" id="cvAirplane">
                     </div>
                 </div>
-                <p class="cv-subtitle">These values keep us moving forward and help us build a more<br>connected, efficient, and reliable world.</p>
+                <p class="cv-subtitle">These values keep us moving forward and help us build a more<br class="d-none d-md-inline"> connected, efficient, and reliable world.</p>
             </div>
             <div class="cv-header-right">
                 <div class="cv-cursive-wrap">
-                    <p class="cv-cursive">Moving<br>Businesses<br>Further</p>
+                    <p class="cv-cursive">Moving Businesses Further</p>
                     <svg class="cv-swoosh" viewBox="0 0 100 16" fill="none">
-                        <path d="M4 12 C 35 2, 70 14, 96 6" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round" />
+                        <path d="M4 12 C 35 2, 70 14, 96 6" stroke="#c66c24" stroke-width="2.5" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -461,85 +443,73 @@
 
             <!-- 01 Reliability -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-shield-check"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-shield-check"></i></div>
-                        <span class="cv-num">01</span>
-                    </div>
                     <h3 class="cv-card-name">RELIABILITY</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">We believe every shipment is a responsibility and every commitment matters.</p>
                 </div>
+                <span class="cv-num">01</span>
                 <div class="cv-card-img" style="background-image: url('images/mega_road.jpg')"></div>
             </div>
 
             <!-- 02 Integrity -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-handshake"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-handshake"></i></div>
-                        <span class="cv-num">02</span>
-                    </div>
                     <h3 class="cv-card-name">INTEGRITY</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">We conduct our business with honesty, transparency, and professional ethics.</p>
                 </div>
+                <span class="cv-num">02</span>
                 <div class="cv-card-img" style="background-image: url('images/integrity_handshake.png')"></div>
             </div>
 
             <!-- 03 Customer First -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-crown"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-crown"></i></div>
-                        <span class="cv-num">03</span>
-                    </div>
                     <h3 class="cv-card-name">CUSTOMER FIRST</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">Our customers' success and satisfaction are our highest priorities.</p>
                 </div>
+                <span class="cv-num">03</span>
                 <div class="cv-card-img" style="background-image: url('images/mega_sea.jpg')"></div>
             </div>
 
             <!-- 04 Teamwork -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-users-three"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-users-three"></i></div>
-                        <span class="cv-num">04</span>
-                    </div>
                     <h3 class="cv-card-name">TEAMWORK</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">We believe strong teams and partnerships create successful global networks.</p>
                 </div>
+                <span class="cv-num">04</span>
                 <div class="cv-card-img" style="background-image: url('images/mega_consolidated.jpg')"></div>
             </div>
 
             <!-- 05 Innovation -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-lightbulb"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-lightbulb"></i></div>
-                        <span class="cv-num">05</span>
-                    </div>
                     <h3 class="cv-card-name">INNOVATION</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">We continuously look for smarter and more efficient ways to improve logistics solutions.</p>
                 </div>
+                <span class="cv-num">05</span>
                 <div class="cv-card-img" style="background-image: url('images/project_cargo.jpg')"></div>
             </div>
 
             <!-- 06 Growth -->
             <div class="cv-card-new">
+                <div class="cv-icon-box"><i class="ph-fill ph-trend-up"></i></div>
                 <div class="cv-card-content">
-                    <div class="cv-top-row">
-                        <div class="cv-icon-box"><i class="ph-fill ph-trend-up"></i></div>
-                        <span class="cv-num">06</span>
-                    </div>
                     <h3 class="cv-card-name">GROWTH</h3>
                     <div class="cv-name-bar"></div>
                     <p class="cv-card-text">We aim to grow together—with our customers, employees, partners, and global network.</p>
                 </div>
+                <span class="cv-num">06</span>
                 <div class="cv-card-img" style="background-image: url('images/air_freight.jpg')"></div>
             </div>
 
@@ -566,7 +536,7 @@
                         A Stronger, More<br>
                         <span class="fm-title-accent">Connected World
                             <svg class="fm-title-swoosh" viewBox="0 0 160 12" fill="none">
-                                <path d="M3 9 C 45 2, 115 2, 157 8" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" />
+                                <path d="M3 9 C 45 2, 115 2, 157 8" stroke="#c66c24" stroke-width="3" stroke-linecap="round" />
                             </svg>
                         </span>
                     </h2>
@@ -591,29 +561,35 @@
 
                 <!-- Right Column: Hero Visual Showcase with Overlapping Floating Pills -->
                 <div class="fm-right-col">
+                    <!-- 4 Value Pill Badges (2x2 on mobile, floating on desktop) -->
+                    <div class="fm-floating-pills">
+                        <div class="fm-pill-badge">
+                            <div class="fm-pill-icon"><i class="ph-bold ph-shield-check"></i></div>
+                            <div class="fm-pill-text">Reliable<br>Solutions</div>
+                        </div>
+                        <div class="fm-pill-badge">
+                            <div class="fm-pill-icon"><i class="ph-bold ph-users-three"></i></div>
+                            <div class="fm-pill-text">Customer<br>Focused</div>
+                        </div>
+                        <div class="fm-pill-badge">
+                            <div class="fm-pill-icon"><i class="ph-bold ph-circles-three"></i></div>
+                            <div class="fm-pill-text">Global<br>Partnerships</div>
+                        </div>
+                        <div class="fm-pill-badge">
+                            <div class="fm-pill-icon"><i class="ph-bold ph-chart-line-up"></i></div>
+                            <div class="fm-pill-text">Long-Term<br>Growth</div>
+                        </div>
+                    </div>
+
                     <div class="fm-hero-card">
                         <div class="fm-hero-img-wrap">
                             <img src="images/founder_message_hero.jpg" alt="RB Connect Founder overlooking logistics seaport" class="fm-hero-img">
                             <div class="fm-hero-fade"></div>
-                        </div>
-
-                        <!-- 4 Floating Value Pill Badges Overlapping the Left Border -->
-                        <div class="fm-floating-pills">
-                            <div class="fm-pill-badge">
-                                <div class="fm-pill-icon"><i class="ph-bold ph-shield-check"></i></div>
-                                <div class="fm-pill-text">Reliable<br>Solutions</div>
-                            </div>
-                            <div class="fm-pill-badge">
-                                <div class="fm-pill-icon"><i class="ph-bold ph-users-three"></i></div>
-                                <div class="fm-pill-text">Customer<br>Focused</div>
-                            </div>
-                            <div class="fm-pill-badge">
-                                <div class="fm-pill-icon"><i class="ph-bold ph-circles-three"></i></div>
-                                <div class="fm-pill-text">Global<br>Partnerships</div>
-                            </div>
-                            <div class="fm-pill-badge">
-                                <div class="fm-pill-icon"><i class="ph-bold ph-chart-line-up"></i></div>
-                                <div class="fm-pill-text">Long-Term<br>Growth</div>
+                            <div class="fm-hero-cursive-badge">
+                                <span class="fm-hero-cursive-text">Moving Businesses Further</span>
+                                <svg class="fm-hero-swoosh" viewBox="0 0 100 12" fill="none">
+                                    <path d="M3 9 C 35 2, 70 10, 97 5" stroke="#c66c24" stroke-width="2.5" stroke-linecap="round" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -972,7 +948,7 @@
                 <div class="of-right-col">
                     <div class="of-hero-glow"></div>
                     <div class="of-hero-mask">
-                        <img src="images/our_future_hero.png" alt="RB Connect Global Network - Connected World Logistics" class="of-hero-img">
+                        <img src="images/our_future_hero_brown.png?v=2" alt="RB Connect Global Network - Connected World Logistics" class="of-hero-img">
                     </div>
                 </div>
             </div>
@@ -984,54 +960,54 @@
                 <defs>
                     <!-- Sky Background Gradient -->
                     <linearGradient id="ofSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#f4f9ff" />
-                        <stop offset="60%" stop-color="#edf5fe" />
-                        <stop offset="100%" stop-color="#ffffff" />
+                        <stop offset="0%" stop-color="#f7f3ee" />
+                        <stop offset="60%" stop-color="#f7f3ee" />
+                        <stop offset="100%" stop-color="#f7f3ee" />
                     </linearGradient>
 
                     <!-- Mountain Far Layer Gradient -->
                     <linearGradient id="ofMtnFar" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#dbeafc" stop-opacity="0.95" />
-                        <stop offset="100%" stop-color="#cfe2fa" stop-opacity="0.75" />
+                        <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.45" />
+                        <stop offset="100%" stop-color="#ffedd5" stop-opacity="0.25" />
                     </linearGradient>
 
                     <!-- Mountain Mid Layer Gradient -->
                     <linearGradient id="ofMtnMid" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#c2dcf8" stop-opacity="0.98" />
-                        <stop offset="100%" stop-color="#b3d4f7" stop-opacity="0.85" />
+                        <stop offset="0%" stop-color="#fdba74" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="#fed7aa" stop-opacity="0.35" />
                     </linearGradient>
 
                     <!-- Mountain Near Layer Gradient -->
                     <linearGradient id="ofMtnNear" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#a8cff7" stop-opacity="0.95" />
-                        <stop offset="100%" stop-color="#98c4f5" stop-opacity="0.9" />
+                        <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#fed7aa" stop-opacity="0.3" />
                     </linearGradient>
 
                     <!-- Road Ribbon Glow Gradient -->
                     <linearGradient id="ofRoadGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.15" />
-                        <stop offset="20%" stop-color="#60a5fa" stop-opacity="0.35" />
-                        <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.35" />
-                        <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.1" />
+                        <stop offset="0%" stop-color="#fdba74" stop-opacity="0.15" />
+                        <stop offset="20%" stop-color="#fb923c" stop-opacity="0.35" />
+                        <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.35" />
+                        <stop offset="100%" stop-color="#fdba74" stop-opacity="0.1" />
                     </linearGradient>
 
                     <!-- Main Road Path Gradient -->
                     <linearGradient id="ofRoadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#3b82f6" />
-                        <stop offset="25%" stop-color="#1d4ed8" />
-                        <stop offset="70%" stop-color="#1d4ed8" />
-                        <stop offset="100%" stop-color="#2563eb" />
+                        <stop offset="0%" stop-color="#ea580c" />
+                        <stop offset="25%" stop-color="#c66c24" />
+                        <stop offset="70%" stop-color="#c66c24" />
+                        <stop offset="100%" stop-color="#d97706" />
                     </linearGradient>
 
                     <!-- Top Right Corner Accent -->
                     <linearGradient id="ofCornerAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1e3a8a" />
-                        <stop offset="100%" stop-color="#1d4ed8" />
+                        <stop offset="0%" stop-color="#9a3412" />
+                        <stop offset="100%" stop-color="#c66c24" />
                     </linearGradient>
 
                     <!-- Pin Drop Shadow Filter -->
                     <filter id="ofPinShadow" x="-30%" y="-30%" width="160%" height="160%">
-                        <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#1d4ed8" flood-opacity="0.25" />
+                        <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#c66c24" flood-opacity="0.25" />
                     </filter>
                 </defs>
 
@@ -1043,9 +1019,9 @@
                 <path d="M 0,125 L 65,113 L 138,118 L 222,96 L 298,103 L 383,80 L 446,88 L 500,66 L 552,80 L 617,64 L 682,82 L 745,54 L 808,70 L 872,60 L 936,76 L 1020,62 L 1105,86 L 1190,74 L 1275,93 L 1370,86 L 1440,100 L 1440,170 L 0,170 Z" fill="url(#ofMtnMid)" />
 
                 <!-- Subtle Mountain Facet Highlights -->
-                <polygon points="500,66 520,42 552,80" fill="#b9d6f5" opacity="0.4" />
-                <polygon points="745,54 780,38 808,70" fill="#b9d6f5" opacity="0.4" />
-                <polygon points="1020,62 1085,52 1105,86" fill="#b9d6f5" opacity="0.4" />
+                <polygon points="500,66 520,42 552,80" fill="#fed7aa" opacity="0.4" />
+                <polygon points="745,54 780,38 808,70" fill="#fed7aa" opacity="0.4" />
+                <polygon points="1020,62 1085,52 1105,86" fill="#fed7aa" opacity="0.4" />
 
                 <!-- Mountain Silhouettes Layer 3 (Foothills & Soft Rolling Slopes) -->
                 <path d="M 0,138 C 106,123 191,116 287,120 C 393,124 468,103 574,106 C 680,109 765,90 872,93 C 978,96 1063,116 1169,113 C 1275,110 1360,126 1440,123 L 1440,170 L 0,170 Z" fill="url(#ofMtnNear)" />
@@ -1058,9 +1034,9 @@
 
                 <!-- Milestone 1: EXPANDING TODAY -->
                 <g class="of-marker-group of-marker-1">
-                    <circle cx="272" cy="96" r="4.5" fill="#1d4ed8" class="of-marker-dot" />
+                    <circle cx="272" cy="96" r="4.5" fill="#c66c24" class="of-marker-dot" />
                     <g filter="url(#ofPinShadow)" class="of-pin-pin">
-                        <path d="M 272,93 C 265.5,84 259,73 259,63 C 259,51.5 265,46 272,46 C 279,46 285,51.5 285,63 C 285,73 278.5,84 272,93 Z" fill="#1d4ed8" />
+                        <path d="M 272,93 C 265.5,84 259,73 259,63 C 259,51.5 265,46 272,46 C 279,46 285,51.5 285,63 C 285,73 278.5,84 272,93 Z" fill="#c66c24" />
                         <circle cx="272" cy="63" r="4.5" fill="#ffffff" />
                     </g>
                     <text x="272" y="30" text-anchor="middle" class="of-svg-label">EXPANDING TODAY</text>
@@ -1068,9 +1044,9 @@
 
                 <!-- Milestone 2: BUILDING TOMORROW -->
                 <g class="of-marker-group of-marker-2">
-                    <circle cx="900" cy="72" r="3.5" fill="#1d4ed8" class="of-marker-dot" />
+                    <circle cx="900" cy="72" r="3.5" fill="#c66c24" class="of-marker-dot" />
                     <g filter="url(#ofPinShadow)" class="of-pin-pin">
-                        <path d="M 900,69 C 895,62 890,54 890,46 C 890,37.5 894.5,33 900,33 C 905.5,33 910,37.5 910,46 C 910,54 905,62 900,69 Z" fill="#1d4ed8" />
+                        <path d="M 900,69 C 895,62 890,54 890,46 C 890,37.5 894.5,33 900,33 C 905.5,33 910,37.5 910,46 C 910,54 905,62 900,69 Z" fill="#c66c24" />
                         <circle cx="900" cy="46" r="3.5" fill="#ffffff" />
                     </g>
                     <text x="900" y="20" text-anchor="middle" class="of-svg-label">BUILDING TOMORROW</text>
@@ -1091,9 +1067,8 @@
         <div class="footer-grid">
             <!-- Brand Column -->
             <div class="footer-brand">
-                <a href="#" class="logo">
-                    <i class="ph-fill ph-globe-hemisphere-west"></i>
-                    LogiXpress
+                <a href="index.html" class="logo">
+                    <img src="images/RBLOGO.png" alt="RB Connect" class="footer-logo-img">
                 </a>
                 <p>Delivering seamless global logistics solutions that drive your business forward. Speed, reliability, and transparency in every shipment.</p>
                 <div class="footer-social">
@@ -1110,10 +1085,10 @@
                 <ul>
                     <li><a href="index.html"><i class="ph-bold ph-caret-right"></i> Home</a></li>
                     <li><a href="about.html"><i class="ph-bold ph-caret-right"></i> About Us</a></li>
-                    <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
-                    <li><a href="index.html#services"><i class="ph-bold ph-caret-right"></i> Services</a></li>
-                    <li><a href="index.html#tracking"><i class="ph-bold ph-caret-right"></i> Tracking</a></li>
-                    <li><a href="index.html#contact"><i class="ph-bold ph-caret-right"></i> Contact Us</a></li>
+                    <li><a href="industries.html"><i class="ph-bold ph-caret-right"></i> Industries</a></li>
+                    <li><a href="solutions.html"><i class="ph-bold ph-caret-right"></i> Solutions</a></li>
+                    <li><a href="track-shipment.html"><i class="ph-bold ph-caret-right"></i> Tracking</a></li>
+                    <li><a href="contact.html"><i class="ph-bold ph-caret-right"></i> Contact Us</a></li>
                 </ul>
             </div>
 
@@ -1122,12 +1097,12 @@
                 <h4>Our Services</h4>
                 <ul>
                     <li><a href="land-freight.html"><i class="ph-bold ph-caret-right"></i> Road Freight</a></li>
-                    <li><a href="index.html#services"><i class="ph-bold ph-caret-right"></i> Ocean Freight</a></li>
+                    <li><a href="sea-freight.html"><i class="ph-bold ph-caret-right"></i> Ocean Freight</a></li>
                     <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
-                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Warehousing</a></li>
-                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Customs Clearance</a></li>
-                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Project Cargo</a></li>
-                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Door-to-Door Logistics</a></li>
+                    <li><a href="warehouse-distribution.html"><i class="ph-bold ph-caret-right"></i> Warehousing & Distribution</a></li>
+                    <li><a href="customs-clearance.html"><i class="ph-bold ph-caret-right"></i> Customs Clearance</a></li>
+                    <li><a href="project-cargo.html"><i class="ph-bold ph-caret-right"></i> Project Cargo</a></li>
+                    <li><a href="door-to-door.html"><i class="ph-bold ph-caret-right"></i> Door-to-Door Logistics</a></li>
                 </ul>
             </div>
 
@@ -1138,22 +1113,29 @@
                     <div class="contact-item">
                         <i class="ph-fill ph-map-pin"></i>
                         <div class="contact-item-text">
-                            <span>Head Office</span>
-                            <p>123 Logistics Avenue, Global Trade Hub, NY 10001</p>
+                            <span>Head Office (India)</span>
+                            <p>1146, Gaurs Aero Suites, Gaur Yamuna City Sector 19, Yeida, Gautam Budh Nagar, UP 201310</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>UK Office</span>
+                            <p>19 Marlborough Road, Upton Park, London, E7 8HA, UK</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="ph-fill ph-phone-call"></i>
                         <div class="contact-item-text">
                             <span>Call Us Anytime</span>
-                            <p>+1 (555) 123-4567</p>
+                            <p><a href="tel:+919311514453" style="color: inherit; text-decoration: none;">+91-9311514453</a> &bull; <a href="tel:+447901380919" style="color: inherit; text-decoration: none;">+44 7901 380919</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="ph-fill ph-envelope-simple"></i>
                         <div class="contact-item-text">
                             <span>Email Us</span>
-                            <p>support@logixpress.com</p>
+                            <p><a href="mailto:info@rbconnectglobal.com" style="color: inherit; text-decoration: none;">info@rbconnectglobal.com</a><br><a href="mailto:marketing@rbconnectglobal.com" style="color: inherit; text-decoration: none;">marketing@rbconnectglobal.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -1161,7 +1143,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 LogiXpress. All rights reserved.</p>
+            <p>&copy; 2026 RB Connect. All rights reserved. | Created by <a href="https://myseosmo.com/" target="_blank" rel="noopener">MySEOSMO</a></p>
             <div class="footer-legal">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -1171,7 +1153,7 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js?v=dropdown_click_v2"></script>
 </body>
 </html>
