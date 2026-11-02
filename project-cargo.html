@@ -25,9 +25,365 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=unified_cards_v2">
+    <link rel="stylesheet" href="style.css?v=no_section_borders_v10">
     <link rel="stylesheet" href="service-capabilities.css?v=page_bg_sync_v4">
-    <link rel="stylesheet" href="project-cargo.css?v=air_freight_match_v1">
+    <link rel="stylesheet" href="project-cargo.css?v=mobile_responsive_v19">
+
+    <style id="pc-mobile-view-override">
+        @media (max-width: 991px) {
+            /* 1. Global Page & Body constraints */
+            html, body.project-cargo-page {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+            }
+
+            /* 2. Section 1: Hero Section Navbar Clearance */
+            .pc-hero-section {
+                padding-top: 118px !important;
+                padding-bottom: 30px !important;
+            }
+            .pc-hero-container {
+                padding: 0 18px !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            /* 3. Top Branded Emblem Headline (Mathematically Centered) */
+            .pc-brand-emblem-headline {
+                margin: 12px auto 20px auto !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .pc-brand-title {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto 12px auto !important;
+                font-size: clamp(24px, 6.8vw, 34px) !important;
+                line-height: 1.15 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                gap: 4px !important;
+            }
+            .pc-brand-project {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                text-align: center !important;
+                letter-spacing: 1.5px !important;
+            }
+            .pc-p-svg-wrap {
+                width: 1.05em !important;
+                height: 0.98em !important;
+                display: inline-block !important;
+                margin-right: -0.02em !important;
+                vertical-align: middle !important;
+            }
+            .pc-brand-cargo {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                letter-spacing: 2px !important;
+            }
+            .pc-brand-divider-bar {
+                width: 100% !important;
+                max-width: 350px !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+
+            /* 4. Hero Content & 4 Feature Badges */
+            .pc-hero-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 24px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            .pc-hero-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+            .pc-eyebrow {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                font-size: 11px !important;
+                font-weight: 800 !important;
+                color: var(--pc-color-terracotta) !important;
+                letter-spacing: 0.16em !important;
+                margin-bottom: 10px !important;
+            }
+            .pc-hero-title {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.2 !important;
+                margin-bottom: 14px !important;
+                word-wrap: break-word !important;
+                text-align: left !important;
+            }
+            .pc-hero-desc {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 20px !important;
+                word-wrap: break-word !important;
+                text-align: left !important;
+            }
+
+            /* 4 Feature Badges in 4-column compact grid */
+            .pc-hero-badges-row {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 8px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto 20px auto !important;
+                box-sizing: border-box !important;
+            }
+            .pc-hero-badge-item {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                width: 100% !important;
+                min-width: 0 !important;
+                padding: 0 !important;
+                gap: 0 !important;
+            }
+            .pc-hero-badge-circle {
+                width: 44px !important;
+                height: 44px !important;
+                font-size: 20px !important;
+                margin: 0 auto 6px auto !important;
+            }
+            .pc-hero-badge-label {
+                font-size: 10.5px !important;
+                line-height: 1.25 !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+                text-align: center !important;
+            }
+
+            /* 5. Hero Visual: Moving Transporter Card with Realistic Land Stage */
+            .pc-ground-stage-container {
+                display: block !important;
+                position: absolute !important;
+                top: 78px !important;
+                bottom: auto !important;
+                left: -12% !important;
+                width: 125% !important;
+                height: 92px !important;
+                z-index: 1 !important;
+                pointer-events: none !important;
+                transform: rotate(2.2deg) !important;
+                transform-origin: 10% 20% !important;
+            }
+            .pc-ground-bed-img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: fill !important;
+                display: block !important;
+                filter: contrast(1.1) brightness(0.94) !important;
+                mask-image: none !important;
+                -webkit-mask-image: none !important;
+            }
+            .pc-hero-visual-card {
+                position: relative !important;
+                width: 100% !important;
+                max-width: 360px !important;
+                margin: 6px auto 0 auto !important;
+                display: block !important;
+                overflow: hidden !important;
+                padding: 24px 0 70px !important;
+                box-sizing: border-box !important;
+            }
+            .pc-hero-overlay-tag {
+                display: none !important;
+            }
+            .pc-transporter-anim-wrap {
+                position: relative !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+                z-index: 2 !important;
+            }
+            .pc-hero-img {
+                width: 100% !important;
+                height: auto !important;
+                display: block !important;
+                max-height: none !important;
+            }
+            .pc-hero-floating-stat {
+                position: absolute !important;
+                bottom: 8px !important;
+                right: 6px !important;
+                width: auto !important;
+                max-width: 255px !important;
+                margin: 0 !important;
+                box-sizing: border-box !important;
+                padding: 8px 12px !important;
+                border-radius: 10px !important;
+                gap: 10px !important;
+                z-index: 3 !important;
+                background: rgba(255, 255, 255, 0.95) !important;
+                box-shadow: 0 8px 20px rgba(11, 37, 70, 0.14) !important;
+            }
+            .pc-stat-icon-wrap {
+                width: 30px !important;
+                height: 30px !important;
+                font-size: 15px !important;
+                flex-shrink: 0 !important;
+            }
+            .pc-stat-num {
+                font-size: 12px !important;
+                font-weight: 800 !important;
+            }
+            .pc-stat-label {
+                font-size: 9.5px !important;
+            }
+
+            /* 6. Section 3: About Precision Engineering & Rigging */
+            .pc-about-section {
+                padding: 11px 0 40px !important;
+                overflow: visible !important;
+            }
+            .pc-about-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 28px !important;
+            }
+            .pc-about-visual-rigging {
+                width: 100% !important;
+                max-width: 360px !important;
+                margin: 0 auto !important;
+                box-sizing: border-box !important;
+            }
+            .pc-overhead-crane-fixed {
+                padding: 0 32px !important;
+            }
+            .pc-dual-chains-row {
+                padding: 0 42px !important;
+            }
+            .pc-pad-eye-left {
+                left: 48px !important;
+            }
+            .pc-pad-eye-right {
+                right: 48px !important;
+            }
+            .pc-about-spec-badge {
+                display: none !important;
+            }
+            .pc-about-content {
+                width: 100% !important;
+                text-align: left !important;
+                padding-top: 24px !important;
+            }
+            .pc-section-eyebrow {
+                font-size: 11px !important;
+                letter-spacing: 0.14em !important;
+                margin-bottom: 10px !important;
+            }
+            .pc-section-title {
+                font-size: clamp(22px, 6vw, 30px) !important;
+                line-height: 1.25 !important;
+                margin-bottom: 14px !important;
+            }
+            .pc-about-p {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 16px !important;
+            }
+            .pc-about-content .pc-btn-primary {
+                width: 100% !important;
+                max-width: 280px !important;
+                justify-content: center !important;
+            }
+
+            /* 7. Section 4: Process Section */
+            body.project-cargo-page .af-process-section {
+                padding: 40px 0 !important;
+            }
+            .af-container {
+                padding: 0 18px !important;
+            }
+            .af-main-heading {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.25 !important;
+            }
+            .af-flight-flow-container,
+            .af-process-arrow {
+                display: none !important;
+            }
+            .af-process-track {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 14px !important;
+            }
+            .af-process-card {
+                flex: 1 1 100% !important;
+                width: 100% !important;
+                padding: 20px 18px !important;
+                border-radius: 16px !important;
+            }
+
+            /* 8. Section 5: Specialized Solutions Grid */
+            .pc-solutions-section {
+                padding: 45px 0 !important;
+            }
+            .pc-solutions-section .pc-hero-container {
+                padding: 0 18px !important;
+            }
+
+            /* 9. Section 7: Call to Action */
+            .pc-cta-section {
+                padding: 45px 0 !important;
+            }
+            .pc-cta-container {
+                padding: 0 18px !important;
+            }
+            .pc-cta-title {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.25 !important;
+                margin-bottom: 14px !important;
+            }
+            .pc-cta-desc {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 22px !important;
+            }
+            .pc-cta-buttons {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 12px !important;
+                width: 100% !important;
+            }
+            .pc-btn-primary,
+            .pc-btn-ghost {
+                width: 100% !important;
+                justify-content: center !important;
+                text-align: center !important;
+                padding: 13px 20px !important;
+            }
+
+            /* 10. Footer */
+            .site-footer {
+                padding: 40px 18px 20px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="project-cargo-page">
@@ -200,49 +556,49 @@
                             <i class="ph-bold ph-airplane-tilt text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Air Freight</strong>
-                                <small>Urgent & time-sensitive air cargo</small>
+                                <small>Fast &amp; secure air cargo</small>
                             </div>
                         </a>
                         <a href="sea-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-boat text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Sea Freight</strong>
-                                <small>FCL & LCL ocean shipping</small>
+                                <small>FCL &amp; LCL ocean shipping</small>
                             </div>
                         </a>
                         <a href="land-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-truck text-primary"></i>
                             <div class="mobile-sublink-text">
-                                <strong>Road Transportation</strong>
-                                <small>FTL, PTL & cross-border trucking</small>
-                            </div>
-                        </a>
-                        <a href="customs-clearance.html" class="mobile-sublink">
-                            <i class="ph-bold ph-shield-check text-primary"></i>
-                            <div class="mobile-sublink-text">
-                                <strong>Customs Clearance</strong>
-                                <small>Documentation & trade compliance</small>
+                                <strong>Road Freight</strong>
+                                <small>Full-truckload &amp; specialized transport</small>
                             </div>
                         </a>
                         <a href="warehouse-distribution.html" class="mobile-sublink">
                             <i class="ph-bold ph-warehouse text-primary"></i>
                             <div class="mobile-sublink-text">
-                                <strong>Warehousing & Distribution</strong>
-                                <small>Short & long-term storage solutions</small>
+                                <strong>Warehousing &amp; Distribution</strong>
+                                <small>Secure modern storage</small>
+                            </div>
+                        </a>
+                        <a href="customs-clearance.html" class="mobile-sublink">
+                            <i class="ph-bold ph-file-text text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Customs Clearance</strong>
+                                <small>Hassle-free documentation</small>
                             </div>
                         </a>
                         <a href="project-cargo.html" class="mobile-sublink active">
                             <i class="ph-bold ph-crane text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Project Cargo</strong>
-                                <small>Heavy-lift & specialized cargo</small>
+                                <small>Specialized complex shipping</small>
                             </div>
                         </a>
                         <a href="door-to-door.html" class="mobile-sublink">
-                            <i class="ph-bold ph-arrows-left-right text-primary"></i>
+                            <i class="ph-bold ph-map-pin text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Door-to-Door Logistics</strong>
-                                <small>Complete end-to-end management</small>
+                                <small>Complete end-to-end delivery</small>
                             </div>
                         </a>
                     </div>
@@ -253,12 +609,12 @@
                     <span>Industries</span>
                 </a>
                 <a href="solutions.html" class="mobile-nav-link">
-                    <i class="ph-bold ph-lightbulb"></i>
+                    <i class="ph-bold ph-gear-six"></i>
                     <span>Solutions</span>
                 </a>
                 <a href="contact.html" class="mobile-nav-link">
-                    <i class="ph-bold ph-phone-call"></i>
-                    <span>Contact Us</span>
+                    <i class="ph-bold ph-envelope-simple"></i>
+                    <span>Contact</span>
                 </a>
             </nav>
 
@@ -282,7 +638,7 @@
                         <span>info@rbconnectglobal.com</span>
                     </div>
                 </div>
-                <p class="mobile-footer-tagline">Connecting Businesses Beyond Borders</p>
+                <p class="mobile-footer-tagline">Moving Businesses Further • Worldwide</p>
             </div>
         </div>
     </aside>
@@ -613,6 +969,38 @@
              SECTION 3: ABOUT PROJECT CARGO
              ========================================= -->
         <section class="pc-about-section" id="about">
+            <!-- Full-Width Overhead Continuous Steel Chain Track (Edge-to-Edge) -->
+            <div class="pc-overhead-chain-track" aria-hidden="true">
+                <svg class="pc-chain-line-svg" width="100%" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="chSteelMain" x1="0" y1="0" x2="0" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#1e293b"/>
+                            <stop offset="22%" stop-color="#64748b"/>
+                            <stop offset="48%" stop-color="#f8fafc"/>
+                            <stop offset="72%" stop-color="#475569"/>
+                            <stop offset="100%" stop-color="#0f172a"/>
+                        </linearGradient>
+                        <linearGradient id="chSteelSide" x1="0" y1="0" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#0f172a"/>
+                            <stop offset="35%" stop-color="#cbd5e1"/>
+                            <stop offset="65%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#1e293b"/>
+                        </linearGradient>
+                        <pattern id="pcLiftingChainPattern" width="22" height="22" patternUnits="userSpaceOnUse">
+                            <!-- Flat chain loop -->
+                            <rect x="1" y="4" width="15" height="12" rx="6" fill="none" stroke="url(#chSteelMain)" stroke-width="2.6"/>
+                            <!-- Inner loop cavity -->
+                            <rect x="4" y="6.8" width="9" height="6.4" rx="3.2" fill="#0b2546" opacity="0.3"/>
+                            <!-- Interlocking vertical profile link connecting into next loop -->
+                            <rect x="12.5" y="7" width="8" height="6" rx="3" fill="url(#chSteelSide)" stroke="#09131f" stroke-width="0.7"/>
+                        </pattern>
+                    </defs>
+                    <!-- Horizontal Chain Line spanning 100% across rigging -->
+                    <g filter="drop-shadow(0 2px 4px rgba(0,0,0,0.32))">
+                        <rect x="0" y="0" width="100%" height="22" fill="url(#pcLiftingChainPattern)"/>
+                    </g>
+                </svg>
+            </div>
             <div class="pc-hero-container">
                 <div class="pc-about-grid">
                     <!-- Left: Engineering Image Suspended by Dual Crane Blocks & Chains connected to Hero Boundary Line -->

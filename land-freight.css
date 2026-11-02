@@ -221,7 +221,7 @@ body.land-freight-page {
     position: relative;
     background: #f7f3ee !important;
     background-color: #f7f3ee !important;
-    border-bottom: 1px solid rgba(198, 108, 36, 0.12);
+    border-bottom: none !important;
     padding-top: 25px;
     padding-bottom: 0;
     overflow: hidden;
@@ -616,6 +616,7 @@ body.land-freight-page {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    transform: translateY(-16px);
 }
 
 /* SVG Road Canvas (placed behind/under the truck) */
@@ -744,8 +745,8 @@ body.land-freight-page {
    ========================================================================== */
 .lf-stats-bar {
     background-color: var(--lf-bg-cream);
-    border-top: 1px solid var(--lf-border-subtle);
-    border-bottom: 1px solid var(--lf-border-subtle);
+    border-top: none !important;
+    border-bottom: none !important;
     padding: 26px 0;
     position: relative;
     z-index: 3;
@@ -1202,6 +1203,18 @@ body.land-freight-page {
         --reveal-w: calc(var(--card-w) * 0.62);
         --left-w: calc(var(--card-w) * 0.38);
     }
+
+    .lf-about-section .wrap:hover .overlay-content,
+    .lf-about-section .wrap.active .overlay-content,
+    .lf-about-section .wrap:hover .overlay-content h1,
+    .lf-about-section .wrap.active .overlay-content h1,
+    .lf-about-section .wrap:hover .overlay-content p,
+    .lf-about-section .wrap.active .overlay-content p {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: none !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1211,6 +1224,18 @@ body.land-freight-page {
         min-height: 520px;
         --reveal-w: calc(var(--card-w) * 0.68);
         --left-w: calc(var(--card-w) * 0.32);
+    }
+
+    .lf-about-section .wrap:hover .overlay-content,
+    .lf-about-section .wrap.active .overlay-content,
+    .lf-about-section .wrap:hover .overlay-content h1,
+    .lf-about-section .wrap.active .overlay-content h1,
+    .lf-about-section .wrap:hover .overlay-content p,
+    .lf-about-section .wrap.active .overlay-content p {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: none !important;
     }
 
     .lf-about-section .overlay-content h1 {

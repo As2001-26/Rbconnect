@@ -26,9 +26,115 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=unified_cards_v2">
+    <link rel="stylesheet" href="style.css?v=no_section_borders_v10">
     <link rel="stylesheet" href="service-capabilities.css?v=page_bg_sync_v4">
-    <link rel="stylesheet" href="land-freight.css?v=equal_section_gap_v1">
+    <link rel="stylesheet" href="land-freight.css?v=truck_shifted_v12">
+
+    <style id="lf-mobile-override">
+        @media (max-width: 991px) {
+            .lf-about-section .wrap:hover .overlay-content,
+            .lf-about-section .wrap.active .overlay-content,
+            .lf-about-section .wrap:hover .overlay-content h1,
+            .lf-about-section .wrap.active .overlay-content h1,
+            .lf-about-section .wrap:hover .overlay-content p,
+            .lf-about-section .wrap.active .overlay-content p {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+                transform: none !important;
+            }
+
+            /* Mobile Hero Optimization & Truck Shift */
+            .lf-hero-section {
+                padding-top: 118px !important;
+                padding-bottom: 30px !important;
+            }
+            .lf-hero-container {
+                padding: 0 18px !important;
+            }
+            .lf-brand-emblem-headline {
+                margin: 12px auto 20px auto !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .lf-brand-title {
+                width: 100% !important;
+                margin: 0 auto 12px auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 4px !important;
+                font-size: clamp(24px, 6.8vw, 34px) !important;
+            }
+            .lf-brand-road {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .lf-brand-freight {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .lf-brand-divider-bar {
+                margin: 0 auto !important;
+                max-width: 350px !important;
+            }
+            .lf-hero-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 24px !important;
+            }
+            .lf-hero-content {
+                width: 100% !important;
+                text-align: left !important;
+            }
+            .lf-hero-badges-row {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 8px !important;
+                width: 100% !important;
+                margin: 0 auto 16px auto !important;
+            }
+            .lf-hero-badge-item {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                min-width: 0 !important;
+                padding: 0 !important;
+            }
+            .lf-hero-badge-circle {
+                width: 44px !important;
+                height: 44px !important;
+                font-size: 20px !important;
+                margin: 0 auto 6px auto !important;
+            }
+            .lf-hero-badge-label {
+                font-size: 10.5px !important;
+                line-height: 1.25 !important;
+                text-align: center !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+            }
+            .lf-hero-visual-wrap {
+                min-height: auto !important;
+                margin-top: 10px !important;
+                width: 100% !important;
+                display: flex !important;
+                justify-content: center !important;
+                overflow: visible !important;
+            }
+            .lf-hero-road-stage {
+                transform: translateY(0px) !important;
+                width: 100% !important;
+                max-width: 360px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="land-freight-page">
@@ -170,7 +276,7 @@
     <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
         <div class="mobile-drawer-header">
             <a href="index.html" class="logo mobile-drawer-logo">
-                <img src="images/RBLOGO.png" alt="RB Connect Global Network" class="site-logo-img">
+                <img src="images/RBLOGO.png" alt="RB Connect" class="site-logo-img">
             </a>
             <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
                 <i class="ph-bold ph-x"></i>
@@ -205,18 +311,18 @@
                                 <small>Fast &amp; secure air cargo</small>
                             </div>
                         </a>
-                        <a href="land-freight.html" class="mobile-sublink active">
-                            <i class="ph-bold ph-truck text-primary"></i>
-                            <div class="mobile-sublink-text">
-                                <strong>Road Freight</strong>
-                                <small>Nationwide ground logistics</small>
-                            </div>
-                        </a>
                         <a href="sea-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-boat text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Sea Freight</strong>
-                                <small>Global ocean shipping</small>
+                                <small>FCL &amp; LCL ocean shipping</small>
+                            </div>
+                        </a>
+                        <a href="land-freight.html" class="mobile-sublink active">
+                            <i class="ph-bold ph-truck text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Road Freight</strong>
+                                <small>Full-truckload &amp; specialized transport</small>
                             </div>
                         </a>
                         <a href="warehouse-distribution.html" class="mobile-sublink">
@@ -234,7 +340,7 @@
                             </div>
                         </a>
                         <a href="project-cargo.html" class="mobile-sublink">
-                            <i class="ph-bold ph-package text-primary"></i>
+                            <i class="ph-bold ph-crane text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Project Cargo</strong>
                                 <small>Specialized complex shipping</small>
@@ -255,7 +361,7 @@
                     <span>Industries</span>
                 </a>
                 <a href="solutions.html" class="mobile-nav-link">
-                    <i class="ph-bold ph-chart-polar"></i>
+                    <i class="ph-bold ph-gear-six"></i>
                     <span>Solutions</span>
                 </a>
                 <a href="contact.html" class="mobile-nav-link">

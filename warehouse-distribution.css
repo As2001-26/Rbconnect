@@ -474,8 +474,8 @@ body.warehouse-page {
 .wd-stats-section {
     background-color: var(--wd-bg-cream);
     padding: 34px 0;
-    border-top: 1px solid var(--wd-border-subtle);
-    border-bottom: 1px solid var(--wd-border-subtle);
+    border-top: none !important;
+    border-bottom: none !important;
 }
 
 .wd-stats-container {
@@ -1643,6 +1643,11 @@ body.warehouse-page .af-process-section {
 }
 
 @media (max-width: 991px) {
+
+    .wd-hero-section {
+        padding-top: 118px !important;
+        padding-bottom: 30px !important;
+    }
 
     .wd-hero-grid,
     .wd-about-grid,

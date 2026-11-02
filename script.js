@@ -1194,7 +1194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const drawer = document.getElementById('mobileDrawer');
         const overlay = document.getElementById('mobileDrawerOverlay');
         const closeBtn = document.getElementById('mobileDrawerClose');
-        const accordionToggle = document.querySelector('.mobile-nav-accordion-toggle');
+        const accordionToggle = document.querySelector('.mobile-nav-accordion-toggle, .mobile-nav-accordion-btn, #mobileServicesBtn');
         const accordion = document.querySelector('.mobile-nav-accordion');
 
         if (!drawer || !overlay) return;

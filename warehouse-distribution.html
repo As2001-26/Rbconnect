@@ -25,9 +25,335 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=unified_cards_v2">
+    <link rel="stylesheet" href="style.css?v=no_section_borders_v10">
     <link rel="stylesheet" href="service-capabilities.css?v=page_bg_sync_v4">
-    <link rel="stylesheet" href="warehouse-distribution.css?v=equal_section_gap_v1">
+    <link rel="stylesheet" href="warehouse-distribution.css?v=mobile_responsive_v11">
+
+    <style id="wd-mobile-view-override">
+        @media (max-width: 991px) {
+            /* 1. Global Page & Body constraints */
+            html, body.warehouse-page {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+            }
+
+            /* 2. Section 1: Hero Section Navbar Clearance */
+            .wd-hero-section {
+                padding-top: 118px !important;
+                padding-bottom: 30px !important;
+            }
+            .wd-hero-container {
+                padding: 0 18px !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            /* 3. Top Branded Emblem Headline (Center Aligned) */
+            .wd-brand-emblem-headline {
+                margin: 12px auto 20px auto !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .wd-brand-title {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto 12px auto !important;
+                font-size: clamp(24px, 6.8vw, 34px) !important;
+                line-height: 1.15 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                gap: 4px !important;
+            }
+            .wd-brand-warehouse {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                text-align: center !important;
+                letter-spacing: 1px !important;
+            }
+            .wd-warehouse-w {
+                width: 1.25em !important;
+                height: 0.96em !important;
+                display: inline-block !important;
+                margin-right: -0.02em !important;
+                vertical-align: middle !important;
+            }
+            .wd-brand-dist-group {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                text-align: center !important;
+                gap: 6px !important;
+                letter-spacing: 1px !important;
+            }
+            .wd-brand-divider-bar {
+                width: 100% !important;
+                max-width: 350px !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+
+            /* 4. Hero Content & Badges */
+            .wd-hero-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 24px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            .wd-hero-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+            .wd-eyebrow {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                font-size: 11px !important;
+                font-weight: 800 !important;
+                color: var(--wd-color-terracotta) !important;
+                letter-spacing: 0.16em !important;
+                margin-bottom: 10px !important;
+            }
+            .wd-hero-title {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.2 !important;
+                margin-bottom: 14px !important;
+                word-wrap: break-word !important;
+                text-align: left !important;
+            }
+            .wd-hero-desc {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 20px !important;
+                word-wrap: break-word !important;
+                text-align: left !important;
+            }
+
+            /* 4 Feature Badges in 4-column compact grid */
+            .wd-hero-badges-row {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 8px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto 20px auto !important;
+                box-sizing: border-box !important;
+            }
+            .wd-hero-badge-item {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                width: 100% !important;
+                min-width: 0 !important;
+                padding: 0 !important;
+                gap: 0 !important;
+            }
+            .wd-hero-badge-circle {
+                width: 44px !important;
+                height: 44px !important;
+                font-size: 20px !important;
+                margin: 0 auto 6px auto !important;
+            }
+            .wd-hero-badge-label {
+                font-size: 10.5px !important;
+                line-height: 1.25 !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+                text-align: center !important;
+            }
+
+            /* 5. Hero Visual: Forklift Stage */
+            .wd-hero-visual {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: center !important;
+                overflow: hidden !important;
+                margin-top: 5px !important;
+            }
+            .wd-forklift-stage {
+                width: 100% !important;
+                max-width: 360px !important;
+                margin: 0 auto !important;
+            }
+            .wd-hero-forklift-img {
+                max-height: 280px !important;
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+
+            /* 6. Section 2: Stats & Key Pillars Row */
+            .wd-stats-section {
+                padding: 24px 0 !important;
+            }
+            .wd-stats-container {
+                padding: 0 18px !important;
+            }
+            .wd-stats-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+            }
+            .wd-stat-item {
+                padding: 16px 18px !important;
+                border-radius: 14px !important;
+                border: 1.5px solid rgba(198, 108, 36, 0.16) !important;
+                background: #ffffff !important;
+                border-right: 1.5px solid rgba(198, 108, 36, 0.16) !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 16px !important;
+            }
+            .wd-stat-icon-wrap {
+                width: 44px !important;
+                height: 44px !important;
+                min-width: 44px !important;
+                font-size: 20px !important;
+            }
+            .wd-stat-title {
+                font-size: 15px !important;
+                font-weight: 800 !important;
+            }
+            .wd-stat-sub {
+                font-size: 12.5px !important;
+            }
+
+            /* 7. Section 3: About Warehouse & Distribution */
+            .wd-about-section {
+                padding: 40px 0 !important;
+            }
+            .wd-about-container {
+                padding: 0 18px !important;
+            }
+            .wd-about-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 28px !important;
+            }
+            .wd-box-stage {
+                height: 280px !important;
+                max-width: 360px !important;
+                width: 100% !important;
+                margin: 0 auto !important;
+            }
+            .wd-shipping-label {
+                width: 130px !important;
+                padding: 6px 8px !important;
+            }
+            .wd-about-content {
+                width: 100% !important;
+                text-align: left !important;
+            }
+            .wd-about-title {
+                font-size: clamp(22px, 6vw, 30px) !important;
+                line-height: 1.25 !important;
+                margin-bottom: 14px !important;
+            }
+            .wd-about-desc {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 16px !important;
+            }
+            .wd-about-content .wd-btn-primary {
+                width: 100% !important;
+                max-width: 280px !important;
+                justify-content: center !important;
+            }
+
+            /* 8. Section 5: Process Section */
+            .af-process-section {
+                padding: 40px 0 !important;
+            }
+            .af-container {
+                padding: 0 18px !important;
+            }
+            .af-main-heading {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.25 !important;
+            }
+            .af-flight-flow-container,
+            .af-process-arrow {
+                display: none !important;
+            }
+            .af-process-track {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 14px !important;
+            }
+            .af-process-card {
+                flex: 1 1 100% !important;
+                width: 100% !important;
+                padding: 20px 18px !important;
+                border-radius: 16px !important;
+            }
+
+            /* 9. Section 6: Warehousing Services Suite */
+            .wd-solutions-section {
+                padding: 45px 0 !important;
+            }
+            .wd-solutions-container {
+                padding: 0 18px !important;
+            }
+            .wd-solutions-title {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.25 !important;
+            }
+
+            /* 10. Section 9: Call to Action */
+            .wd-cta-section {
+                padding: 45px 0 !important;
+            }
+            .wd-cta-container {
+                padding: 0 18px !important;
+            }
+            .wd-cta-title {
+                font-size: clamp(24px, 6.5vw, 32px) !important;
+                line-height: 1.25 !important;
+                margin-bottom: 14px !important;
+            }
+            .wd-cta-desc {
+                font-size: 14px !important;
+                line-height: 1.65 !important;
+                margin-bottom: 22px !important;
+            }
+            .wd-cta-buttons {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 12px !important;
+                width: 100% !important;
+            }
+            .wd-btn-primary,
+            .wd-btn-ghost {
+                width: 100% !important;
+                justify-content: center !important;
+                text-align: center !important;
+                padding: 13px 20px !important;
+            }
+
+            /* 11. Footer */
+            .site-footer {
+                padding: 40px 18px 20px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="warehouse-page">
@@ -200,49 +526,49 @@
                             <i class="ph-bold ph-airplane-tilt text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Air Freight</strong>
-                                <small>Urgent & time-sensitive air cargo</small>
+                                <small>Fast &amp; secure air cargo</small>
                             </div>
                         </a>
                         <a href="sea-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-boat text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Sea Freight</strong>
-                                <small>FCL & LCL ocean shipping</small>
+                                <small>FCL &amp; LCL ocean shipping</small>
                             </div>
                         </a>
                         <a href="land-freight.html" class="mobile-sublink">
                             <i class="ph-bold ph-truck text-primary"></i>
                             <div class="mobile-sublink-text">
-                                <strong>Road Transportation</strong>
-                                <small>FTL, PTL & cross-border trucking</small>
-                            </div>
-                        </a>
-                        <a href="customs-clearance.html" class="mobile-sublink">
-                            <i class="ph-bold ph-shield-check text-primary"></i>
-                            <div class="mobile-sublink-text">
-                                <strong>Customs Clearance</strong>
-                                <small>Documentation & trade compliance</small>
+                                <strong>Road Freight</strong>
+                                <small>Full-truckload &amp; specialized transport</small>
                             </div>
                         </a>
                         <a href="warehouse-distribution.html" class="mobile-sublink active">
                             <i class="ph-bold ph-warehouse text-primary"></i>
                             <div class="mobile-sublink-text">
-                                <strong>Warehousing & Distribution</strong>
-                                <small>Short & long-term storage solutions</small>
+                                <strong>Warehousing &amp; Distribution</strong>
+                                <small>Secure modern storage</small>
+                            </div>
+                        </a>
+                        <a href="customs-clearance.html" class="mobile-sublink">
+                            <i class="ph-bold ph-file-text text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Customs Clearance</strong>
+                                <small>Hassle-free documentation</small>
                             </div>
                         </a>
                         <a href="project-cargo.html" class="mobile-sublink">
                             <i class="ph-bold ph-crane text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Project Cargo</strong>
-                                <small>Heavy-lift & specialized cargo</small>
+                                <small>Specialized complex shipping</small>
                             </div>
                         </a>
                         <a href="door-to-door.html" class="mobile-sublink">
-                            <i class="ph-bold ph-arrows-left-right text-primary"></i>
+                            <i class="ph-bold ph-map-pin text-primary"></i>
                             <div class="mobile-sublink-text">
                                 <strong>Door-to-Door Logistics</strong>
-                                <small>Complete end-to-end management</small>
+                                <small>Complete end-to-end delivery</small>
                             </div>
                         </a>
                     </div>
@@ -253,12 +579,12 @@
                     <span>Industries</span>
                 </a>
                 <a href="solutions.html" class="mobile-nav-link">
-                    <i class="ph-bold ph-lightbulb"></i>
+                    <i class="ph-bold ph-gear-six"></i>
                     <span>Solutions</span>
                 </a>
                 <a href="contact.html" class="mobile-nav-link">
-                    <i class="ph-bold ph-phone-call"></i>
-                    <span>Contact Us</span>
+                    <i class="ph-bold ph-envelope-simple"></i>
+                    <span>Contact</span>
                 </a>
             </nav>
 
@@ -282,7 +608,7 @@
                         <span>info@rbconnectglobal.com</span>
                     </div>
                 </div>
-                <p class="mobile-footer-tagline">Connecting Businesses Beyond Borders</p>
+                <p class="mobile-footer-tagline">Moving Businesses Further • Worldwide</p>
             </div>
         </div>
     </aside>
@@ -473,16 +799,12 @@
 
                     <!-- Pillar 4: Inventory & Fulfillment -->
                     <div class="wd-stat-item">
+                        <div class="wd-stat-icon-wrap">
+                            <i class="ph-bold ph-check-circle"></i>
+                        </div>
                         <div class="wd-stat-info">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="wd-stat-icon-wrap">
-                                    <i class="ph-bold ph-check-circle"></i>
-                                </div>
-                                <div class="wd-stat-info">
-                                    <span class="wd-stat-title">Order Fulfillment</span>
-                                    <span class="wd-stat-sub">Accurate Coordination</span>
-                                </div>
-                            </div>
+                            <span class="wd-stat-title">Order Fulfillment</span>
+                            <span class="wd-stat-sub">Accurate Coordination</span>
                         </div>
                     </div>
                 </div>

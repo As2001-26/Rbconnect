@@ -12,7 +12,7 @@
     --ind-primary-hover: #b05c19;
     --ind-primary-light: #fff7ed;
     --ind-primary-glow: rgba(198, 108, 36, 0.35);
-    
+
     --ind-navy-deep: #060e18;
     --ind-navy-hero: #091524;
     --ind-navy-card: #0f1d30;
@@ -38,7 +38,7 @@
     --ind-shadow-md: 0 10px 25px rgba(0, 0, 0, 0.07);
     --ind-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
     --ind-shadow-glow: 0 0 35px rgba(198, 108, 36, 0.25);
-    
+
     --ind-transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -58,12 +58,12 @@ body.industries-page {
    -------------------------------------------------------------------------- */
 .ind-hero-section {
     position: relative;
-    background: 
+    background:
         linear-gradient(175deg, rgba(6, 14, 24, 0.72) 0%, rgba(10, 23, 40, 0.65) 55%, rgba(14, 30, 52, 0.82) 100%),
         url("images/ind_hero_air_cargo.jpg") center center / cover no-repeat;
     background-attachment: fixed;
     color: #ffffff;
-    padding-top: 140px;
+    padding-top: 155px;
     padding-bottom: 80px;
     overflow: hidden;
 }
@@ -89,7 +89,7 @@ body.industries-page {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: 
+    background:
         linear-gradient(175deg, rgba(6, 14, 24, 0.72) 0%, rgba(10, 23, 40, 0.65) 55%, rgba(14, 30, 52, 0.82) 100%),
         url("images/ind_hero_multimodal_hub.jpg") center center / cover no-repeat;
     background-size: cover;
@@ -242,6 +242,7 @@ body.industries-page {
     gap: 10px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
+
     color: #ffffff;
     font-weight: 600;
     font-size: 15px;
@@ -1071,6 +1072,7 @@ body.industries-page {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.08);
     }
@@ -1125,10 +1127,12 @@ body.industries-page {
     .ind-hero-title {
         font-size: 46px;
     }
+
     .ind-why-grid,
     .ind-trust-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .ind-case-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1136,35 +1140,44 @@ body.industries-page {
 
 @media (max-width: 992px) {
     .ind-hero-section {
-        padding-top: 120px;
+        padding-top: 145px !important;
         padding-bottom: 60px;
     }
+
     .ind-hero-title {
         font-size: 38px;
     }
+
     .ind-hero-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .ind-stat-item:nth-child(2) {
         border-right: none;
     }
+
     .ind-sector-grid,
     .ind-sector-card.reversed .ind-sector-grid {
         grid-template-columns: 1fr;
     }
+
     .ind-sector-card.reversed .ind-sector-visual {
         order: 1;
     }
+
     .ind-sector-card.reversed .ind-sector-content {
         order: 2;
     }
+
     .ind-sector-visual {
         height: 380px;
     }
+
     .ind-sector-content {
         padding: 36px 28px;
     }
+
     .ind-cta-flex {
         flex-direction: column;
         align-items: flex-start;
@@ -1176,35 +1189,43 @@ body.industries-page {
     .ind-hero-title {
         font-size: 32px;
     }
+
     .ind-hero-desc {
         font-size: 16px;
     }
+
     .ind-hero-stats {
         grid-template-columns: 1fr;
         padding: 20px;
     }
+
     .ind-stat-item {
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         padding-bottom: 14px;
         margin-bottom: 14px;
     }
+
     .ind-stat-item:last-child {
         border-bottom: none;
         padding-bottom: 0;
         margin-bottom: 0;
     }
+
     .ind-cap-list {
         grid-template-columns: 1fr;
     }
+
     .ind-why-grid,
     .ind-trust-grid,
     .ind-case-grid {
         grid-template-columns: 1fr;
     }
+
     .ind-cta-title {
         font-size: 30px;
     }
+
     .ind-hero-section,
     .ind-strip {
         background-attachment: scroll;
